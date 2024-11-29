@@ -11,9 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControls", "..\Custom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainFormSC", "..\MainFormSC\MainFormSC.csproj", "{28B770CD-A100-4704-AA7B-2D2739F79E4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "..\..\Proyecto1\Login\Login.csproj", "{599526AF-A32C-4307-A599-F690C17FE08F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "..\Login\Login.csproj", "{599526AF-A32C-4307-A599-F690C17FE08F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hashing", "..\..\Proyecto1\Hashing\Hashing.csproj", "{C402E829-7745-476B-967F-60350ACC2F39}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hashing", "..\Hashing\Hashing.csproj", "{C402E829-7745-476B-967F-60350ACC2F39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
