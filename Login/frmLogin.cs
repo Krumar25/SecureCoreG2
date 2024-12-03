@@ -54,7 +54,7 @@ namespace Login
                     {
                         this.Hide();
 
-                        Main.frmMain frmmain = new Main.frmMain();
+                        MainFormSC.frmPrincipal frmmain = new MainFormSC.frmPrincipal();
                         frmmain.Show();
                         //MessageBox.Show("Usuario y contraseña correctos");
                     }

@@ -32,20 +32,36 @@ namespace MainFormSC
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.swLaunchForm1 = new CustomControls.SWLaunchForm();
             this.btnDesplegable = new CustomControls.SWButton();
             this.imgBotons = new System.Windows.Forms.ImageList(this.components);
             this.pnlForm = new System.Windows.Forms.Panel();
             this.menuTransicio = new System.Windows.Forms.Timer(this.components);
             this.pnlMenu.SuspendLayout();
+            this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
             // 
-            this.pnlMenu.Controls.Add(this.btnDesplegable);
+            this.pnlMenu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pnlMenu.Controls.Add(this.swLaunchForm1);
             this.pnlMenu.Location = new System.Drawing.Point(12, 12);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(200, 426);
+            this.pnlMenu.Size = new System.Drawing.Size(220, 426);
             this.pnlMenu.TabIndex = 0;
+            // 
+            // swLaunchForm1
+            // 
+            this.swLaunchForm1.BackColor = System.Drawing.Color.Black;
+            this.swLaunchForm1.Descripcio = null;
+            this.swLaunchForm1.Imatge = ((System.Drawing.Image)(resources.GetObject("swLaunchForm1.Imatge")));
+            this.swLaunchForm1.Location = new System.Drawing.Point(3, 3);
+            this.swLaunchForm1.Name = "swLaunchForm1";
+            this.swLaunchForm1.NomClase = null;
+            this.swLaunchForm1.NomFormulari = null;
+            this.swLaunchForm1.PanellManteniment = null;
+            this.swLaunchForm1.Size = new System.Drawing.Size(200, 60);
+            this.swLaunchForm1.TabIndex = 1;
             // 
             // btnDesplegable
             // 
@@ -60,7 +76,7 @@ namespace MainFormSC
             this.btnDesplegable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDesplegable.ImageKey = "menuDesplegable.png";
             this.btnDesplegable.ImageList = this.imgBotons;
-            this.btnDesplegable.Location = new System.Drawing.Point(3, 3);
+            this.btnDesplegable.Location = new System.Drawing.Point(148, 77);
             this.btnDesplegable.Name = "btnDesplegable";
             this.btnDesplegable.Size = new System.Drawing.Size(52, 44);
             this.btnDesplegable.TabIndex = 0;
@@ -68,6 +84,7 @@ namespace MainFormSC
             this.btnDesplegable.TextColor = System.Drawing.Color.White;
             this.btnDesplegable.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnDesplegable.UseVisualStyleBackColor = false;
+            this.btnDesplegable.Click += new System.EventHandler(this.btnDesplegable_Click);
             // 
             // imgBotons
             // 
@@ -77,6 +94,7 @@ namespace MainFormSC
             // 
             // pnlForm
             // 
+            this.pnlForm.Controls.Add(this.btnDesplegable);
             this.pnlForm.Location = new System.Drawing.Point(218, 12);
             this.pnlForm.Name = "pnlForm";
             this.pnlForm.Size = new System.Drawing.Size(570, 426);
@@ -84,6 +102,7 @@ namespace MainFormSC
             // 
             // menuTransicio
             // 
+            this.menuTransicio.Interval = 30;
             this.menuTransicio.Tick += new System.EventHandler(this.menuTransicio_Tick);
             // 
             // frmPrincipal
@@ -96,6 +115,7 @@ namespace MainFormSC
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
             this.pnlMenu.ResumeLayout(false);
+            this.pnlForm.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -107,5 +127,6 @@ namespace MainFormSC
         private CustomControls.SWButton btnDesplegable;
         private System.Windows.Forms.ImageList imgBotons;
         private System.Windows.Forms.Timer menuTransicio;
+        private CustomControls.SWLaunchForm swLaunchForm1;
     }
 }
