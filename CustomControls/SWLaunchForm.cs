@@ -42,23 +42,47 @@ namespace CustomControls
             set { descripcio = value; }
         }
         // Imagen que tendrá el label
-        private Image imatge;
+        private string imatge;
 
-        public Image Imatge
+        public string Imatge
         {
             get { return imatge; }
-            set { imatge = value; }
+            set { pbOpcioMenu.Image = new System.Drawing.Bitmap(value); }
         }
-        private Panel panellManteniment;
+        private Form parentForm;
 
-        public Panel PanellManteniment
+        public Form ParentForm
         {
-            get { return panellManteniment; }
-            set { panellManteniment = value; }
+            get { return parentForm; }
+            set { parentForm = value; }
         }
 
+        [Browsable(true)]
+
+        [Category("Action")]
+
+        [Description("Invoked when user clicks button")]
+
+        public event EventHandler ButtonClick;
+
+        private void SWLaunchForm_Load(object sender, EventArgs e)
+        {
+            // Creamos un objeto SWButton y ponemos su descripción e imagen
+            if (this.Descripcio != null)
+            {
+                lblDescripcio.Text = this.descripcio;
+                lblDescripcio.Refresh();
+            }
+        }
 
         private void SWLaunchForm_Click(object sender, EventArgs e)
+        {
+            if (this.ButtonClick != null)
+
+                this.ButtonClick(this, e);
+        }
+
+        public void activarForm()
         {
             //Cargamos la dll. No hacemos constar ningún path para que la compilemos en la carpeta donde compilamos todos los ensamblados
             Assembly ensamblat = Assembly.LoadFrom($"{this.NomClase}.dll");
@@ -75,23 +99,8 @@ namespace CustomControls
                 formulari.TopLevel = false;
                 formulari.Dock = DockStyle.Fill;
                 formulari.FormBorderStyle = FormBorderStyle.None;
-                panellManteniment.Controls.Clear();
-                panellManteniment.Controls.Add(formulari);
+                formulari.MdiParent = parentForm;
                 formulari.Show();
-            }
-        }
-
-        private void SWLaunchForm_Load(object sender, EventArgs e)
-        {
-            // Creamos un objeto SWButton y ponemos su descripción e imagen
-            if (this.Descripcio != null)
-            {
-                lblDescripcio.Text = this.descripcio;
-                lblDescripcio.Refresh();
-            }
-            if (this.Imatge != null)
-            {
-                pbOpcioMenu.Image = this.Imatge;
             }
         }
     }

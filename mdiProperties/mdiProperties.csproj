@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{28B770CD-A100-4704-AA7B-2D2739F79E4C}</ProjectGuid>
+    <ProjectGuid>{DB4D62F4-335B-41E6-9C8C-84A531E2EAA6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MainFormSC</RootNamespace>
-    <AssemblyName>MainFormSC</AssemblyName>
+    <RootNamespace>mdiProperties</RootNamespace>
+    <AssemblyName>mdiProperties</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -33,7 +33,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,41 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPrincipal.Designer.cs">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
-    </Compile>
+    <Compile Include="UIEffects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CustomControls\CustomControls.csproj">
-      <Project>{77c1d327-1c61-4cd1-babd-d13629498441}</Project>
-      <Name>CustomControls</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Dades\Dades.csproj">
-      <Project>{994b6a65-41bc-4014-9ee3-eb7c9161bd34}</Project>
-      <Name>Dades</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\mdiProperties\mdiProperties.csproj">
-      <Project>{db4d62f4-335b-41e6-9c8c-84a531e2eaa6}</Project>
-      <Name>mdiProperties</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

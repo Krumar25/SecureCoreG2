@@ -37,9 +37,10 @@ namespace CustomControls
             // pbOpcioMenu
             // 
             this.pbOpcioMenu.BackColor = System.Drawing.SystemColors.Control;
-            this.pbOpcioMenu.Location = new System.Drawing.Point(3, 3);
+            this.pbOpcioMenu.Location = new System.Drawing.Point(3, 4);
+            this.pbOpcioMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbOpcioMenu.Name = "pbOpcioMenu";
-            this.pbOpcioMenu.Size = new System.Drawing.Size(40, 40);
+            this.pbOpcioMenu.Size = new System.Drawing.Size(45, 50);
             this.pbOpcioMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbOpcioMenu.TabIndex = 3;
             this.pbOpcioMenu.TabStop = false;
@@ -49,22 +50,23 @@ namespace CustomControls
             // 
             this.lblDescripcio.AutoSize = true;
             this.lblDescripcio.ForeColor = System.Drawing.Color.White;
-            this.lblDescripcio.Location = new System.Drawing.Point(49, 13);
+            this.lblDescripcio.Location = new System.Drawing.Point(55, 16);
             this.lblDescripcio.Name = "lblDescripcio";
-            this.lblDescripcio.Size = new System.Drawing.Size(38, 17);
+            this.lblDescripcio.Size = new System.Drawing.Size(42, 20);
             this.lblDescripcio.TabIndex = 4;
             this.lblDescripcio.Text = "label";
             this.lblDescripcio.Click += new System.EventHandler(this.SWLaunchForm_Click);
             // 
             // SWLaunchForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.lblDescripcio);
             this.Controls.Add(this.pbOpcioMenu);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SWLaunchForm";
-            this.Size = new System.Drawing.Size(200, 60);
+            this.Size = new System.Drawing.Size(225, 75);
             this.Load += new System.EventHandler(this.SWLaunchForm_Load);
             this.Click += new System.EventHandler(this.SWLaunchForm_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pbOpcioMenu)).EndInit();
