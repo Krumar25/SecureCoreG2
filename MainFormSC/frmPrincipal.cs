@@ -33,24 +33,24 @@ namespace MainFormSC
         }
         private void menuTransicio_Tick(object sender, EventArgs e)
         {
-            if (menuExpandit)
+            if (!menuExpandit)
             {
-                pnlMenu.Width -= 10;
+                pnlMenu.Width -= 20;
 
-                if (pnlMenu.Width <= 200)
+                if (pnlMenu.Width <= 44)
+                {
+                    menuExpandit = true;
+                    menuTransicio.Stop();
+                }
+            }
+            else
+            {
+                pnlMenu.Width += 20;
+
+                if (pnlMenu.Width >= 200)
                 {
                     menuExpandit = false;
                     menuTransicio.Stop();
-                }
-                else
-                {
-                    pnlMenu.Width += 10;
-
-                    if (pnlMenu.Width >= 200)
-                    {
-                        menuExpandit = true;
-                        menuTransicio.Stop();
-                    }
                 }
             }
         }
@@ -74,6 +74,9 @@ namespace MainFormSC
                 buttonLaunchForm.Descripcio = row["DLL_name"].ToString();
                 buttonLaunchForm.Imatge = row["icon_img"].ToString();
             }
+        private void btnDesplegable_Click(object sender, EventArgs e)
+        {
+            menuTransicio.Start();
         }
     }
 }
