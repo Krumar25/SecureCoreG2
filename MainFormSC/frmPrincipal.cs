@@ -16,6 +16,7 @@ namespace MainFormSC
         {
             InitializeComponent();
         }
+
         bool menuExpandit = false;
         private void menuTransicio_Tick(object sender, EventArgs e)
         {
