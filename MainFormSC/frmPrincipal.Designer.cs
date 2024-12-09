@@ -61,9 +61,6 @@ namespace MainFormSC
             this.pnlSuperior.Name = "pnlSuperior";
             this.pnlSuperior.Size = new System.Drawing.Size(1193, 75);
             this.pnlSuperior.TabIndex = 1;
-            this.pnlSuperior.MouseDown += Control_MouseDown;
-            this.pnlSuperior.MouseMove += Control_MouseMove;
-            this.pnlSuperior.MouseUp += Control_MouseUp;
             // 
             // picBoxMinimizar
             // 
@@ -126,9 +123,6 @@ namespace MainFormSC
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(329, 698);
             this.pnlMenu.TabIndex = 3;
-            this.pnlMenu.MouseDown += Control_MouseDown;
-            this.pnlMenu.MouseMove += Control_MouseMove;
-            this.pnlMenu.MouseUp += Control_MouseUp;
             // 
             // frmPrincipal
             // 
@@ -138,10 +132,11 @@ namespace MainFormSC
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPrincipal";
+            this.Text = "Secure Core";
             this.pnlSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxVentana)).EndInit();
