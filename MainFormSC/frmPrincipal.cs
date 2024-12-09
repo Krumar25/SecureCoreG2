@@ -22,7 +22,7 @@ namespace MainFormSC
         {
             if (!menuExpandit)
             {
-                pnlMenu.Width -= 20;
+                pnlMenu.Width -= 5;
 
                 if (pnlMenu.Width <= 44)
                 {
@@ -32,7 +32,7 @@ namespace MainFormSC
             }
             else
             {
-                pnlMenu.Width += 20;
+                pnlMenu.Width += 5;
 
                 if (pnlMenu.Width >= 200)
                 {

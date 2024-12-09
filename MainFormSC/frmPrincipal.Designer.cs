@@ -37,6 +37,11 @@ namespace MainFormSC
             this.pnlSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
+            // menuTransicio
+            // 
+            this.menuTransicio.Interval = 10;
+            this.menuTransicio.Tick += new System.EventHandler(this.menuTransicio_Tick);
+            // 
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
