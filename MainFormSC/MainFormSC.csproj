@@ -70,6 +70,10 @@
       <Project>{77c1d327-1c61-4cd1-babd-d13629498441}</Project>
       <Name>CustomControls</Name>
     </ProjectReference>
+    <ProjectReference Include="..\mdiProperties\mdiProperties.csproj">
+      <Project>{db4d62f4-335b-41e6-9c8c-84a531e2eaa6}</Project>
+      <Name>mdiProperties</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
