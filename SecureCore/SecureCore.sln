@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControls", "..\Custom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainFormSC", "..\MainFormSC\MainFormSC.csproj", "{28B770CD-A100-4704-AA7B-2D2739F79E4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormularioBase", "..\..\FormularioBase\FormularioBase.csproj", "{66919BE8-323D-4519-8163-4472C59B63BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mantenimiento", "Mantenimiento\Mantenimiento.csproj", "{966A33D4-D071-4565-8B3D-8E24C65A8C6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{28B770CD-A100-4704-AA7B-2D2739F79E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28B770CD-A100-4704-AA7B-2D2739F79E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28B770CD-A100-4704-AA7B-2D2739F79E4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66919BE8-323D-4519-8163-4472C59B63BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66919BE8-323D-4519-8163-4472C59B63BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66919BE8-323D-4519-8163-4472C59B63BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66919BE8-323D-4519-8163-4472C59B63BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{966A33D4-D071-4565-8B3D-8E24C65A8C6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{966A33D4-D071-4565-8B3D-8E24C65A8C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{966A33D4-D071-4565-8B3D-8E24C65A8C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{966A33D4-D071-4565-8B3D-8E24C65A8C6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
