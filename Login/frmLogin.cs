@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dades;
 using Hashing;
-
+using CustomControls;
 
 namespace Login
 {

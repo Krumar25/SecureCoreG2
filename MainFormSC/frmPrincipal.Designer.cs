@@ -31,102 +31,133 @@ namespace MainFormSC
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
-            this.pnlMenu = new System.Windows.Forms.Panel();
-            this.swLaunchForm1 = new CustomControls.SWLaunchForm();
-            this.btnDesplegable = new CustomControls.SWButton();
-            this.imgBotons = new System.Windows.Forms.ImageList(this.components);
-            this.pnlForm = new System.Windows.Forms.Panel();
             this.menuTransicio = new System.Windows.Forms.Timer(this.components);
-            this.pnlMenu.SuspendLayout();
-            this.pnlForm.SuspendLayout();
+            this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.picBoxMinimizar = new System.Windows.Forms.PictureBox();
+            this.picBoxVentana = new System.Windows.Forms.PictureBox();
+            this.picBoxCerrar = new System.Windows.Forms.PictureBox();
+            this.btnDesplegable = new System.Windows.Forms.Button();
+            this.pnlMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxVentana)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxCerrar)).BeginInit();
             this.SuspendLayout();
+            // 
+            // menuTransicio
+            // 
+            this.menuTransicio.Interval = 10;
+            this.menuTransicio.Tick += new System.EventHandler(this.menuTransicio_Tick);
+            // 
+            // pnlSuperior
+            // 
+            this.pnlSuperior.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pnlSuperior.Controls.Add(this.picBoxMinimizar);
+            this.pnlSuperior.Controls.Add(this.picBoxVentana);
+            this.pnlSuperior.Controls.Add(this.picBoxCerrar);
+            this.pnlSuperior.Controls.Add(this.btnDesplegable);
+            this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
+            this.pnlSuperior.Name = "pnlSuperior";
+            this.pnlSuperior.Size = new System.Drawing.Size(1193, 75);
+            this.pnlSuperior.TabIndex = 1;
+            this.pnlSuperior.MouseDown += Control_MouseDown;
+            this.pnlSuperior.MouseMove += Control_MouseMove;
+            this.pnlSuperior.MouseUp += Control_MouseUp;
+            // 
+            // picBoxMinimizar
+            // 
+            this.picBoxMinimizar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picBoxMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picBoxMinimizar.Image")));
+            this.picBoxMinimizar.Location = new System.Drawing.Point(842, 0);
+            this.picBoxMinimizar.Name = "picBoxMinimizar";
+            this.picBoxMinimizar.Padding = new System.Windows.Forms.Padding(40, 10, 40, 10);
+            this.picBoxMinimizar.Size = new System.Drawing.Size(117, 75);
+            this.picBoxMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxMinimizar.TabIndex = 4;
+            this.picBoxMinimizar.TabStop = false;
+            this.picBoxMinimizar.Click += new System.EventHandler(this.picBoxMinimizar_Click);
+            // 
+            // picBoxVentana
+            // 
+            this.picBoxVentana.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picBoxVentana.Image = ((System.Drawing.Image)(resources.GetObject("picBoxVentana.Image")));
+            this.picBoxVentana.Location = new System.Drawing.Point(959, 0);
+            this.picBoxVentana.Name = "picBoxVentana";
+            this.picBoxVentana.Padding = new System.Windows.Forms.Padding(35, 15, 35, 15);
+            this.picBoxVentana.Size = new System.Drawing.Size(117, 75);
+            this.picBoxVentana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxVentana.TabIndex = 5;
+            this.picBoxVentana.TabStop = false;
+            this.picBoxVentana.Click += new System.EventHandler(this.picBoxVentana_Click);
+            // 
+            // picBoxCerrar
+            // 
+            this.picBoxCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBoxCerrar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picBoxCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picBoxCerrar.Image")));
+            this.picBoxCerrar.Location = new System.Drawing.Point(1076, 0);
+            this.picBoxCerrar.Name = "picBoxCerrar";
+            this.picBoxCerrar.Padding = new System.Windows.Forms.Padding(45, 25, 45, 25);
+            this.picBoxCerrar.Size = new System.Drawing.Size(117, 75);
+            this.picBoxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxCerrar.TabIndex = 6;
+            this.picBoxCerrar.TabStop = false;
+            this.picBoxCerrar.Click += new System.EventHandler(this.picBoxCerrar_Click);
+            // 
+            // btnDesplegable
+            // 
+            this.btnDesplegable.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDesplegable.BackgroundImage")));
+            this.btnDesplegable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDesplegable.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDesplegable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDesplegable.Location = new System.Drawing.Point(0, 0);
+            this.btnDesplegable.Name = "btnDesplegable";
+            this.btnDesplegable.Size = new System.Drawing.Size(110, 75);
+            this.btnDesplegable.TabIndex = 3;
+            this.btnDesplegable.UseVisualStyleBackColor = true;
+            this.btnDesplegable.Click += new System.EventHandler(this.btnDesplegable_Click);
             // 
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pnlMenu.Controls.Add(this.swLaunchForm1);
-            this.pnlMenu.Location = new System.Drawing.Point(12, 12);
+            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlMenu.Location = new System.Drawing.Point(0, 75);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(220, 426);
-            this.pnlMenu.TabIndex = 0;
-            // 
-            // swLaunchForm1
-            // 
-            this.swLaunchForm1.BackColor = System.Drawing.Color.Black;
-            this.swLaunchForm1.Descripcio = null;
-            this.swLaunchForm1.Imatge = ((System.Drawing.Image)(resources.GetObject("swLaunchForm1.Imatge")));
-            this.swLaunchForm1.Location = new System.Drawing.Point(3, 3);
-            this.swLaunchForm1.Name = "swLaunchForm1";
-            this.swLaunchForm1.NomClase = null;
-            this.swLaunchForm1.NomFormulari = null;
-            this.swLaunchForm1.PanellManteniment = null;
-            this.swLaunchForm1.Size = new System.Drawing.Size(200, 60);
-            this.swLaunchForm1.TabIndex = 1;
-            // 
-            // btnDesplegable
-            // 
-            this.btnDesplegable.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDesplegable.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDesplegable.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDesplegable.BorderRadius = 0;
-            this.btnDesplegable.BorderSize = 0;
-            this.btnDesplegable.FlatAppearance.BorderSize = 0;
-            this.btnDesplegable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDesplegable.ForeColor = System.Drawing.Color.White;
-            this.btnDesplegable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDesplegable.ImageKey = "menuDesplegable.png";
-            this.btnDesplegable.ImageList = this.imgBotons;
-            this.btnDesplegable.Location = new System.Drawing.Point(148, 77);
-            this.btnDesplegable.Name = "btnDesplegable";
-            this.btnDesplegable.Size = new System.Drawing.Size(52, 44);
-            this.btnDesplegable.TabIndex = 0;
-            this.btnDesplegable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDesplegable.TextColor = System.Drawing.Color.White;
-            this.btnDesplegable.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnDesplegable.UseVisualStyleBackColor = false;
-            this.btnDesplegable.Click += new System.EventHandler(this.btnDesplegable_Click);
-            // 
-            // imgBotons
-            // 
-            this.imgBotons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgBotons.ImageStream")));
-            this.imgBotons.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgBotons.Images.SetKeyName(0, "menuDesplegable.png");
-            // 
-            // pnlForm
-            // 
-            this.pnlForm.Controls.Add(this.btnDesplegable);
-            this.pnlForm.Location = new System.Drawing.Point(218, 12);
-            this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(570, 426);
-            this.pnlForm.TabIndex = 1;
-            // 
-            // menuTransicio
-            // 
-            this.menuTransicio.Interval = 30;
-            this.menuTransicio.Tick += new System.EventHandler(this.menuTransicio_Tick);
+            this.pnlMenu.Size = new System.Drawing.Size(329, 698);
+            this.pnlMenu.TabIndex = 3;
+            this.pnlMenu.MouseDown += Control_MouseDown;
+            this.pnlMenu.MouseMove += Control_MouseMove;
+            this.pnlMenu.MouseUp += Control_MouseUp;
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pnlForm);
+            this.ClientSize = new System.Drawing.Size(1193, 773);
             this.Controls.Add(this.pnlMenu);
+            this.Controls.Add(this.pnlSuperior);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrincipal";
-            this.pnlMenu.ResumeLayout(false);
-            this.pnlForm.ResumeLayout(false);
+            this.pnlSuperior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxVentana)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlMenu;
-        private System.Windows.Forms.Panel pnlForm;
-        private CustomControls.SWButton btnDesplegable;
-        private System.Windows.Forms.ImageList imgBotons;
         private System.Windows.Forms.Timer menuTransicio;
-        private CustomControls.SWLaunchForm swLaunchForm1;
+        private System.Windows.Forms.Panel pnlSuperior;
+        private System.Windows.Forms.Button btnDesplegable;
+        private System.Windows.Forms.PictureBox picBoxCerrar;
+        private System.Windows.Forms.PictureBox picBoxVentana;
+        private System.Windows.Forms.PictureBox picBoxMinimizar;
+        private System.Windows.Forms.FlowLayoutPanel pnlMenu;
     }
 }

@@ -13,6 +13,55 @@ namespace CustomControls
 {
     public partial class SWTextBox : TextBox
     {
+        #region Variables Globals
+
+        public enum TipusDada
+        {
+            Numero,
+            Text,
+            Codi
+        }
+
+        // Permite decidir si el TextBox será un número, un texto o un código
+        private TipusDada dadaPermesa;
+
+        public TipusDada DadaPermesa
+        {
+            get { return dadaPermesa; }
+            set { dadaPermesa = value; }
+        }
+
+        // Permite decidir si el TextBox puede estar vacío o no (verificar al validar el dato)
+        private bool esNulable;
+        public bool EsNulable
+        {
+            get { return esNulable; }
+            set { esNulable = value; }
+        }
+
+        // Indica si es una clave foránea
+        private bool esForana;
+        public bool EsForana
+        {
+            get { return esForana; }
+            set { esForana = value; }
+        }
+
+        // Indica el nombre del campo de la base de datos al que enlazaremos el control
+        private string campBBDD;
+
+        public string CampBBDD
+        {
+            get { return campBBDD; }
+            set { campBBDD = value; }
+        }
+
+        // Regex para el código: YXXX001
+        private Regex regex = new Regex(@"^[AEIOU][A-Z]{3}\d{2}[13579]$");
+
+
+        #endregion
+
         public SWTextBox()
         {
             InitializeComponent();
@@ -29,45 +78,9 @@ namespace CustomControls
             this.Validating += new System.ComponentModel.CancelEventHandler(this.SWTextBox_Validating);
             this.ResumeLayout(false);
         }
-        
-        public enum TipusDada
-        {
-            Numero,
-            Text,
-            Codi
-        }
-        // Permite decidir si el TextBox será un número, un texto o un código
-        private TipusDada dadaPermesa;
 
-        public TipusDada DadaPermesa
-        {
-            get { return dadaPermesa; }
-            set { dadaPermesa = value;}
-        }
-        // Permite decidir si el TextBox puede estar vacío o no (verificar al validar el dato)
-        private bool esNulable;
-        public bool EsNulable
-        {
-            get { return esNulable; }
-            set { esNulable = value; }
-        }
-        // Indica si es una clave foránea
-        private bool esForana;
-        public bool EsForana
-        {
-            get { return esForana; }
-            set { esForana = value; }
-        }
-        // Indica el nombre del campo de la base de datos al que enlazaremos el control
-        private string nomTextBox;
+        #region Events
 
-        public string NomTextBox
-        {
-            get { return nomTextBox; }
-            set { nomTextBox = value; }
-        }
-        // Regex para el código: YXXX001
-        private Regex regex = new Regex(@"^[AEIOU][A-Z]{3}\d{2}[13579]$");
         // Cambio de color al recibir el foco
         private void SWTextBox_Enter(object sender, EventArgs e)
         {
@@ -108,18 +121,21 @@ namespace CustomControls
                 }
             }
             // Enlazar el control 
-            if (NomTextBox != null)
+            if (CampBBDD != null)
             {
                 Form frm = this.FindForm();
 
                 foreach (Control ctrl in frm.Controls)
                 {
-                    if (NomTextBox.Equals(ctrl.Name))
+                    if (CampBBDD.Equals(ctrl.Name))
                     {
                         ctrl.Text = this.Text;
                     }
                 }
             }
         }
+
+        #endregion
+
     }
 }
