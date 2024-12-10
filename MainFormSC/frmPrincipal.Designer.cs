@@ -38,10 +38,12 @@ namespace MainFormSC
             this.picBoxCerrar = new System.Windows.Forms.PictureBox();
             this.btnDesplegable = new System.Windows.Forms.Button();
             this.pnlMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxVentana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCerrar)).BeginInit();
+            this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuTransicio
@@ -118,11 +120,22 @@ namespace MainFormSC
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pnlMenu.Controls.Add(this.button1);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 75);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(329, 698);
             this.pnlMenu.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(177, 77);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmPrincipal
             // 
@@ -141,6 +154,7 @@ namespace MainFormSC
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxVentana)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCerrar)).EndInit();
+            this.pnlMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -154,5 +168,6 @@ namespace MainFormSC
         private System.Windows.Forms.PictureBox picBoxVentana;
         private System.Windows.Forms.PictureBox picBoxMinimizar;
         private System.Windows.Forms.FlowLayoutPanel pnlMenu;
+        private System.Windows.Forms.Button button1;
     }
 }

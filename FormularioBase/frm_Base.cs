@@ -24,6 +24,7 @@ namespace FormularioBase
         {
             InitializeComponent();
         }
+
         public void ConfigurarConsulta(string taula, string nombreTabla)
         {
             this.query = "Select * from " + taula;
@@ -84,6 +85,7 @@ namespace FormularioBase
 
         private void frm_Base_Load(object sender, EventArgs e)
         {
+            if (DesignMode) return;
             CargarDatos();
             ConfigurarDataGridView();
         }
