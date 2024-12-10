@@ -18,8 +18,7 @@ namespace SecureCore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Form form = new frmPrincipal();
-            Application.Run(form);
+            Application.Run(new frmPrincipal());
         }
     }
 }

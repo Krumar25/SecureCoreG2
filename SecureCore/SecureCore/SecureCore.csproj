@@ -33,18 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FormsManteniment, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\App\FormsManteniment.dll</HintPath>
-    </Reference>
-    <Reference Include="FormularioBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\App\FormularioBase.dll</HintPath>
-    </Reference>
-    <Reference Include="Mantenimiento, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\App\Mantenimiento.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -91,10 +79,33 @@
       <Project>{994b6a65-41bc-4014-9ee3-eb7c9161bd34}</Project>
       <Name>Dades</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\FormularioBase\FormularioBase.csproj">
+      <Project>{66919be8-323d-4519-8163-4472c59b63bd}</Project>
+      <Name>FormularioBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hashing\Hashing.csproj">
+      <Project>{c402e829-7745-476b-967f-60350acc2f39}</Project>
+      <Name>Hashing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Login\Login.csproj">
+      <Project>{599526af-a32c-4307-a599-f690c17fe08f}</Project>
+      <Name>Login</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\MainFormSC\MainFormSC.csproj">
       <Project>{28b770cd-a100-4704-aa7b-2d2739f79e4c}</Project>
       <Name>MainFormSC</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Mantenimiento\Mantenimiento.csproj">
+      <Project>{966a33d4-d071-4565-8b3d-8e24c65a8c6d}</Project>
+      <Name>Mantenimiento</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\mdiProperties\mdiProperties.csproj">
+      <Project>{db4d62f4-335b-41e6-9c8c-84a531e2eaa6}</Project>
+      <Name>mdiProperties</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

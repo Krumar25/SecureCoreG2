@@ -136,6 +136,9 @@ namespace MainFormSC
                 mantenimiento = new frm_userCategories();
                 mantenimiento.FormClosed += Mantenimiento_FormClosed;
                 mantenimiento.MdiParent = this;
+                mantenimiento.TopLevel = false;
+                mantenimiento.Dock = DockStyle.Fill;
+                mantenimiento.FormBorderStyle = FormBorderStyle.None;
                 mantenimiento.Show();
             }
             else
