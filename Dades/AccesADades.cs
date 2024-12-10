@@ -25,6 +25,7 @@ namespace Dades
             {
                 throw new InvalidOperationException("No hi ha cap connection string");
             }
+
             conn = new SqlConnection(cnx);
         }
         public DataSet PortarTaula(string nomTaula)
@@ -60,6 +61,8 @@ namespace Dades
         } 
         public DataSet PortarPerConsulta(string query, string nomTaula)
         {
+            Connectar();
+
             SqlDataAdapter adapter;
             DataSet dts = new DataSet();
 
@@ -87,6 +90,7 @@ namespace Dades
             }
             conn.Close();
         }
+       
         public DataSet GenerarConsultaCerca (string query, string parameter, string value)
         {
             // En el futuro habrá que utilizar un diccionario en vez de los string parameter y value
