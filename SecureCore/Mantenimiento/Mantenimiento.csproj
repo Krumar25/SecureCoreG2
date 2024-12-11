@@ -31,18 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CustomControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CustomControls\bin\Debug\CustomControls.dll</HintPath>
-    </Reference>
-    <Reference Include="Dades, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Dades\bin\Debug\Dades.dll</HintPath>
-    </Reference>
-    <Reference Include="FormularioBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\FormularioBase\bin\Debug\FormularioBase.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -62,6 +50,20 @@
       <DependentUpon>frm_userCategories.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\FormularioBase\FormularioBase.csproj">
+      <Project>{66919be8-323d-4519-8163-4472c59b63bd}</Project>
+      <Name>FormularioBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CustomControls\CustomControls.csproj">
+      <Project>{77c1d327-1c61-4cd1-babd-d13629498441}</Project>
+      <Name>CustomControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Dades\Dades.csproj">
+      <Project>{994b6a65-41bc-4014-9ee3-eb7c9161bd34}</Project>
+      <Name>Dades</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frm_userCategories.resx">

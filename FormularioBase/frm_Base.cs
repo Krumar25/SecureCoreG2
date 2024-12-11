@@ -162,10 +162,6 @@ namespace FormularioBase
 
         }
 
-        private void cmb_buscar_Click(object sender, EventArgs e)
-        {
-            
-        }
 
        
     }
