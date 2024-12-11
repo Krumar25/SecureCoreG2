@@ -38,10 +38,12 @@ namespace MainFormSC
             this.picBoxCerrar = new System.Windows.Forms.PictureBox();
             this.btnDesplegable = new System.Windows.Forms.Button();
             this.pnlMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxVentana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCerrar)).BeginInit();
+            this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuTransicio
@@ -59,17 +61,17 @@ namespace MainFormSC
             this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
             this.pnlSuperior.Name = "pnlSuperior";
-            this.pnlSuperior.Size = new System.Drawing.Size(1193, 75);
+            this.pnlSuperior.Size = new System.Drawing.Size(1830, 75);
             this.pnlSuperior.TabIndex = 1;
             this.pnlSuperior.MouseDown += Control_MouseDown;
-            this.pnlSuperior.MouseMove += Control_MouseMove;
             this.pnlSuperior.MouseUp += Control_MouseUp;
+            this.pnlSuperior.MouseMove += Control_MouseMove;
             // 
             // picBoxMinimizar
             // 
             this.picBoxMinimizar.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picBoxMinimizar.Image")));
-            this.picBoxMinimizar.Location = new System.Drawing.Point(842, 0);
+            this.picBoxMinimizar.Location = new System.Drawing.Point(1479, 0);
             this.picBoxMinimizar.Name = "picBoxMinimizar";
             this.picBoxMinimizar.Padding = new System.Windows.Forms.Padding(40, 10, 40, 10);
             this.picBoxMinimizar.Size = new System.Drawing.Size(117, 75);
@@ -82,7 +84,7 @@ namespace MainFormSC
             // 
             this.picBoxVentana.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxVentana.Image = ((System.Drawing.Image)(resources.GetObject("picBoxVentana.Image")));
-            this.picBoxVentana.Location = new System.Drawing.Point(959, 0);
+            this.picBoxVentana.Location = new System.Drawing.Point(1596, 0);
             this.picBoxVentana.Name = "picBoxVentana";
             this.picBoxVentana.Padding = new System.Windows.Forms.Padding(35, 15, 35, 15);
             this.picBoxVentana.Size = new System.Drawing.Size(117, 75);
@@ -96,7 +98,7 @@ namespace MainFormSC
             this.picBoxCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBoxCerrar.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picBoxCerrar.Image")));
-            this.picBoxCerrar.Location = new System.Drawing.Point(1076, 0);
+            this.picBoxCerrar.Location = new System.Drawing.Point(1713, 0);
             this.picBoxCerrar.Name = "picBoxCerrar";
             this.picBoxCerrar.Padding = new System.Windows.Forms.Padding(45, 25, 45, 25);
             this.picBoxCerrar.Size = new System.Drawing.Size(117, 75);
@@ -121,31 +123,44 @@ namespace MainFormSC
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pnlMenu.Controls.Add(this.button1);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 75);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(329, 698);
+            this.pnlMenu.Size = new System.Drawing.Size(329, 1076);
             this.pnlMenu.TabIndex = 3;
             this.pnlMenu.MouseDown += Control_MouseDown;
-            this.pnlMenu.MouseMove += Control_MouseMove;
             this.pnlMenu.MouseUp += Control_MouseUp;
+            this.pnlMenu.MouseMove += Control_MouseMove;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(177, 77);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1193, 773);
+            this.ClientSize = new System.Drawing.Size(1830, 1151);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPrincipal";
+            this.Text = "Secure Core";
             this.pnlSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxVentana)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCerrar)).EndInit();
+            this.pnlMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -159,5 +174,6 @@ namespace MainFormSC
         private System.Windows.Forms.PictureBox picBoxVentana;
         private System.Windows.Forms.PictureBox picBoxMinimizar;
         private System.Windows.Forms.FlowLayoutPanel pnlMenu;
+        private System.Windows.Forms.Button button1;
     }
 }
