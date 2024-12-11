@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Mant_Proyecto
+namespace Mantenimiento
 {
-    public partial class Form1 : Form
+    public partial class frm_userCategories : FormularioBase.frm_Base
     {
-        public Form1()
+        public frm_userCategories()
         {
             InitializeComponent();
+            ConfigurarConsulta("UserCategories", "USER CATEGORIES");
         }
     }
 }
