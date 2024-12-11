@@ -35,71 +35,92 @@ namespace Mantenimiento
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(416, 33);
+            this.controlManteniment1.Location = new System.Drawing.Point(402, 33);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Size = new System.Drawing.Size(1273, 911);
+            this.panel1.Controls.SetChildIndex(this.controlManteniment1, 0);
+            this.panel1.Controls.SetChildIndex(this.textBox4, 0);
+            this.panel1.Controls.SetChildIndex(this.textBox5, 0);
+            this.panel1.Controls.SetChildIndex(this.textBox6, 0);
             // 
             // textBox1
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Location = new System.Drawing.Point(621, 250);
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(325, 26);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Tag = "CodeCategory";
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.TabIndex = 10;
             // 
             // textBox2
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox2.Location = new System.Drawing.Point(621, 334);
+            this.textBox2.Location = new System.Drawing.Point(0, 0);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(325, 26);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Tag = "DescCategory";
+            this.textBox2.Size = new System.Drawing.Size(100, 26);
+            this.textBox2.TabIndex = 9;
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(446, 260);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Codigo";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 8;
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(446, 337);
+            this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 20);
+            this.label2.Size = new System.Drawing.Size(100, 23);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Descripción";
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Yellow;
-            this.label3.Location = new System.Drawing.Point(446, 411);
+            this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 20);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Access Level";
+            this.label3.Size = new System.Drawing.Size(100, 23);
+            this.label3.TabIndex = 5;
             // 
             // textBox3
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox3.Location = new System.Drawing.Point(621, 408);
+            this.textBox3.Location = new System.Drawing.Point(0, 0);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(325, 26);
-            this.textBox3.TabIndex = 8;
-            this.textBox3.Tag = "AccessLevel";
+            this.textBox3.Size = new System.Drawing.Size(100, 26);
+            this.textBox3.TabIndex = 6;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(583, 253);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(407, 26);
+            this.textBox4.TabIndex = 4;
+            this.textBox4.Tag = "CodeCategory";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(583, 335);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(407, 26);
+            this.textBox5.TabIndex = 5;
+            this.textBox5.Tag = "DescCategory";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(583, 411);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(407, 26);
+            this.textBox6.TabIndex = 6;
+            this.textBox6.Tag = "AccessLevel";
             // 
             // frm_userCategories
             // 
@@ -116,13 +137,15 @@ namespace Mantenimiento
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_userCategories";
             this.Text = "frm_userCategories";
-            this.Controls.SetChildIndex(this.controlManteniment1, 0);
             this.Controls.SetChildIndex(this.textBox1, 0);
             this.Controls.SetChildIndex(this.textBox2, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.textBox3, 0);
             this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +159,8 @@ namespace Mantenimiento
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }

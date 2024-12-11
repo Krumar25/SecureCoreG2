@@ -188,6 +188,6 @@ namespace FormularioBase
         private System.Windows.Forms.DataGridView dtg_datos;
         private System.Windows.Forms.ImageList imageList1;
         protected CustomControls.ControlManteniment controlManteniment1;
-        private System.Windows.Forms.Panel panel1;
+        protected System.Windows.Forms.Panel panel1;
     }
 }
