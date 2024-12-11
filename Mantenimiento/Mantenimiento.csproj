@@ -52,17 +52,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\FormularioBase\FormularioBase.csproj">
-      <Project>{66919be8-323d-4519-8163-4472c59b63bd}</Project>
-      <Name>FormularioBase</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\CustomControls\CustomControls.csproj">
+    <ProjectReference Include="..\CustomControls\CustomControls.csproj">
       <Project>{77c1d327-1c61-4cd1-babd-d13629498441}</Project>
       <Name>CustomControls</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Dades\Dades.csproj">
+    <ProjectReference Include="..\Dades\Dades.csproj">
       <Project>{994b6a65-41bc-4014-9ee3-eb7c9161bd34}</Project>
       <Name>Dades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FormularioBase\FormularioBase.csproj">
+      <Project>{66919be8-323d-4519-8163-4472c59b63bd}</Project>
+      <Name>FormularioBase</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -7,18 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FormularioBase;
 
 namespace Mantenimiento
 {
-    public partial class frm_userCategories : frm_Base
+    public partial class frm_userCategories : FormularioBase.frm_Base
     {
-
         public frm_userCategories()
         {
             InitializeComponent();
-            ConfigurarConsulta("UserCategories", "User Categories");
-            
+            ConfigurarConsulta("UserCategories", "USER CATEGORIES");
         }
     }
 }

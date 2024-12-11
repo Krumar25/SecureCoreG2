@@ -18,7 +18,7 @@ namespace SecureCore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_userCategories());
+            Application.Run(new frmPrincipal());
         }
     }
 }

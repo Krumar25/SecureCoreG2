@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using mdiProperties;
+using Mantenimiento;
 
 namespace MainFormSC
 {
@@ -20,6 +21,7 @@ namespace MainFormSC
         private bool dragging = false;
         private Point dragCursorPoint;
         private Point dragFormPoint;
+        frm_userCategories mantenimiento;
 
         #endregion
         public frmPrincipal()
@@ -126,5 +128,28 @@ namespace MainFormSC
         }
 
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(mantenimiento == null)
+            {
+                mantenimiento = new frm_userCategories();
+                mantenimiento.FormClosed += Mantenimiento_FormClosed;
+                mantenimiento.MdiParent = this;
+                mantenimiento.TopLevel = false;
+                mantenimiento.Dock = DockStyle.Fill;
+                mantenimiento.FormBorderStyle = FormBorderStyle.None;
+                mantenimiento.Show();
+            }
+            else
+            {
+                mantenimiento.Activate();
+            }
+        }
+
+        private void Mantenimiento_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            mantenimiento = null;
+        }
     }
 }
