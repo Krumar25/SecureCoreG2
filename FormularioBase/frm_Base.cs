@@ -44,14 +44,21 @@ namespace FormularioBase
 
             dtg_datos.DataSource = dts.Tables[0];
 
-            foreach (Control item in Controls)
+            foreach (Control panel in Controls)
             {
-                if (item is TextBox)
+                if (panel is Panel)
                 {
-                    TextBox ctr = (TextBox)item;
-                    ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
+                    foreach (Control control in panel.Controls)
+                    {
 
-                    
+                        if (control is TextBox)
+                        {
+                            TextBox ctr = (TextBox)control;
+                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
+
+
+                        }
+                    }
                 }
             }
             this.dtg_datos.Columns[0].Visible = false;
@@ -60,21 +67,27 @@ namespace FormularioBase
         {
             dtg_datos.DataSource = dts.Tables[0];
 
-            foreach (Control item in this.Controls)
+            foreach (Control panel in Controls)
             {
-                if (item is TextBox)
+                if (panel is Panel)
                 {
-                    TextBox ctr = (TextBox)item;
-                    ctr.DataBindings.Clear();
-                    ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
-                    ctr.Validated += new System.EventHandler(this.ValidarTextBox);
-                }
-                if (item is ComboBox)
-                {
-                    ComboBox ctr = (ComboBox)item;
-                    ctr.DataBindings.Clear();
-                    ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
-                    ctr.Validated += new System.EventHandler(this.ValidarTextBox);
+                    foreach (Control item in panel.Controls)
+                    {
+                        if (item is TextBox)
+                        {
+                            TextBox ctr = (TextBox)item;
+                            ctr.DataBindings.Clear();
+                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
+                            ctr.Validated += new System.EventHandler(this.ValidarTextBox);
+                        }
+                        if (item is ComboBox)
+                        {
+                            ComboBox ctr = (ComboBox)item;
+                            ctr.DataBindings.Clear();
+                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
+                            ctr.Validated += new System.EventHandler(this.ValidarTextBox);
+                        }
+                    }
                 }
             }
         }
