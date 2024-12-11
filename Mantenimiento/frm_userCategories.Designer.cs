@@ -38,15 +38,21 @@ namespace Mantenimiento
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(402, 33);
+            this.controlManteniment1.Location = new System.Drawing.Point(388, 33);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.textBox4);
@@ -55,6 +61,9 @@ namespace Mantenimiento
             this.panel1.Controls.SetChildIndex(this.textBox4, 0);
             this.panel1.Controls.SetChildIndex(this.textBox5, 0);
             this.panel1.Controls.SetChildIndex(this.textBox6, 0);
+            this.panel1.Controls.SetChildIndex(this.label4, 0);
+            this.panel1.Controls.SetChildIndex(this.label5, 0);
+            this.panel1.Controls.SetChildIndex(this.label6, 0);
             // 
             // textBox1
             // 
@@ -100,7 +109,8 @@ namespace Mantenimiento
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(583, 253);
+            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox4.Location = new System.Drawing.Point(569, 253);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(407, 26);
             this.textBox4.TabIndex = 4;
@@ -108,7 +118,8 @@ namespace Mantenimiento
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(583, 335);
+            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox5.Location = new System.Drawing.Point(569, 335);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(407, 26);
             this.textBox5.TabIndex = 5;
@@ -116,11 +127,45 @@ namespace Mantenimiento
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(583, 411);
+            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox6.Location = new System.Drawing.Point(569, 411);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(407, 26);
             this.textBox6.TabIndex = 6;
             this.textBox6.Tag = "AccessLevel";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Yellow;
+            this.label4.Location = new System.Drawing.Point(388, 258);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 20);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Codigo Categoria";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Yellow;
+            this.label5.Location = new System.Drawing.Point(384, 338);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(165, 20);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Descripcion Categoria";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Yellow;
+            this.label6.Location = new System.Drawing.Point(388, 414);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(102, 20);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Access Level";
             // 
             // frm_userCategories
             // 
@@ -162,5 +207,8 @@ namespace Mantenimiento
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

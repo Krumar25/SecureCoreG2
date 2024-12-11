@@ -39,8 +39,8 @@ namespace FormularioBase
             this.cmb_nuevo = new System.Windows.Forms.Button();
             this.dtg_datos = new System.Windows.Forms.DataGridView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.controlManteniment1 = new CustomControls.ControlManteniment();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.controlManteniment1 = new CustomControls.ControlManteniment();
             this.pn_opciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_datos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -52,10 +52,10 @@ namespace FormularioBase
             this.pn_opciones.Controls.Add(this.cmb_actualizar);
             this.pn_opciones.Controls.Add(this.cmb_nuevo);
             this.pn_opciones.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pn_opciones.Location = new System.Drawing.Point(1300, 0);
+            this.pn_opciones.Location = new System.Drawing.Point(1285, 0);
             this.pn_opciones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pn_opciones.Name = "pn_opciones";
-            this.pn_opciones.Size = new System.Drawing.Size(200, 895);
+            this.pn_opciones.Size = new System.Drawing.Size(215, 895);
             this.pn_opciones.TabIndex = 1;
             // 
             // cmb_actualizar
@@ -68,10 +68,10 @@ namespace FormularioBase
             this.cmb_actualizar.ForeColor = System.Drawing.Color.Yellow;
             this.cmb_actualizar.Image = ((System.Drawing.Image)(resources.GetObject("cmb_actualizar.Image")));
             this.cmb_actualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmb_actualizar.Location = new System.Drawing.Point(0, 411);
+            this.cmb_actualizar.Location = new System.Drawing.Point(8, 570);
             this.cmb_actualizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmb_actualizar.Name = "cmb_actualizar";
-            this.cmb_actualizar.Size = new System.Drawing.Size(207, 62);
+            this.cmb_actualizar.Size = new System.Drawing.Size(203, 62);
             this.cmb_actualizar.TabIndex = 0;
             this.cmb_actualizar.Text = " Actualizar";
             this.cmb_actualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -88,10 +88,10 @@ namespace FormularioBase
             this.cmb_nuevo.ForeColor = System.Drawing.Color.Yellow;
             this.cmb_nuevo.Image = ((System.Drawing.Image)(resources.GetObject("cmb_nuevo.Image")));
             this.cmb_nuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmb_nuevo.Location = new System.Drawing.Point(0, 480);
+            this.cmb_nuevo.Location = new System.Drawing.Point(8, 624);
             this.cmb_nuevo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmb_nuevo.Name = "cmb_nuevo";
-            this.cmb_nuevo.Size = new System.Drawing.Size(207, 62);
+            this.cmb_nuevo.Size = new System.Drawing.Size(203, 62);
             this.cmb_nuevo.TabIndex = 0;
             this.cmb_nuevo.Text = " Nuevo";
             this.cmb_nuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -121,7 +121,7 @@ namespace FormularioBase
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Yellow;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtg_datos.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtg_datos.Location = new System.Drawing.Point(279, 494);
+            this.dtg_datos.Location = new System.Drawing.Point(271, 494);
             this.dtg_datos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtg_datos.Name = "dtg_datos";
             this.dtg_datos.RowHeadersWidth = 62;
@@ -136,21 +136,6 @@ namespace FormularioBase
             this.imageList1.Images.SetKeyName(1, "añadir.png");
             this.imageList1.Images.SetKeyName(2, "salir.png");
             // 
-            // controlManteniment1
-            // 
-            this.controlManteniment1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.controlManteniment1.BackColor = System.Drawing.SystemColors.Desktop;
-            this.controlManteniment1.Descripcio = null;
-            this.controlManteniment1.ForeColor = System.Drawing.Color.Yellow;
-            this.controlManteniment1.Img = ((System.Drawing.Image)(resources.GetObject("controlManteniment1.Img")));
-            this.controlManteniment1.Location = new System.Drawing.Point(412, 64);
-            this.controlManteniment1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.controlManteniment1.Name = "controlManteniment1";
-            this.controlManteniment1.NomClase = null;
-            this.controlManteniment1.NomForm = null;
-            this.controlManteniment1.Size = new System.Drawing.Size(588, 98);
-            this.controlManteniment1.TabIndex = 2;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.controlManteniment1);
@@ -158,8 +143,23 @@ namespace FormularioBase
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1300, 895);
+            this.panel1.Size = new System.Drawing.Size(1285, 895);
             this.panel1.TabIndex = 4;
+            // 
+            // controlManteniment1
+            // 
+            this.controlManteniment1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.controlManteniment1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.controlManteniment1.Descripcio = null;
+            this.controlManteniment1.ForeColor = System.Drawing.Color.Yellow;
+            this.controlManteniment1.Img = ((System.Drawing.Image)(resources.GetObject("controlManteniment1.Img")));
+            this.controlManteniment1.Location = new System.Drawing.Point(404, 64);
+            this.controlManteniment1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.controlManteniment1.Name = "controlManteniment1";
+            this.controlManteniment1.NomClase = null;
+            this.controlManteniment1.NomForm = null;
+            this.controlManteniment1.Size = new System.Drawing.Size(588, 98);
+            this.controlManteniment1.TabIndex = 2;
             // 
             // frm_Base
             // 
