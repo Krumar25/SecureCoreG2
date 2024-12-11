@@ -15,7 +15,7 @@ namespace Mantenimiento
         public frm_userCategories()
         {
             InitializeComponent();
-            ConfigurarConsulta("UserCategories", "User Categories");
+            ConfigurarConsulta("UserCategories", "USER CATEGORIES");
         }
     }
 }
