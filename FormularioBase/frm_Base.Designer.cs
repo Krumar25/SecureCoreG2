@@ -40,8 +40,10 @@ namespace FormularioBase
             this.dtg_datos = new System.Windows.Forms.DataGridView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.controlManteniment1 = new CustomControls.ControlManteniment();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pn_opciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_datos)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pn_opciones
@@ -50,10 +52,10 @@ namespace FormularioBase
             this.pn_opciones.Controls.Add(this.cmb_actualizar);
             this.pn_opciones.Controls.Add(this.cmb_nuevo);
             this.pn_opciones.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pn_opciones.Location = new System.Drawing.Point(1285, 0);
+            this.pn_opciones.Location = new System.Drawing.Point(1300, 0);
             this.pn_opciones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pn_opciones.Name = "pn_opciones";
-            this.pn_opciones.Size = new System.Drawing.Size(200, 887);
+            this.pn_opciones.Size = new System.Drawing.Size(200, 895);
             this.pn_opciones.TabIndex = 1;
             // 
             // cmb_actualizar
@@ -119,7 +121,7 @@ namespace FormularioBase
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Yellow;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtg_datos.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtg_datos.Location = new System.Drawing.Point(313, 480);
+            this.dtg_datos.Location = new System.Drawing.Point(279, 494);
             this.dtg_datos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtg_datos.Name = "dtg_datos";
             this.dtg_datos.RowHeadersWidth = 62;
@@ -141,7 +143,7 @@ namespace FormularioBase
             this.controlManteniment1.Descripcio = null;
             this.controlManteniment1.ForeColor = System.Drawing.Color.Yellow;
             this.controlManteniment1.Img = ((System.Drawing.Image)(resources.GetObject("controlManteniment1.Img")));
-            this.controlManteniment1.Location = new System.Drawing.Point(445, 35);
+            this.controlManteniment1.Location = new System.Drawing.Point(412, 64);
             this.controlManteniment1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.controlManteniment1.Name = "controlManteniment1";
             this.controlManteniment1.NomClase = null;
@@ -149,14 +151,23 @@ namespace FormularioBase
             this.controlManteniment1.Size = new System.Drawing.Size(588, 98);
             this.controlManteniment1.TabIndex = 2;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.controlManteniment1);
+            this.panel1.Controls.Add(this.dtg_datos);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1300, 895);
+            this.panel1.TabIndex = 4;
+            // 
             // frm_Base
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1485, 887);
-            this.Controls.Add(this.dtg_datos);
-            this.Controls.Add(this.controlManteniment1);
+            this.ClientSize = new System.Drawing.Size(1500, 895);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pn_opciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -165,6 +176,7 @@ namespace FormularioBase
             this.Load += new System.EventHandler(this.frm_Base_Load);
             this.pn_opciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtg_datos)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -176,5 +188,6 @@ namespace FormularioBase
         private System.Windows.Forms.DataGridView dtg_datos;
         private System.Windows.Forms.ImageList imageList1;
         protected CustomControls.ControlManteniment controlManteniment1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
