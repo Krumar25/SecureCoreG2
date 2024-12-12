@@ -31,9 +31,9 @@ namespace FormularioBase
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Base));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pn_opciones = new System.Windows.Forms.Panel();
             this.cmb_actualizar = new System.Windows.Forms.Button();
             this.cmb_nuevo = new System.Windows.Forms.Button();
@@ -101,26 +101,26 @@ namespace FormularioBase
             // 
             // dtg_datos
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Yellow;
-            this.dtg_datos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Yellow;
+            this.dtg_datos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtg_datos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtg_datos.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
             this.dtg_datos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_datos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_datos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtg_datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtg_datos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtg_datos.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtg_datos.Location = new System.Drawing.Point(271, 494);
             this.dtg_datos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtg_datos.Name = "dtg_datos";
@@ -151,6 +151,7 @@ namespace FormularioBase
             this.controlManteniment1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.controlManteniment1.BackColor = System.Drawing.SystemColors.Desktop;
             this.controlManteniment1.Descripcio = null;
+            this.controlManteniment1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.controlManteniment1.ForeColor = System.Drawing.Color.Yellow;
             this.controlManteniment1.Img = ((System.Drawing.Image)(resources.GetObject("controlManteniment1.Img")));
             this.controlManteniment1.Location = new System.Drawing.Point(404, 64);
@@ -158,7 +159,7 @@ namespace FormularioBase
             this.controlManteniment1.Name = "controlManteniment1";
             this.controlManteniment1.NomClase = null;
             this.controlManteniment1.NomForm = null;
-            this.controlManteniment1.Size = new System.Drawing.Size(588, 98);
+            this.controlManteniment1.Size = new System.Drawing.Size(588, 106);
             this.controlManteniment1.TabIndex = 2;
             // 
             // frm_Base
