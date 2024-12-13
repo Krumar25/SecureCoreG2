@@ -162,7 +162,6 @@ namespace MainFormSC
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCerrar)).EndInit();
             this.pnlMenu.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         #endregion

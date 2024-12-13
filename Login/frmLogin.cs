@@ -86,6 +86,7 @@ namespace Login
                             this.Hide();
 
                             MainFormSC.frmPrincipal frmmain = new MainFormSC.frmPrincipal();
+                            frmmain.FormClosed += (s, args) => this.Close();
                             frmmain.Show();
                         }
                         else
