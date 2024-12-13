@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mantenimiento", "..\Manteni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormularioBase", "..\FormularioBase\FormularioBase.csproj", "{66919BE8-323D-4519-8163-4472C59B63BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplashScreen", "..\SplashScreen\SplashScreen.csproj", "{8577B167-194F-47F0-8982-57C306C10A21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{66919BE8-323D-4519-8163-4472C59B63BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66919BE8-323D-4519-8163-4472C59B63BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66919BE8-323D-4519-8163-4472C59B63BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8577B167-194F-47F0-8982-57C306C10A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8577B167-194F-47F0-8982-57C306C10A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8577B167-194F-47F0-8982-57C306C10A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8577B167-194F-47F0-8982-57C306C10A21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
