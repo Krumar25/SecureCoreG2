@@ -51,10 +51,10 @@ namespace FormularioBase
                     foreach (Control control in panel.Controls)
                     {
 
-                        if (control is TextBox)
+                        if (control is CustomControls.SWTextBox)
                         {
-                            TextBox ctr = (TextBox)control;
-                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
+                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)control;
+                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.CampBBDD.ToString());
 
 
                         }
@@ -73,27 +73,37 @@ namespace FormularioBase
                 {
                     foreach (Control item in panel.Controls)
                     {
-                        if (item is TextBox)
+                        if (item is CustomControls.SWTextBox)
                         {
-                            TextBox ctr = (TextBox)item;
+                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)item;
                             ctr.DataBindings.Clear();
-                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
-                            ctr.Validated += new System.EventHandler(this.ValidarTextBox);
+                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.CampBBDD.ToString());
+                            ctr.Validated += new System.EventHandler(this.ValidarControl);
                         }
                         if (item is ComboBox)
                         {
                             ComboBox ctr = (ComboBox)item;
                             ctr.DataBindings.Clear();
-                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
-                            ctr.Validated += new System.EventHandler(this.ValidarTextBox);
+                            ctr.DisplayMember = ctr.Tag.ToString();
+                            ctr.ValueMember = dts.Tables[0].Columns[0].ColumnName;
+                            ctr.DataSource = dts.Tables[0];
+                            ctr.Validated += new System.EventHandler(this.ValidarControl);
                         }
                     }
                 }
             }
         }
-        private void ValidarTextBox(object sender, EventArgs e)
+        // Método de validación genérico
+        private void ValidarControl(object sender, EventArgs e)
         {
-            ((TextBox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
+            if (sender is TextBox || sender is ComboBox)
+            {
+                BindingManagerBase bindingManager = ((Control)sender).DataBindings[0].BindingManagerBase;
+                if (bindingManager != null)
+                {
+                    bindingManager.EndCurrentEdit();
+                }
+            }
         }
 
         private void frm_Base_Load(object sender, EventArgs e)
@@ -133,15 +143,21 @@ namespace FormularioBase
         {
             DataRow dr = dts.Tables[0].NewRow();
 
-            foreach (Control item in Controls)
+            foreach (Control panel in Controls)
             {
-                if (item is TextBox)
+                if (panel is Panel)
                 {
-                    TextBox ctr = (TextBox)item;
+                    foreach (Control item in panel.Controls)
+                    {
+                        if (item is CustomControls.SWTextBox)
+                        {
+                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)item;
 
-                    dr[ctr.Tag.ToString()] = ctr.Text;
+                            dr[ctr.Tag.ToString()] = ctr.Text;
+                        }
+
+                    }
                 }
-
             }
             dts.Tables[0].Rows.Add(dr);
 
@@ -162,24 +178,23 @@ namespace FormularioBase
         {
             esNou = true;
 
-            foreach (Control item in Controls)
+            foreach (Control panel in Controls)
             {
-                if (item is TextBox)
+                if (panel is Panel)
                 {
-                    TextBox ctr = (TextBox)item;
-                    ctr.DataBindings.Clear();
-                    ctr.Text = "";
-                    ctr.Validated -= new System.EventHandler(this.ValidarTextBox);
+                    foreach (Control item in panel.Controls)
+                    {
+                        if (item is CustomControls.SWTextBox)
+                        {
+                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)item;
+                            ctr.DataBindings.Clear();
+                            ctr.Text = "";
+                            ctr.Validated -= new System.EventHandler(this.ValidarControl);
+                        }
+                    }
                 }
             }
 
-        }
-
-        private void cmb_buscar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-       
+        }       
     }
 }
