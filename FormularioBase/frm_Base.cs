@@ -48,15 +48,22 @@ namespace FormularioBase
             {
                 if (panel is Panel)
                 {
-                    foreach (Control control in panel.Controls)
+                    foreach (Control item in panel.Controls)
                     {
 
-                        if (control is CustomControls.SWTextBox)
+                        if (item is CustomControls.SWTextBox)
                         {
-                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)control;
+                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)item;
+                            ctr.DataBindings.Clear();
                             ctr.DataBindings.Add("Text", dts.Tables[0], ctr.CampBBDD.ToString());
-
-
+                            ctr.Validated += new System.EventHandler(this.ValidarControl);
+                        }
+                        if (item is ComboBox)
+                        {
+                            ComboBox ctr = (ComboBox)item;
+                            ctr.DataBindings.Clear();
+                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
+                            ctr.Validated += new System.EventHandler(this.ValidarControl);
                         }
                     }
                 }
@@ -84,9 +91,7 @@ namespace FormularioBase
                         {
                             ComboBox ctr = (ComboBox)item;
                             ctr.DataBindings.Clear();
-                            ctr.DisplayMember = ctr.Tag.ToString();
-                            ctr.ValueMember = dts.Tables[0].Columns[0].ColumnName;
-                            ctr.DataSource = dts.Tables[0];
+                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
                             ctr.Validated += new System.EventHandler(this.ValidarControl);
                         }
                     }

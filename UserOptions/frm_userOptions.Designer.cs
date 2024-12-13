@@ -44,7 +44,7 @@ namespace UserOptions
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(268, 64);
+            this.controlManteniment1.Location = new System.Drawing.Point(234, 64);
             // 
             // panel1
             // 
@@ -193,6 +193,17 @@ namespace UserOptions
             this.cboxAccessLevel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboxAccessLevel.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxAccessLevel.FormattingEnabled = true;
+            this.cboxAccessLevel.Items.AddRange(new object[] {
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100"});
             this.cboxAccessLevel.Location = new System.Drawing.Point(254, 208);
             this.cboxAccessLevel.Name = "cboxAccessLevel";
             this.cboxAccessLevel.Size = new System.Drawing.Size(88, 33);
