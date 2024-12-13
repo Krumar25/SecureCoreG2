@@ -15,10 +15,20 @@ namespace Login
 {
     public partial class frmLogin : Form
     {
-        //private const int SaltByteSize = 24;
+        private const int SaltByteSize = 24;
         private const int HashByteSize = 24;
         private const int HasingIterationsCount = 10101;
         private string creedentials_query;
+        private string idAccess;
+
+        private string username;
+
+        public string Username
+        {
+            get { return username; }
+            set { username = value; }
+        }
+
         public frmLogin()
         {
             InitializeComponent();
@@ -27,10 +37,15 @@ namespace Login
 
         private void verify_Creedentials()
         {
-            string username = tbUser.Text.Trim();
+            Username = tbUser.Text.Trim();
             string password = tbPass.Text.Trim();
-            //creedentials_query = "SELECT * FROM Users WHERE Login = @username";
-            creedentials_query = "SELECT * FROM LoginFrancescRubio WHERE Login = @username";
+            string passwordBBDD;
+            string loginBBDD;
+            string Hashsalt;
+            Dictionary<string, string> Dicc = new Dictionary<string, string>();
+            Dicc.Add("@username", Username);
+            creedentials_query = "SELECT * FROM Users WHERE Login = @username";
+            //creedentials_query = "SELECT * FROM LoginFrancescRubio WHERE Login = @username";
 
 
             // Verifica que ambos campos no estén vacíos
@@ -41,12 +56,46 @@ namespace Login
             }
             else
             {
-                DataSet dts = AccesDades.GenerarConsultaCerca(creedentials_query, username, "@username");
+                
+                DataSet dts = AccesDades.GenerarConsultaCerca(creedentials_query, Dicc);
                 if (dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0)
                 {
                     DataRow row = dts.Tables[0].Rows[0];
+                    passwordBBDD = row["Password"].ToString();
+                    loginBBDD = row["Login"].ToString();
+                    idAccess = row["idUserCategory"].ToString();
+                    Hashsalt = row["Hash"].ToString();
 
-                    byte[] salt = Convert.FromBase64String(row["Salt"].ToString());
+                    if (string.IsNullOrEmpty(Hashsalt))
+                    {
+                        this.Hide();
+
+                        CanviPassword frmCanvi = new CanviPassword();
+                        frmCanvi.UserName = Username;
+                        frmCanvi.Show();
+                    }
+                    else
+                    {
+                        Hashsalt = row["Hash"].ToString();
+                        byte[] salt = HashUser.ConvertHexStringToBytes(Hashsalt);
+                        byte[] passwordhashed = HashUser.ComputeHash(tbPass.Text, salt, HasingIterationsCount, HashByteSize);
+                        string Password = BitConverter.ToString(passwordhashed);
+
+                        if (Password== passwordBBDD && Username == loginBBDD)
+                        {
+                            this.Hide();
+
+                            MainFormSC.frmPrincipal frmmain = new MainFormSC.frmPrincipal();
+                            frmmain.Show();
+                        }
+                        else
+                        {
+                            lbErrorLogin.Visible = true;
+                        }
+                        
+                    }
+
+                    /*byte[] salt = Convert.FromBase64String(row["Salt"].ToString());
                     byte[] passwordhashed = HashUser.ComputeHash(password, salt, HasingIterationsCount, HashByteSize);
                     byte[] passwordBBDD = Convert.FromBase64String(row["Password"].ToString());
 
@@ -55,6 +104,7 @@ namespace Login
                         this.Hide();
 
                         MainFormSC.frmPrincipal frmmain = new MainFormSC.frmPrincipal();
+
                         frmmain.Show();
                         //MessageBox.Show("Usuario y contraseña correctos");
                     }
@@ -62,7 +112,7 @@ namespace Login
                     {
                         // Si falla el login, muestra un mensaje de error
                         lbErrorLogin.Visible = true;
-                    }
+                    }*/
                 }
                 else
                 {
