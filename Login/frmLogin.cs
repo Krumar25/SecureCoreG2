@@ -45,8 +45,6 @@ namespace Login
             Dictionary<string, string> Dicc = new Dictionary<string, string>();
             Dicc.Add("@username", Username);
             creedentials_query = "SELECT * FROM Users WHERE Login = @username";
-            //creedentials_query = "SELECT * FROM LoginFrancescRubio WHERE Login = @username";
-
 
             // Verifica que ambos campos no estén vacíos
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
