@@ -92,5 +92,11 @@
       <DependentUpon>SWTextbox.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dades\Dades.csproj">
+      <Project>{994b6a65-41bc-4014-9ee3-eb7c9161bd34}</Project>
+      <Name>Dades</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

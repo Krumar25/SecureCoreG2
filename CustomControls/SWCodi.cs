@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dades;
 
 namespace CustomControls
 {
@@ -17,6 +18,7 @@ namespace CustomControls
         {
             InitializeComponent();
         }
+        AccesADades AccesDades = new AccesADades();
         // Aquí empieza lo del proyecto
         private string nomTaula;
 
@@ -65,9 +67,13 @@ namespace CustomControls
         public string ControlID
         {
             get { return controlID; }
-            set { controlID = value; }
+            set { controlID = value;
+                if (txtID != null) {
+                    txtID.Text = controlID;
+                }
+            }
         }
-        private void obreCS (string classeCS, string formCS)
+        public void obreCS (string classeCS, string formCS)
         {
             //Cargamos la dll. No hacemos constar ningún path para que la compilemos en la carpeta donde compilamos todos los ensamblados
             Assembly ensamblat = Assembly.LoadFrom($"{this.classeCS}.dll");
@@ -81,83 +87,29 @@ namespace CustomControls
             //Lo mostramos asumiendo que se trata de un form y por eso hacemos un cast con (Form)
             ((Form)dllBD).Show();
         }
-        // Aqui acaba
-        private bool requerit;
-
-        public bool Requerit
-        {
-            get { return requerit; }
-            set { requerit = value; }
-        }
-
-        public enum Nivell
-        {
-            GS,
-            GM,
-        }
-        private Nivell dadaNivell;
-
-        public Nivell DadaNivell
-        {
-            get { return dadaNivell; }
-            set { dadaNivell = value; }
-        }
         private void ValidaCodi()
         {
-            if (DadaNivell.Equals(Nivell.GS) && this.Text != null)
+            Dictionary<string, string> Dicc = new Dictionary<string, string>();
+            Dicc.Add("@nomTaula", NomTaula);
+            Dicc.Add("@nomCodi", NomCodi);
+            Dicc.Add("@NomCodi", txtCodiNivell.Text);
+            string query = "SELECT * FROM @nomTaula WHERE @nomCodi = @NomCodi";
+            DataSet dts = AccesDades.GenerarConsultaCerca(query, Dicc);
+
+            if (dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0)
             {
-                if (txtCodiNivell.Text.Equals("S2AM") && this.Text != null)
-                {
-                    txtNivell.Text = "Desenvolupament aplicacions multiplataforma";
-                } 
-                else if (txtCodiNivell.Text.Equals("S2SX") && this.Text != null)
-                {
-                    txtNivell.Text = "Administració de sistemes Informàtics en xarxa";
-                }
-                else if (txtCodiNivell.Text.Equals("M2SX") && this.Text != null)
-                {
-                    txtNivell.Text = "Codi incorrecte";
-                    txtCodiNivell.Clear();
-                    txtCodiNivell.Focus();
-                }
-                else
-                {
-                    txtNivell.Text = "Uknown data";
-                }
+                DataRow row = dts.Tables[0].Rows[0];
+
+                txtNivell.Text = row[NomDesc].ToString();
             }
-            else if (DadaNivell.Equals(Nivell.GM) && this.Text != null)
+            else
             {
-                if (txtCodiNivell.Text.Equals("M2SX"))
-                {
-                    txtNivell.Text = "Sistemes MicroInformàtics i Xarxesa";
-                }
-                else if (txtCodiNivell.Text.Equals("S2AM") && this.Text != null)
-                {
-                    txtNivell.Text = "Codi incorrecte";
-                    txtCodiNivell.Clear();
-                    txtCodiNivell.Focus();
-                }
-                else if (txtCodiNivell.Text.Equals("S2SX") && this.Text != null)
-                {
-                    txtNivell.Text = "Codi incorrecte";
-                    txtCodiNivell.Clear();
-                    txtCodiNivell.Focus();
-                }
-                else
-                {
-                    txtNivell.Text = "Uknown data";
-                }
-            }
-        }
-        private void txtCodiNivell_Validating(object sender, CancelEventArgs e)
-        {
-            if (Requerit && txtCodiNivell.Text.Equals(""))
-            {
-                e.Cancel = true;
+                txtCodiNivell.Focus();
+                txtNivell.Text = "Unknown Data";
             }
         }
 
-        private void txtCodiNivell_Leave(object sender, EventArgs e)
+        private void SWCodi_Validating(object sender, CancelEventArgs e)
         {
             ValidaCodi();
         }
