@@ -15,6 +15,8 @@ namespace Login
 {
     public partial class frmLogin : Form
     {
+        #region Variables Globales
+
         private const int SaltByteSize = 24;
         private const int HashByteSize = 24;
         private const int HasingIterationsCount = 10101;
@@ -29,11 +31,15 @@ namespace Login
             set { username = value; }
         }
 
+        #endregion
+
         public frmLogin()
         {
             InitializeComponent();
         }
         AccesADades AccesDades = new AccesADades();
+
+        #region Metodos
 
         private void verify_Creedentials()
         {
@@ -45,8 +51,6 @@ namespace Login
             Dictionary<string, string> Dicc = new Dictionary<string, string>();
             Dicc.Add("@username", Username);
             creedentials_query = "SELECT * FROM Users WHERE Login = @username";
-            //creedentials_query = "SELECT * FROM LoginFrancescRubio WHERE Login = @username";
-
 
             // Verifica que ambos campos no estén vacíos
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
@@ -76,15 +80,17 @@ namespace Login
                     }
                     else
                     {
-                        byte[] Salt = HashUser.GenerateSalt(SaltByteSize);
-                        byte[] passwordhashed = HashUser.ComputeHash(tbPass.Text, Salt, HasingIterationsCount, HashByteSize);
+                        Hashsalt = row["Hash"].ToString();
+                        byte[] salt = HashUser.ConvertHexStringToBytes(Hashsalt);
+                        byte[] passwordhashed = HashUser.ComputeHash(tbPass.Text, salt, HasingIterationsCount, HashByteSize);
                         string Password = BitConverter.ToString(passwordhashed);
 
                         if (Password== passwordBBDD && Username == loginBBDD)
                         {
-                            this.Hide();
-
+                            this.Hide();                      
                             MainFormSC.frmPrincipal frmmain = new MainFormSC.frmPrincipal();
+                            frmmain.FormClosed += (s, args) => this.Close();
+                            frmmain.idAccess = idAccess;
                             frmmain.Show();
                         }
                         else
@@ -93,25 +99,6 @@ namespace Login
                         }
                         
                     }
-
-                    /*byte[] salt = Convert.FromBase64String(row["Salt"].ToString());
-                    byte[] passwordhashed = HashUser.ComputeHash(password, salt, HasingIterationsCount, HashByteSize);
-                    byte[] passwordBBDD = Convert.FromBase64String(row["Password"].ToString());
-
-                    if (HashUser.AreHashesEqual(passwordhashed, passwordBBDD)) // Validación de ejemplo
-                    {
-                        this.Hide();
-
-                        MainFormSC.frmPrincipal frmmain = new MainFormSC.frmPrincipal();
-
-                        frmmain.Show();
-                        //MessageBox.Show("Usuario y contraseña correctos");
-                    }
-                    else
-                    {
-                        // Si falla el login, muestra un mensaje de error
-                        lbErrorLogin.Visible = true;
-                    }*/
                 }
                 else
                 {
@@ -121,6 +108,11 @@ namespace Login
 
             }
         }
+
+        #endregion
+
+        #region Eventos
+
         private void pbClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -157,6 +149,8 @@ namespace Login
         {
             verify_Creedentials();
         }
-    
-}
+
+        #endregion
+
+    }
 }
