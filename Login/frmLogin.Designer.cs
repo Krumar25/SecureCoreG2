@@ -165,8 +165,8 @@ namespace Login
             this.pbMinim.Location = new System.Drawing.Point(380, 0);
             this.pbMinim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbMinim.Name = "pbMinim";
-            this.pbMinim.Padding = new System.Windows.Forms.Padding(11, 12, 11, 12);
-            this.pbMinim.Size = new System.Drawing.Size(46, 51);
+            this.pbMinim.Padding = new System.Windows.Forms.Padding(10);
+            this.pbMinim.Size = new System.Drawing.Size(41, 41);
             this.pbMinim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMinim.TabIndex = 0;
             this.pbMinim.TabStop = false;
@@ -189,8 +189,8 @@ namespace Login
             this.pbClose.Location = new System.Drawing.Point(433, 0);
             this.pbClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbClose.Name = "pbClose";
-            this.pbClose.Padding = new System.Windows.Forms.Padding(11, 12, 11, 12);
-            this.pbClose.Size = new System.Drawing.Size(46, 51);
+            this.pbClose.Padding = new System.Windows.Forms.Padding(10);
+            this.pbClose.Size = new System.Drawing.Size(41, 41);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbClose.TabIndex = 1;
             this.pbClose.TabStop = false;

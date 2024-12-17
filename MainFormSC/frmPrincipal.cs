@@ -24,6 +24,15 @@ namespace MainFormSC
         private Point dragFormPoint;
         frm_userOptions mantenimiento;
 
+
+        private string _idAccess;
+
+        public string idAccess
+        {
+            get { return _idAccess; }
+            set { _idAccess = value; }
+        }
+
         #endregion
         public frmPrincipal()
         {

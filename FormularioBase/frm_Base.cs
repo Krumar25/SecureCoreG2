@@ -16,6 +16,7 @@ namespace FormularioBase
     {
         private AccesADades BBDD = new AccesADades();
         private DataSet dts;
+        private DataSet dts_for;
         private string query;
         private string nomTaula;
         private bool esNou;
@@ -51,19 +52,17 @@ namespace FormularioBase
                     foreach (Control item in panel.Controls)
                     {
 
-                        if (item is CustomControls.SWTextBox)
+                        if (control is CustomControls.SWTextBox)
                         {
-                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)item;
-                            ctr.DataBindings.Clear();
+                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)control;
                             ctr.DataBindings.Add("Text", dts.Tables[0], ctr.CampBBDD.ToString());
-                            ctr.Validated += new System.EventHandler(this.ValidarControl);
                         }
-                        if (item is ComboBox)
+                        if (control is CustomControls.SWCodi)
                         {
-                            ComboBox ctr = (ComboBox)item;
-                            ctr.DataBindings.Clear();
-                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
-                            ctr.Validated += new System.EventHandler(this.ValidarControl);
+
+                            CustomControls.SWCodi ctr = (CustomControls.SWCodi)control;
+                            ctr.ValidaCodi();
+
                         }
                     }
                 }
@@ -152,17 +151,18 @@ namespace FormularioBase
             {
                 if (panel is Panel)
                 {
-                    foreach (Control item in panel.Controls)
+                    foreach (Control control in panel.Controls)
                     {
-                        if (item is CustomControls.SWTextBox)
+                        if (control is CustomControls.SWTextBox)
                         {
-                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)item;
+                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)control;
 
-                            dr[ctr.Tag.ToString()] = ctr.Text;
+                            dr[ctr.CampBBDD.ToString()] = ctr.Text;
                         }
-
                     }
                 }
+                
+
             }
             dts.Tables[0].Rows.Add(dr);
 
@@ -182,7 +182,6 @@ namespace FormularioBase
         private void cmb_nuevo_Click(object sender, EventArgs e)
         {
             esNou = true;
-
             foreach (Control panel in Controls)
             {
                 if (panel is Panel)
@@ -198,8 +197,10 @@ namespace FormularioBase
                         }
                     }
                 }
+
             }
 
-        }       
+        }
+               
     }
 }

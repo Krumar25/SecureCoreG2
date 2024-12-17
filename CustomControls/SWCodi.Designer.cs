@@ -31,6 +31,7 @@ namespace CustomControls
         {
             this.txtCodiNivell = new System.Windows.Forms.TextBox();
             this.txtNivell = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtCodiNivell
@@ -39,8 +40,6 @@ namespace CustomControls
             this.txtCodiNivell.Name = "txtCodiNivell";
             this.txtCodiNivell.Size = new System.Drawing.Size(100, 22);
             this.txtCodiNivell.TabIndex = 0;
-            this.txtCodiNivell.Leave += new System.EventHandler(this.txtCodiNivell_Leave);
-            this.txtCodiNivell.Validating += new System.ComponentModel.CancelEventHandler(this.txtCodiNivell_Validating);
             // 
             // txtNivell
             // 
@@ -50,14 +49,24 @@ namespace CustomControls
             this.txtNivell.Size = new System.Drawing.Size(243, 22);
             this.txtNivell.TabIndex = 1;
             // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(21, 76);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(100, 22);
+            this.txtID.TabIndex = 2;
+            this.txtID.Visible = false;
+            // 
             // SWCodi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtNivell);
             this.Controls.Add(this.txtCodiNivell);
             this.Name = "SWCodi";
             this.Size = new System.Drawing.Size(492, 121);
+            this.Validating += new System.ComponentModel.CancelEventHandler(this.SWCodi_Validating);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -67,5 +76,6 @@ namespace CustomControls
 
         private System.Windows.Forms.TextBox txtCodiNivell;
         private System.Windows.Forms.TextBox txtNivell;
+        private System.Windows.Forms.TextBox txtID;
     }
 }
