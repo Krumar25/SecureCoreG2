@@ -94,7 +94,6 @@ namespace Login
             this.tbNewPass.Size = new System.Drawing.Size(232, 31);
             this.tbNewPass.TabIndex = 21;
             this.tbNewPass.UseSystemPasswordChar = true;
-            this.tbNewPass.TextChanged += new System.EventHandler(this.tbNewPass_TextChanged);
             // 
             // pbClose
             // 
@@ -166,7 +165,6 @@ namespace Login
             this.Name = "CanviPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CanviPassword";
-            this.Load += new System.EventHandler(this.CanviPassword_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinim)).EndInit();

@@ -14,6 +14,7 @@ namespace Login
 {
     public partial class CanviPassword : Form
     {
+        #region Variables Globales
 
         string query_update_pass;
         private const int SaltByteSize = 24;
@@ -27,12 +28,19 @@ namespace Login
             set { username = value; }
         }
 
+        #endregion
 
         public CanviPassword()
         {
             InitializeComponent();
             
         }
+
+        #region Metodos
+
+        #endregion
+
+        #region Eventos
 
         private void pbClose_Click(object sender, EventArgs e)
         {
@@ -74,14 +82,6 @@ namespace Login
             }
         }
 
-        private void tbNewPass_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void CanviPassword_Load(object sender, EventArgs e)
-        {
-
-        }
+        #endregion
     }
 }

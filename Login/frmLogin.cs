@@ -15,6 +15,8 @@ namespace Login
 {
     public partial class frmLogin : Form
     {
+        #region Variables Globales
+
         private const int SaltByteSize = 24;
         private const int HashByteSize = 24;
         private const int HasingIterationsCount = 10101;
@@ -29,11 +31,15 @@ namespace Login
             set { username = value; }
         }
 
+        #endregion
+
         public frmLogin()
         {
             InitializeComponent();
         }
         AccesADades AccesDades = new AccesADades();
+
+        #region Metodos
 
         private void verify_Creedentials()
         {
@@ -84,6 +90,7 @@ namespace Login
                             this.Hide();                      
                             MainFormSC.frmPrincipal frmmain = new MainFormSC.frmPrincipal();
                             frmmain.FormClosed += (s, args) => this.Close();
+                            frmmain.idAccess = idAccess;
                             frmmain.Show();
                         }
                         else
@@ -101,6 +108,11 @@ namespace Login
 
             }
         }
+
+        #endregion
+
+        #region Eventos
+
         private void pbClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -137,6 +149,8 @@ namespace Login
         {
             verify_Creedentials();
         }
-    
-}
+
+        #endregion
+
+    }
 }

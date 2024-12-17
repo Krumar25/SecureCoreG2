@@ -23,6 +23,15 @@ namespace MainFormSC
         private Point dragFormPoint;
         frm_userCategories mantenimiento;
 
+
+        private string _idAccess;
+
+        public string idAccess
+        {
+            get { return _idAccess; }
+            set { _idAccess = value; }
+        }
+
         #endregion
         public frmPrincipal()
         {
@@ -97,6 +106,29 @@ namespace MainFormSC
             this.Close();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (mantenimiento == null)
+            {
+                mantenimiento = new frm_userCategories();
+                mantenimiento.FormClosed += Mantenimiento_FormClosed;
+                mantenimiento.MdiParent = this;
+                mantenimiento.TopLevel = false;
+                mantenimiento.Dock = DockStyle.Fill;
+                mantenimiento.FormBorderStyle = FormBorderStyle.None;
+                mantenimiento.Show();
+            }
+            else
+            {
+                mantenimiento.Activate();
+            }
+        }
+
+        private void Mantenimiento_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            mantenimiento = null;
+        }
+
         #endregion
 
         #region Eventos para mover el formulario
@@ -128,28 +160,5 @@ namespace MainFormSC
         }
 
         #endregion
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if(mantenimiento == null)
-            {
-                mantenimiento = new frm_userCategories();
-                mantenimiento.FormClosed += Mantenimiento_FormClosed;
-                mantenimiento.MdiParent = this;
-                mantenimiento.TopLevel = false;
-                mantenimiento.Dock = DockStyle.Fill;
-                mantenimiento.FormBorderStyle = FormBorderStyle.None;
-                mantenimiento.Show();
-            }
-            else
-            {
-                mantenimiento.Activate();
-            }
-        }
-
-        private void Mantenimiento_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            mantenimiento = null;
-        }
     }
 }
