@@ -141,6 +141,7 @@ namespace Login
             this.tbPass.Size = new System.Drawing.Size(232, 31);
             this.tbPass.TabIndex = 12;
             this.tbPass.UseSystemPasswordChar = true;
+            this.tbPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPass_KeyDown);
             // 
             // tbUser
             // 
@@ -157,7 +158,7 @@ namespace Login
             this.pbMinim.Image = ((System.Drawing.Image)(resources.GetObject("pbMinim.Image")));
             this.pbMinim.Location = new System.Drawing.Point(338, 0);
             this.pbMinim.Name = "pbMinim";
-            this.pbMinim.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.pbMinim.Padding = new System.Windows.Forms.Padding(10);
             this.pbMinim.Size = new System.Drawing.Size(41, 41);
             this.pbMinim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMinim.TabIndex = 0;
@@ -179,7 +180,7 @@ namespace Login
             this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
             this.pbClose.Location = new System.Drawing.Point(385, 0);
             this.pbClose.Name = "pbClose";
-            this.pbClose.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.pbClose.Padding = new System.Windows.Forms.Padding(10);
             this.pbClose.Size = new System.Drawing.Size(41, 41);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbClose.TabIndex = 1;
