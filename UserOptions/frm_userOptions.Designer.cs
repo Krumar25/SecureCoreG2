@@ -205,7 +205,7 @@ namespace UserOptions
             "80",
             "90",
             "100"});
-            this.cboxAccessLevel.Location = new System.Drawing.Point(254, 208);
+            this.cboxAccessLevel.Location = new System.Drawing.Point(264, 208);
             this.cboxAccessLevel.Name = "cboxAccessLevel";
             this.cboxAccessLevel.Size = new System.Drawing.Size(88, 33);
             this.cboxAccessLevel.TabIndex = 15;

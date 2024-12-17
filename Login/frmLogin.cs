@@ -95,25 +95,6 @@ namespace Login
                         }
                         
                     }
-
-                    /*byte[] salt = Convert.FromBase64String(row["Salt"].ToString());
-                    byte[] passwordhashed = HashUser.ComputeHash(password, salt, HasingIterationsCount, HashByteSize);
-                    byte[] passwordBBDD = Convert.FromBase64String(row["Password"].ToString());
-
-                    if (HashUser.AreHashesEqual(passwordhashed, passwordBBDD)) // Validación de ejemplo
-                    {
-                        this.Hide();
-
-                        MainFormSC.frmPrincipal frmmain = new MainFormSC.frmPrincipal();
-
-                        frmmain.Show();
-                        //MessageBox.Show("Usuario y contraseña correctos");
-                    }
-                    else
-                    {
-                        // Si falla el login, muestra un mensaje de error
-                        lbErrorLogin.Visible = true;
-                    }*/
                 }
                 else
                 {
