@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormularioBase", "..\Formul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "..\Login\Login.csproj", "{599526AF-A32C-4307-A599-F690C17FE08F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CategoriaNaus", "..\CategoriaNaus\CategoriaNaus.csproj", "{12BEC4DA-E98D-4F8F-B04F-0B3380647EEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{599526AF-A32C-4307-A599-F690C17FE08F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{599526AF-A32C-4307-A599-F690C17FE08F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{599526AF-A32C-4307-A599-F690C17FE08F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12BEC4DA-E98D-4F8F-B04F-0B3380647EEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12BEC4DA-E98D-4F8F-B04F-0B3380647EEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12BEC4DA-E98D-4F8F-B04F-0B3380647EEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12BEC4DA-E98D-4F8F-B04F-0B3380647EEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
