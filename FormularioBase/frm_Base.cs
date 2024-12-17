@@ -16,6 +16,7 @@ namespace FormularioBase
     {
         private AccesADades BBDD = new AccesADades();
         private DataSet dts;
+        private DataSet dts_for;
         private string query;
         private string nomTaula;
         private bool esNou;
@@ -51,11 +52,16 @@ namespace FormularioBase
                     foreach (Control control in panel.Controls)
                     {
 
-                        if (control is TextBox)
+                        if (control is CustomControls.SWTextBox)
                         {
-                            TextBox ctr = (TextBox)control;
-                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
+                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)control;
+                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.CampBBDD.ToString());
+                        }
+                        if (control is CustomControls.SWCodi)
+                        {
 
+                            CustomControls.SWCodi ctr = (CustomControls.SWCodi)control;
+                            ctr.ValidaCodi();
 
                         }
                     }
@@ -73,11 +79,11 @@ namespace FormularioBase
                 {
                     foreach (Control item in panel.Controls)
                     {
-                        if (item is TextBox)
+                        if (item is CustomControls.SWTextBox)
                         {
-                            TextBox ctr = (TextBox)item;
+                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)item;
                             ctr.DataBindings.Clear();
-                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
+                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.CampBBDD.ToString());
                             ctr.Validated += new System.EventHandler(this.ValidarTextBox);
                         }
                         if (item is ComboBox)
@@ -133,14 +139,21 @@ namespace FormularioBase
         {
             DataRow dr = dts.Tables[0].NewRow();
 
-            foreach (Control item in Controls)
+            foreach (Control panel in Controls)
             {
-                if (item is TextBox)
+                if (panel is Panel)
                 {
-                    TextBox ctr = (TextBox)item;
+                    foreach (Control control in panel.Controls)
+                    {
+                        if (control is CustomControls.SWTextBox)
+                        {
+                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)control;
 
-                    dr[ctr.Tag.ToString()] = ctr.Text;
+                            dr[ctr.CampBBDD.ToString()] = ctr.Text;
+                        }
+                    }
                 }
+                
 
             }
             dts.Tables[0].Rows.Add(dr);
@@ -161,21 +174,26 @@ namespace FormularioBase
         private void cmb_nuevo_Click(object sender, EventArgs e)
         {
             esNou = true;
-
-            foreach (Control item in Controls)
+            foreach (Control panel in Controls)
             {
-                if (item is TextBox)
+                if (panel is Panel)
                 {
-                    TextBox ctr = (TextBox)item;
-                    ctr.DataBindings.Clear();
-                    ctr.Text = "";
-                    ctr.Validated -= new System.EventHandler(this.ValidarTextBox);
+                    foreach (Control control in panel.Controls)
+                    {
+                        if (control is CustomControls.SWTextBox)
+                        {
+                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)control;
+
+                            ctr.DataBindings.Clear();
+                            ctr.Text = "";
+                            ctr.Validated -= new System.EventHandler(this.ValidarTextBox);
+                        }
+                    }
                 }
+
             }
 
         }
-
-
-       
+               
     }
 }

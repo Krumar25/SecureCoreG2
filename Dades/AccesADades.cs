@@ -90,16 +90,22 @@ namespace Dades
             }
             conn.Close();
         }
-       
-        public DataSet GenerarConsultaCerca (string query, string parameter, string value)
+
+        public DataSet GenerarConsultaCerca(string query, Dictionary<string, string> parameters)
         {
-            // En el futuro habrá que utilizar un diccionario en vez de los string parameter y value
-            DataSet dts = new DataSet(); ;
+            DataSet dts = new DataSet();
             SqlDataAdapter adapter;
-            // Configuramos la conexion
+
+            // Configuramos la conexión
             Connectar();
+
             SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue(parameter, value);
+
+            // Agregamos los parámetros desde el diccionario
+            foreach (var param in parameters)
+            {
+                command.Parameters.AddWithValue(param.Key, param.Value);
+            }
 
             adapter = new SqlDataAdapter(command);
             conn.Open();
@@ -111,13 +117,17 @@ namespace Dades
 
             return dts;
         }
-        public void Executa(string query)
+        public void Executa(string query, Dictionary<string, string> parameters)
         {
-            conn.Open();
+            Connectar();
 
+            conn.Open();
             SqlCommand cmd;
             cmd = new SqlCommand(query, conn);
-
+            foreach (var param in parameters)
+            {
+                cmd.Parameters.AddWithValue(param.Key, param.Value);
+            }
             cmd.ExecuteNonQuery();
             cmd.Dispose();
 
