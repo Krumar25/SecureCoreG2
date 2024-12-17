@@ -87,7 +87,7 @@ namespace CustomControls
             //Lo mostramos asumiendo que se trata de un form y por eso hacemos un cast con (Form)
             ((Form)dllBD).Show();
         }
-        private void ValidaCodi()
+        public void ValidaCodi()
         {
             Dictionary<string, string> Dicc = new Dictionary<string, string>();
             Dicc.Add("@nomTaula", NomTaula);
