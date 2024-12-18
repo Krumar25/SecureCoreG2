@@ -95,10 +95,6 @@
       <Project>{28b770cd-a100-4704-aa7b-2d2739f79e4c}</Project>
       <Name>MainFormSC</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Mantenimiento\Mantenimiento.csproj">
-      <Project>{966a33d4-d071-4565-8b3d-8e24c65a8c6d}</Project>
-      <Name>Mantenimiento</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\mdiProperties\mdiProperties.csproj">
       <Project>{db4d62f4-335b-41e6-9c8c-84a531e2eaa6}</Project>
       <Name>mdiProperties</Name>

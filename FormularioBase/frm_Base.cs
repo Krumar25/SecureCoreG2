@@ -16,7 +16,6 @@ namespace FormularioBase
     {
         private AccesADades BBDD = new AccesADades();
         private DataSet dts;
-        private DataSet dts_for;
         private string query;
         private string nomTaula;
         private bool esNou;
@@ -49,20 +48,20 @@ namespace FormularioBase
             {
                 if (panel is Panel)
                 {
-                    foreach (Control control in panel.Controls)
+                    foreach (Control item in panel.Controls)
                     {
 
-                        if (control is CustomControls.SWTextBox)
+                        if (item is CustomControls.SWTextBox)
                         {
-                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)control;
+                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)item;
+                            ctr.DataBindings.Clear();
                             ctr.DataBindings.Add("Text", dts.Tables[0], ctr.CampBBDD.ToString());
                         }
-                        if (control is CustomControls.SWCodi)
+                        if (item is ComboBox)
                         {
-
-                            CustomControls.SWCodi ctr = (CustomControls.SWCodi)control;
-                            ctr.ValidaCodi();
-
+                            ComboBox ctr = (ComboBox)item;
+                            ctr.DataBindings.Clear();
+                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
                         }
                     }
                 }
@@ -84,22 +83,30 @@ namespace FormularioBase
                             CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)item;
                             ctr.DataBindings.Clear();
                             ctr.DataBindings.Add("Text", dts.Tables[0], ctr.CampBBDD.ToString());
-                            ctr.Validated += new System.EventHandler(this.ValidarTextBox);
+                            ctr.Validated += new System.EventHandler(this.ValidarControl);
                         }
                         if (item is ComboBox)
                         {
                             ComboBox ctr = (ComboBox)item;
                             ctr.DataBindings.Clear();
                             ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
-                            ctr.Validated += new System.EventHandler(this.ValidarTextBox);
+                            ctr.Validated += new System.EventHandler(this.ValidarControl);
                         }
                     }
                 }
             }
         }
-        private void ValidarTextBox(object sender, EventArgs e)
+        // Método de validación genérico
+        private void ValidarControl(object sender, EventArgs e)
         {
-            ((TextBox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
+            if (sender is TextBox || sender is ComboBox)
+            {
+                BindingManagerBase bindingManager = ((Control)sender).DataBindings[0].BindingManagerBase;
+                if (bindingManager != null)
+                {
+                    bindingManager.EndCurrentEdit();
+                }
+            }
         }
 
         private void frm_Base_Load(object sender, EventArgs e)
@@ -118,9 +125,10 @@ namespace FormularioBase
 
             // Cambiar el tamaño de las Celdas
             dtg_datos.RowTemplate.Height = 30;
-            dtg_datos.Columns[1].Width = 150;
-            dtg_datos.Columns[2].Width = 150;
-            dtg_datos.Columns[3].Width = 150;
+            for (int i = 0; i < dtg_datos.ColumnCount; i++)
+            {
+                dtg_datos.Columns[i].Width = 150;
+            }
 
             // Cambiar el color de las celdas
             dtg_datos.DefaultCellStyle.BackColor = Color.DarkGray;
@@ -178,15 +186,14 @@ namespace FormularioBase
             {
                 if (panel is Panel)
                 {
-                    foreach (Control control in panel.Controls)
+                    foreach (Control item in panel.Controls)
                     {
-                        if (control is CustomControls.SWTextBox)
+                        if (item is CustomControls.SWTextBox)
                         {
-                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)control;
-
+                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)item;
                             ctr.DataBindings.Clear();
                             ctr.Text = "";
-                            ctr.Validated -= new System.EventHandler(this.ValidarTextBox);
+                            ctr.Validated -= new System.EventHandler(this.ValidarControl);
                         }
                     }
                 }

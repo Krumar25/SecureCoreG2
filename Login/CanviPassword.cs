@@ -14,6 +14,7 @@ namespace Login
 {
     public partial class CanviPassword : Form
     {
+        #region Variables Globales
 
         string query_update_pass;
         private const int SaltByteSize = 24;
@@ -27,12 +28,50 @@ namespace Login
             set { username = value; }
         }
 
+        #endregion
 
         public CanviPassword()
         {
             InitializeComponent();
             
         }
+
+        #region Metodos
+
+        private void verify_Creedentials()
+        {
+            if (tbNewPass.Text == tbConfNewPass.Text)
+            {
+                Dictionary<string, string> Dicc = new Dictionary<string, string>();
+
+                byte[] Salt = HashUser.GenerateSalt(SaltByteSize);
+                byte[] passwordhashed = HashUser.ComputeHash(tbNewPass.Text, Salt, HasingIterationsCount, HashByteSize);
+
+                Dicc.Add("@username", UserName);
+                Dicc.Add("@pass", BitConverter.ToString(passwordhashed));
+                Dicc.Add("@salt", BitConverter.ToString(Salt));
+
+
+                query_update_pass = "UPDATE Users SET Hash = @salt, Password = @pass WHERE Login = @username";
+
+                AccesADades dades = new AccesADades();
+                dades.Executa(query_update_pass, Dicc);
+
+                this.Hide();
+
+                MainFormSC.frmPrincipal frmmain = new MainFormSC.frmPrincipal();
+                frmmain.FormClosed += (s, args) => this.Close();
+                frmmain.Show();
+            }
+            else
+            {
+
+            }
+        }
+
+        #endregion
+
+        #region Eventos
 
         private void pbClose_Click(object sender, EventArgs e)
         {
@@ -46,42 +85,18 @@ namespace Login
 
         private void btnAccess_Click(object sender, EventArgs e)
         {
-            if (tbNewPass.Text == tbConfNewPass.Text)
+            verify_Creedentials();
+        }
+
+
+        private void tbConfNewPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-                Dictionary<string, string> Dicc = new Dictionary<string, string>();
-
-                byte[] Salt= HashUser.GenerateSalt(SaltByteSize);
-                byte[] passwordhashed = HashUser.ComputeHash(tbNewPass.Text, Salt, HasingIterationsCount, HashByteSize);
-                
-                Dicc.Add("@username", UserName);
-                Dicc.Add("@pass", BitConverter.ToString(passwordhashed));
-                Dicc.Add("@salt", BitConverter.ToString(Salt));
-
-
-                query_update_pass = "UPDATE Users SET Hash = @salt, Password = @pass WHERE Login = @username";
-
-                AccesADades dades = new AccesADades();
-                dades.Executa(query_update_pass,Dicc);
-
-                this.Hide();
-
-                MainFormSC.frmPrincipal frmmain = new MainFormSC.frmPrincipal();
-                frmmain.Show();
-            }
-            else
-            {
-
+                verify_Creedentials();
             }
         }
 
-        private void tbNewPass_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void CanviPassword_Load(object sender, EventArgs e)
-        {
-
-        }
+        #endregion
     }
 }
