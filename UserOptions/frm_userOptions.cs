@@ -9,16 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FormularioBase;
 
-namespace Mantenimiento
+namespace UserOptions
 {
-    public partial class frm_userCategories : frm_Base
+    public partial class frm_userOptions : frm_Base
     {
-
-        public frm_userCategories()
+        public frm_userOptions()
         {
             InitializeComponent();
-            ConfigurarConsulta("UserCategories", "User Categories");
-            
+            ConfigurarConsulta("UserOptions", "USER OPTIONS");
         }
     }
 }

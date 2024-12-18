@@ -4,8 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MainFormSC;
-using Mantenimiento;
-using CategoriaNaus;
 
 namespace SecureCore
 {
@@ -19,7 +17,7 @@ namespace SecureCore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_categoriaNaus());
+            Application.Run(new Login.frmLogin());
         }
     }
 }
