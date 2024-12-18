@@ -61,17 +61,17 @@ namespace MainFormSC
             this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
             this.pnlSuperior.Name = "pnlSuperior";
-            this.pnlSuperior.Size = new System.Drawing.Size(1830, 75);
+            this.pnlSuperior.Size = new System.Drawing.Size(2586, 75);
             this.pnlSuperior.TabIndex = 1;
-            this.pnlSuperior.MouseDown += Control_MouseDown;
-            this.pnlSuperior.MouseUp += Control_MouseUp;
-            this.pnlSuperior.MouseMove += Control_MouseMove;
+            this.pnlSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Control_MouseDown);
+            this.pnlSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Control_MouseMove);
+            this.pnlSuperior.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Control_MouseUp);
             // 
             // picBoxMinimizar
             // 
             this.picBoxMinimizar.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picBoxMinimizar.Image")));
-            this.picBoxMinimizar.Location = new System.Drawing.Point(1479, 0);
+            this.picBoxMinimizar.Location = new System.Drawing.Point(2235, 0);
             this.picBoxMinimizar.Name = "picBoxMinimizar";
             this.picBoxMinimizar.Padding = new System.Windows.Forms.Padding(40, 10, 40, 10);
             this.picBoxMinimizar.Size = new System.Drawing.Size(117, 75);
@@ -84,7 +84,7 @@ namespace MainFormSC
             // 
             this.picBoxVentana.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxVentana.Image = ((System.Drawing.Image)(resources.GetObject("picBoxVentana.Image")));
-            this.picBoxVentana.Location = new System.Drawing.Point(1596, 0);
+            this.picBoxVentana.Location = new System.Drawing.Point(2352, 0);
             this.picBoxVentana.Name = "picBoxVentana";
             this.picBoxVentana.Padding = new System.Windows.Forms.Padding(35, 15, 35, 15);
             this.picBoxVentana.Size = new System.Drawing.Size(117, 75);
@@ -98,7 +98,7 @@ namespace MainFormSC
             this.picBoxCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBoxCerrar.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picBoxCerrar.Image")));
-            this.picBoxCerrar.Location = new System.Drawing.Point(1713, 0);
+            this.picBoxCerrar.Location = new System.Drawing.Point(2469, 0);
             this.picBoxCerrar.Name = "picBoxCerrar";
             this.picBoxCerrar.Padding = new System.Windows.Forms.Padding(45, 25, 45, 25);
             this.picBoxCerrar.Size = new System.Drawing.Size(117, 75);
@@ -127,11 +127,11 @@ namespace MainFormSC
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 75);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(329, 1076);
+            this.pnlMenu.Size = new System.Drawing.Size(329, 1551);
             this.pnlMenu.TabIndex = 3;
-            this.pnlMenu.MouseDown += Control_MouseDown;
-            this.pnlMenu.MouseUp += Control_MouseUp;
-            this.pnlMenu.MouseMove += Control_MouseMove;
+            this.pnlMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Control_MouseDown);
+            this.pnlMenu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Control_MouseMove);
+            this.pnlMenu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Control_MouseUp);
             // 
             // button1
             // 
@@ -147,7 +147,7 @@ namespace MainFormSC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1830, 1151);
+            this.ClientSize = new System.Drawing.Size(2586, 1626);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -162,6 +162,7 @@ namespace MainFormSC
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCerrar)).EndInit();
             this.pnlMenu.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
 
         #endregion

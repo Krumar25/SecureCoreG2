@@ -63,6 +63,12 @@ namespace FormularioBase
                             ctr.DataBindings.Clear();
                             ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
                         }
+                        if(item is PictureBox)
+                        {
+                            PictureBox image = (PictureBox)item;
+                            image.DataBindings.Clear();
+                            image.DataBindings.Add("ImageLocation", dts.Tables[0], image.Tag.ToString());
+                        }
                     }
                 }
             }
