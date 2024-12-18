@@ -67,9 +67,16 @@ namespace CustomControls
         public string ControlID
         {
             get { return controlID; }
-            set { controlID = value;
-                if (txtID != null) {
-                    txtID.Text = controlID;
+            set { controlID = value; }
+        }
+        private void UpdateControlID(string id)
+        {
+            Form frm = this.FindForm();
+            foreach(Control control in frm.Controls)
+            {
+                if (control.Name == ControlID)
+                {
+                    control.Text = id;
                 }
             }
         }
@@ -93,7 +100,7 @@ namespace CustomControls
             Dicc.Add("@nomTaula", NomTaula);
             Dicc.Add("@nomCodi", NomCodi);
             Dicc.Add("@NomCodi", txtCodiNivell.Text);
-            string query = "SELECT * FROM @nomTaula WHERE @nomCodi = @NomCodi";
+            string query = $"SELECT * FROM @nomTaula WHERE {NomCodi}= @NomCodi"; //Modificado 
             DataSet dts = AccesDades.GenerarConsultaCerca(query, Dicc);
 
             if (dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0)
@@ -101,12 +108,14 @@ namespace CustomControls
                 DataRow row = dts.Tables[0].Rows[0];
 
                 txtNivell.Text = row[NomDesc].ToString();
+                UpdateControlID(row[NomId].ToString());
             }
             else
             {
                 txtCodiNivell.Focus();
                 txtNivell.Text = "Unknown Data";
             }
+
         }
 
         private void SWCodi_Validating(object sender, CancelEventArgs e)

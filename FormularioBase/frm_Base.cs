@@ -118,9 +118,10 @@ namespace FormularioBase
 
             // Cambiar el tamaño de las Celdas
             dtg_datos.RowTemplate.Height = 30;
-            dtg_datos.Columns[1].Width = 150;
-            dtg_datos.Columns[2].Width = 150;
-            dtg_datos.Columns[3].Width = 150;
+            for (int i = 0; i < dtg_datos.ColumnCount; i++)
+            {
+                dtg_datos.Columns[i].Width = 150;
+            }
 
             // Cambiar el color de las celdas
             dtg_datos.DefaultCellStyle.BackColor = Color.DarkGray;
