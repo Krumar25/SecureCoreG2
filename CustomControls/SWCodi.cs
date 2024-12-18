@@ -67,19 +67,35 @@ namespace CustomControls
         public string ControlID
         {
             get { return controlID; }
-            set { controlID = value; }
+            set { controlID = value;}
         }
-        private void UpdateControlID(string id)
+
+        private string txtDesc;
+
+        public string TxtDesc
         {
-            Form frm = this.FindForm();
-            foreach(Control control in frm.Controls)
-            {
-                if (control.Name == ControlID)
+            get { return txtDesc; }
+            set { txtDesc = value;
+                if (txtNivell != null)
                 {
-                    control.Text = id;
+                    txtNivell.Text = txtDesc;
                 }
             }
         }
+
+        private string txtCode;
+
+        public string TxtCode
+        {
+            get { return txtCode; }
+            set { txtCode = value;
+                if (txtCodiNivell != null)
+                {
+                    txtCodiNivell.Text = txtCode;
+                }
+            }
+        }
+
         public void obreCS (string classeCS, string formCS)
         {
             //Cargamos la dll. No hacemos constar ningún path para que la compilemos en la carpeta donde compilamos todos los ensamblados
@@ -94,13 +110,12 @@ namespace CustomControls
             //Lo mostramos asumiendo que se trata de un form y por eso hacemos un cast con (Form)
             ((Form)dllBD).Show();
         }
-        public void ValidaCodi()
+
+        private void ValidaCodi()
         {
             Dictionary<string, string> Dicc = new Dictionary<string, string>();
-            Dicc.Add("@nomTaula", NomTaula);
-            Dicc.Add("@nomCodi", NomCodi);
             Dicc.Add("@NomCodi", txtCodiNivell.Text);
-            string query = $"SELECT * FROM @nomTaula WHERE {NomCodi}= @NomCodi"; //Modificado 
+            string query = $"SELECT * FROM {NomTaula} WHERE {NomCodi} = @NomCodi";
             DataSet dts = AccesDades.GenerarConsultaCerca(query, Dicc);
 
             if (dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0)
@@ -108,19 +123,33 @@ namespace CustomControls
                 DataRow row = dts.Tables[0].Rows[0];
 
                 txtNivell.Text = row[NomDesc].ToString();
-                UpdateControlID(row[NomId].ToString());
             }
             else
             {
                 txtCodiNivell.Focus();
                 txtNivell.Text = "Unknown Data";
             }
-
         }
 
         private void SWCodi_Validating(object sender, CancelEventArgs e)
         {
             ValidaCodi();
+        }
+
+        public void ActualizarId(string id)
+        {
+            Dictionary<string, string> Dicc = new Dictionary<string, string>();
+            Dicc.Add("@id", id);
+            string query = $"SELECT * FROM {NomTaula} WHERE {NomId} = @id";
+            DataSet dts = AccesDades.GenerarConsultaCerca(query, Dicc);
+
+            if (dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0)
+            {
+                DataRow row = dts.Tables[0].Rows[0];
+
+                txtNivell.Text = row[NomDesc].ToString();
+                txtCodiNivell.Text = row[NomCodi].ToString();
+            }
         }
     }
 }

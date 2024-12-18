@@ -75,6 +75,7 @@ namespace Login
                         this.Hide();
 
                         CanviPassword frmCanvi = new CanviPassword();
+                        frmCanvi.FormClosed += (s, args) => this.Close();
                         frmCanvi.UserName = Username;
                         frmCanvi.Show();
                     }

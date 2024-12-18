@@ -31,41 +31,34 @@ namespace CustomControls
         {
             this.txtCodiNivell = new System.Windows.Forms.TextBox();
             this.txtNivell = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtCodiNivell
             // 
-            this.txtCodiNivell.Location = new System.Drawing.Point(21, 48);
+            this.txtCodiNivell.Location = new System.Drawing.Point(24, 60);
+            this.txtCodiNivell.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCodiNivell.Name = "txtCodiNivell";
-            this.txtCodiNivell.Size = new System.Drawing.Size(100, 22);
+            this.txtCodiNivell.Size = new System.Drawing.Size(112, 26);
             this.txtCodiNivell.TabIndex = 0;
             // 
             // txtNivell
             // 
             this.txtNivell.Enabled = false;
-            this.txtNivell.Location = new System.Drawing.Point(164, 48);
+            this.txtNivell.Location = new System.Drawing.Point(184, 60);
+            this.txtNivell.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNivell.Name = "txtNivell";
-            this.txtNivell.Size = new System.Drawing.Size(243, 22);
+            this.txtNivell.Size = new System.Drawing.Size(273, 26);
             this.txtNivell.TabIndex = 1;
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(21, 76);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(100, 22);
-            this.txtID.TabIndex = 2;
-            this.txtID.Visible = false;
             // 
             // SWCodi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtNivell);
             this.Controls.Add(this.txtCodiNivell);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SWCodi";
-            this.Size = new System.Drawing.Size(492, 121);
+            this.Size = new System.Drawing.Size(554, 151);
             this.Validating += new System.ComponentModel.CancelEventHandler(this.SWCodi_Validating);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -76,6 +69,5 @@ namespace CustomControls
 
         private System.Windows.Forms.TextBox txtCodiNivell;
         private System.Windows.Forms.TextBox txtNivell;
-        private System.Windows.Forms.TextBox txtID;
     }
 }
