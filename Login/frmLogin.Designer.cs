@@ -109,7 +109,7 @@ namespace Login
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(130, 59);
+            this.pictureBox1.Location = new System.Drawing.Point(137, 102);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(225, 240);
@@ -166,7 +166,7 @@ namespace Login
             this.pbMinim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbMinim.Name = "pbMinim";
             this.pbMinim.Padding = new System.Windows.Forms.Padding(10);
-            this.pbMinim.Size = new System.Drawing.Size(41, 41);
+            this.pbMinim.Size = new System.Drawing.Size(46, 51);
             this.pbMinim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMinim.TabIndex = 0;
             this.pbMinim.TabStop = false;
@@ -180,7 +180,7 @@ namespace Login
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(479, 51);
+            this.pnlHeader.Size = new System.Drawing.Size(494, 51);
             this.pnlHeader.TabIndex = 15;
             // 
             // pbClose
@@ -190,7 +190,7 @@ namespace Login
             this.pbClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbClose.Name = "pbClose";
             this.pbClose.Padding = new System.Windows.Forms.Padding(10);
-            this.pbClose.Size = new System.Drawing.Size(41, 41);
+            this.pbClose.Size = new System.Drawing.Size(46, 51);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbClose.TabIndex = 1;
             this.pbClose.TabStop = false;
@@ -201,7 +201,7 @@ namespace Login
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.ClientSize = new System.Drawing.Size(480, 808);
+            this.ClientSize = new System.Drawing.Size(487, 762);
             this.Controls.Add(this.pbMostrarPass);
             this.Controls.Add(this.pbOcultarPass);
             this.Controls.Add(this.lbErrorLogin);

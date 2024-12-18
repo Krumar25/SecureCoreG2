@@ -16,7 +16,6 @@ namespace FormularioBase
     {
         private AccesADades BBDD = new AccesADades();
         private DataSet dts;
-        private DataSet dts_for;
         private string query;
         private string nomTaula;
         private bool esNou;
@@ -52,17 +51,17 @@ namespace FormularioBase
                     foreach (Control item in panel.Controls)
                     {
 
-                        if (control is CustomControls.SWTextBox)
+                        if (item is CustomControls.SWTextBox)
                         {
-                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)control;
+                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)item;
+                            ctr.DataBindings.Clear();
                             ctr.DataBindings.Add("Text", dts.Tables[0], ctr.CampBBDD.ToString());
                         }
-                        if (control is CustomControls.SWCodi)
+                        if (item is ComboBox)
                         {
-
-                            CustomControls.SWCodi ctr = (CustomControls.SWCodi)control;
-                            ctr.ValidaCodi();
-
+                            ComboBox ctr = (ComboBox)item;
+                            ctr.DataBindings.Clear();
+                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
                         }
                     }
                 }
@@ -126,9 +125,10 @@ namespace FormularioBase
 
             // Cambiar el tamaño de las Celdas
             dtg_datos.RowTemplate.Height = 30;
-            dtg_datos.Columns[1].Width = 150;
-            dtg_datos.Columns[2].Width = 150;
-            dtg_datos.Columns[3].Width = 150;
+            for (int i = 0; i < dtg_datos.ColumnCount; i++)
+            {
+                dtg_datos.Columns[i].Width = 150;
+            }
 
             // Cambiar el color de las celdas
             dtg_datos.DefaultCellStyle.BackColor = Color.DarkGray;

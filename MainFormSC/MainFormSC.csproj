@@ -86,6 +86,10 @@
       <Project>{9b9a80ee-8089-4134-a2f8-df5533172fe8}</Project>
       <Name>UserOptions</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Users\Users.csproj">
+      <Project>{0f180fe2-08ed-46be-873f-861ef4c3ad6a}</Project>
+      <Name>Users</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
