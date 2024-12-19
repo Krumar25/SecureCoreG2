@@ -41,7 +41,7 @@ namespace TipusDeNausFK
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(277, 51);
+            this.controlManteniment1.Location = new System.Drawing.Point(311, 51);
             // 
             // panel1
             // 
@@ -129,7 +129,7 @@ namespace TipusDeNausFK
             this.swCodeSpaceShip.DadaPermesa = CustomControls.SWTextBox.TipusDada.Codi;
             this.swCodeSpaceShip.EsForana = false;
             this.swCodeSpaceShip.EsNulable = false;
-            this.swCodeSpaceShip.Location = new System.Drawing.Point(313, 209);
+            this.swCodeSpaceShip.Location = new System.Drawing.Point(311, 209);
             this.swCodeSpaceShip.Name = "swCodeSpaceShip";
             this.swCodeSpaceShip.Size = new System.Drawing.Size(148, 22);
             this.swCodeSpaceShip.TabIndex = 8;
@@ -141,7 +141,7 @@ namespace TipusDeNausFK
             this.swDescSpaceShip.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swDescSpaceShip.EsForana = false;
             this.swDescSpaceShip.EsNulable = false;
-            this.swDescSpaceShip.Location = new System.Drawing.Point(313, 272);
+            this.swDescSpaceShip.Location = new System.Drawing.Point(311, 281);
             this.swDescSpaceShip.Name = "swDescSpaceShip";
             this.swDescSpaceShip.Size = new System.Drawing.Size(148, 22);
             this.swDescSpaceShip.TabIndex = 9;
