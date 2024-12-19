@@ -18,5 +18,15 @@ namespace TipusDeNausFK
             InitializeComponent();
             ConfigurarConsulta("SpaceShipTypes", "Tipus de Naus");
         }
+
+        private void idFiliation_TextChanged(object sender, EventArgs e)
+        {
+            swCodiFiliation.ActualizarId(idFiliation.Text);
+        }
+
+        private void idCategory_TextChanged(object sender, EventArgs e)
+        {
+            swCodiCategory.ActualizarId(idCategory.Text);
+        }
     }
 }

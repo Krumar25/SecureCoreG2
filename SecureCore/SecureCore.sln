@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "..\Login\Login.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users", "..\Users\Users.csproj", "{0F180FE2-08ED-46BE-873F-861EF4C3AD6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RangUsuari", "..\RangUsuari\RangUsuari.csproj", "{67B0AB61-2A18-45D0-8F62-0765BEAAAA01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipusDeNausFK", "..\TipusDeNausFK\TipusDeNausFK.csproj", "{7FF41C10-6EDD-4948-8193-38D24024D204}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{0F180FE2-08ED-46BE-873F-861EF4C3AD6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F180FE2-08ED-46BE-873F-861EF4C3AD6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F180FE2-08ED-46BE-873F-861EF4C3AD6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B0AB61-2A18-45D0-8F62-0765BEAAAA01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B0AB61-2A18-45D0-8F62-0765BEAAAA01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B0AB61-2A18-45D0-8F62-0765BEAAAA01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B0AB61-2A18-45D0-8F62-0765BEAAAA01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FF41C10-6EDD-4948-8193-38D24024D204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FF41C10-6EDD-4948-8193-38D24024D204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FF41C10-6EDD-4948-8193-38D24024D204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FF41C10-6EDD-4948-8193-38D24024D204}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
