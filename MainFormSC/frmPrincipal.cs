@@ -19,6 +19,8 @@ namespace MainFormSC
 
         #region Variables Globales
 
+        private bool menuExpandit = false;
+        private bool menuWelcomeExpandit = false;
         private bool dragging = false;
         private Point dragCursorPoint;
         private Point dragFormPoint;
@@ -40,7 +42,6 @@ namespace MainFormSC
             mdiProp();
         }
 
-        bool menuExpandit = false;
 
         #region Metodos
 
@@ -161,5 +162,37 @@ namespace MainFormSC
         }
 
         #endregion
+
+        private void DesplegableWelcome_Tick(object sender, EventArgs e)
+        {
+            if (!menuExpandit)
+            {
+                if (!menuWelcomeExpandit)
+                {
+                    pnlMenu.Height -= 5;
+
+                    if (pnlMenu.Height <= 0)
+                    {
+                        menuWelcomeExpandit = true;
+                        DesplegableWelcome.Stop();
+                    }
+                }
+                else
+                {
+                    pnlMenu.Height += 5;
+
+                    if (pnlMenu.Height >= 200)
+                    {
+                        menuWelcomeExpandit = false;
+                        DesplegableWelcome.Stop();
+                    }
+                }
+            }
+        }
+
+        private void pnlWelcome_Click(object sender, EventArgs e)
+        {
+            DesplegableWelcome.Start();
+        }
     }
 }
