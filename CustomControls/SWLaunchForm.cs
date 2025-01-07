@@ -60,24 +60,45 @@ namespace CustomControls
 
         private void SWLaunchForm_Click(object sender, EventArgs e)
         {
-            //Cargamos la dll. No hacemos constar ningún path para que la compilemos en la carpeta donde compilamos todos los ensamblados
+            // Cargamos la DLL
             Assembly ensamblat = Assembly.LoadFrom($"{this.NomClase}.dll");
-            //Declaramos las variables
+
+            // Declaramos las variables
             Object dllBD;
             Type tipus;
-            //Recuperamos el tipo de la clase que queremos instanciar
+
+            // Recuperamos el tipo de la clase que queremos instanciar
             tipus = ensamblat.GetType($"{this.NomClase}.{this.NomFormulari}");
-            //Instanciamos el objeto
+
+            // Instanciamos el objeto
             dllBD = Activator.CreateInstance(tipus);
 
+            // Si es un formulario, lo abrimos como hijo MDI
             if (dllBD is Form formulari)
             {
-                formulari.TopLevel = false;
-                formulari.Dock = DockStyle.Fill;
-                formulari.FormBorderStyle = FormBorderStyle.None;
-                panellManteniment.Controls.Clear();
-                panellManteniment.Controls.Add(formulari);
-                formulari.Show();
+                Form frmPrincipal = this.FindForm(); // Encuentra el formulario principal donde se aloja el control
+
+                if (frmPrincipal != null)
+                {
+                    // Verificamos si el formulario es un MDI container
+                    if (frmPrincipal.IsMdiContainer)
+                    {
+                        // Configuramos el formulario hijo
+                        formulari.MdiParent = frmPrincipal;
+                        formulari.TopLevel = false;
+                        formulari.Dock = DockStyle.Fill;
+                        formulari.FormBorderStyle = FormBorderStyle.None;
+                        formulari.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El formulario principal no está configurado como contenedor MDI.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo encontrar el formulario principal.");
+                }
             }
         }
 

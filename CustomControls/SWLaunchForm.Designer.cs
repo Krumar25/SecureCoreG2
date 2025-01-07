@@ -36,10 +36,11 @@ namespace CustomControls
             // 
             // pbOpcioMenu
             // 
-            this.pbOpcioMenu.BackColor = System.Drawing.SystemColors.Control;
-            this.pbOpcioMenu.Location = new System.Drawing.Point(3, 3);
+            this.pbOpcioMenu.BackColor = System.Drawing.Color.Transparent;
+            this.pbOpcioMenu.Location = new System.Drawing.Point(27, 26);
+            this.pbOpcioMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbOpcioMenu.Name = "pbOpcioMenu";
-            this.pbOpcioMenu.Size = new System.Drawing.Size(40, 40);
+            this.pbOpcioMenu.Size = new System.Drawing.Size(45, 50);
             this.pbOpcioMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbOpcioMenu.TabIndex = 3;
             this.pbOpcioMenu.TabStop = false;
@@ -48,23 +49,25 @@ namespace CustomControls
             // lblDescripcio
             // 
             this.lblDescripcio.AutoSize = true;
-            this.lblDescripcio.ForeColor = System.Drawing.Color.White;
-            this.lblDescripcio.Location = new System.Drawing.Point(49, 13);
+            this.lblDescripcio.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.lblDescripcio.ForeColor = System.Drawing.Color.Yellow;
+            this.lblDescripcio.Location = new System.Drawing.Point(116, 40);
             this.lblDescripcio.Name = "lblDescripcio";
-            this.lblDescripcio.Size = new System.Drawing.Size(38, 17);
+            this.lblDescripcio.Size = new System.Drawing.Size(54, 21);
             this.lblDescripcio.TabIndex = 4;
             this.lblDescripcio.Text = "label";
             this.lblDescripcio.Click += new System.EventHandler(this.SWLaunchForm_Click);
             // 
             // SWLaunchForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.lblDescripcio);
             this.Controls.Add(this.pbOpcioMenu);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SWLaunchForm";
-            this.Size = new System.Drawing.Size(200, 60);
+            this.Size = new System.Drawing.Size(349, 109);
             this.Load += new System.EventHandler(this.SWLaunchForm_Load);
             this.Click += new System.EventHandler(this.SWLaunchForm_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pbOpcioMenu)).EndInit();

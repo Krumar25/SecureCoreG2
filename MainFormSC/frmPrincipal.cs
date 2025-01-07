@@ -11,6 +11,8 @@ using System.Runtime.InteropServices;
 using mdiProperties;
 using UserOptions;
 using Users;
+using Dades;
+using CustomControls;
 
 namespace MainFormSC
 {
@@ -20,10 +22,11 @@ namespace MainFormSC
         #region Variables Globales
 
         private bool menuExpandit = false;
-        private bool menuWelcomeExpandit = false;
         private bool dragging = false;
+        public bool logout = false;
         private Point dragCursorPoint;
         private Point dragFormPoint;
+        private AccesADades AccessDades = new AccesADades();
         frm_users mantenimiento;
 
 
@@ -55,11 +58,62 @@ namespace MainFormSC
 
         #region Eventos
 
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            //Obtencion del idUserCategory
+            string query = $"SELECT * FROM Users WHERE idUser = {idAccess}";
+            DataSet dts = AccessDades.PortarPerConsulta(query, "Users");
+            DataRow row = dts.Tables[0].Rows[0];
+            string idUserCategory = row["idUserCategory"].ToString();
+
+            //Obtencion del AccessLevel
+            query = $"SELECT * FROM UserCategories WHERE idUserCategory = {idUserCategory}";
+            dts = AccessDades.PortarPerConsulta(query, "UserCategories");
+            row = dts.Tables[0].Rows[0];
+            string accessLevel = row["AccessLevel"].ToString();
+
+            //Obtencion de las DLLs por AccessLevel
+            query = $"SELECT * FROM UserOptions WHERE AccessLevel <= {accessLevel}";
+            dts = AccessDades.PortarPerConsulta(query, "UserOptions");
+
+            //Introduccion de los custom controls al form
+            foreach (DataRow rows in dts.Tables["UserOptions"].Rows)
+            {
+                SWLaunchForm control = new SWLaunchForm
+                {
+                    NomClase = rows["class"].ToString(),
+                    NomFormulari = rows["form"].ToString(),
+                    Descripcio = rows["DLL_name"].ToString(),
+                    Imatge = Bitmap.FromFile(rows["icon_img"].ToString()),
+                    PanellManteniment = pnlMenu
+                };
+
+                // Configurar posición del UserControl en el panel
+                control.Size = new Size(pnlMenu.Width, 100); // Ajustar el tamaño del control
+                control.Dock = DockStyle.Top;
+
+                // Agregar el control al panel
+                pnlMenu.Controls.Add(control);
+            }
+
+            Button button = new Button();
+            button.Size = new Size(pnlMenu.Width, 100);
+            button.Dock = DockStyle.Bottom;
+            button.FlatStyle = FlatStyle.Flat;
+            button.FlatAppearance.BorderSize = 0;
+            button.BackColor = Color.Transparent;
+            button.ForeColor = Color.Yellow;
+            button.Text = "Logout";
+            button.Font = new Font("Lucida Sans", 9, FontStyle.Bold);
+            button.Click += Button_Click;
+            pnlMenu.Controls.Add(button);
+        }
+
         private void menuTransicio_Tick(object sender, EventArgs e)
         {
             if (!menuExpandit)
             {
-                pnlMenu.Width -= 5;
+                pnlMenu.Width -= 4;
 
                 if (pnlMenu.Width <= 74)
                 {
@@ -69,9 +123,9 @@ namespace MainFormSC
             }
             else
             {
-                pnlMenu.Width += 5;
+                pnlMenu.Width += 4;
 
-                if (pnlMenu.Width >= 200)
+                if (pnlMenu.Width >= 330)
                 {
                     menuExpandit = false;
                     menuTransicio.Stop();
@@ -131,6 +185,12 @@ namespace MainFormSC
             mantenimiento = null;
         }
 
+        private void Button_Click(object sender, EventArgs e)
+        {
+            logout = true; // Indica que el cierre fue intencional
+            this.Close(); // Cierra frmMain
+        }
+
         #endregion
 
         #region Eventos para mover el formulario
@@ -162,37 +222,5 @@ namespace MainFormSC
         }
 
         #endregion
-
-        private void DesplegableWelcome_Tick(object sender, EventArgs e)
-        {
-            if (!menuExpandit)
-            {
-                if (!menuWelcomeExpandit)
-                {
-                    pnlMenu.Height -= 5;
-
-                    if (pnlMenu.Height <= 0)
-                    {
-                        menuWelcomeExpandit = true;
-                        DesplegableWelcome.Stop();
-                    }
-                }
-                else
-                {
-                    pnlMenu.Height += 5;
-
-                    if (pnlMenu.Height >= 200)
-                    {
-                        menuWelcomeExpandit = false;
-                        DesplegableWelcome.Stop();
-                    }
-                }
-            }
-        }
-
-        private void pnlWelcome_Click(object sender, EventArgs e)
-        {
-            DesplegableWelcome.Start();
-        }
     }
 }

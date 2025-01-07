@@ -17,11 +17,14 @@ namespace Login
     {
         #region Variables Globales
 
+        AccesADades AccesDades = new AccesADades();
+        MainFormSC.frmPrincipal frmmain;
         private const int SaltByteSize = 24;
         private const int HashByteSize = 24;
         private const int HasingIterationsCount = 10101;
         private string creedentials_query;
         private string idAccess;
+
 
         private string username;
 
@@ -37,7 +40,7 @@ namespace Login
         {
             InitializeComponent();
         }
-        AccesADades AccesDades = new AccesADades();
+        
 
         #region Metodos
 
@@ -88,9 +91,9 @@ namespace Login
 
                         if (Password== passwordBBDD && Username == loginBBDD)
                         {
-                            this.Hide();                      
-                            MainFormSC.frmPrincipal frmmain = new MainFormSC.frmPrincipal();
-                            frmmain.FormClosed += (s, args) => this.Close();
+                            this.Hide();
+                            frmmain = new MainFormSC.frmPrincipal();
+                            frmmain.FormClosed += frmmain_FormClosed;
                             frmmain.idAccess = idAccess;
                             frmmain.Show();
                         }
@@ -149,6 +152,26 @@ namespace Login
         private void btnAccess_Click(object sender, EventArgs e)
         {
             verify_Creedentials();
+        }
+
+        private void frmmain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (frmmain.logout)
+            {
+                // Volver a mostrar el frmLogin
+                var frmLogin = Application.OpenForms.OfType<frmLogin>().FirstOrDefault();
+                if (frmLogin != null)
+                {
+                    tbUser.Clear();
+                    tbPass.Clear();
+                    frmLogin.Show();
+                }
+            }
+            else
+            {
+                // Cerrar completamente la aplicación si no fue un cierre intencional
+                this.Close();
+            }
         }
 
         #endregion
