@@ -11,6 +11,12 @@ namespace Dades
 { public class AccesADades
     {
         private SqlConnection conn;
+        /// <summary>
+        /// Función para conectarse a la BBDD
+        /// </summary>
+        /// <remarks>
+        /// La cadena de conexión está en la biblioteca SecureCore en el archivo App.config
+        /// </remarks>
 
         private void Connectar()
         {
@@ -28,6 +34,11 @@ namespace Dades
 
             conn = new SqlConnection(cnx);
         }
+        /// <summary>
+        /// Función que trae tabla de la BBDD
+        /// </summary>
+        /// <param name="nomTaula">Nombre de la tabla</param>
+        /// <returns>Devuelve un DataSet</returns>
         public DataSet PortarTaula(string nomTaula)
         {
             SqlDataAdapter adapter;
@@ -43,7 +54,11 @@ namespace Dades
 
             return dts;
         }
-        
+        /// <summary>
+        /// Función que trae info de la BBDD a través de query
+        /// </summary>
+        /// <param name="query">La cadena que utilizamos para hacer la consulta</param> 
+        /// <returns>Devuelve un DataSet</returns>
         public DataSet PortarPerConsulta(string query)
         {
             string nomTaula = "DadesAlumnes";
@@ -58,7 +73,13 @@ namespace Dades
             conn.Close();
 
             return dts;
-        } 
+        }
+        /// <summary>
+        /// Función que trae info de la BBDD a través de query que además entramos como parametro el nombre de la tabla
+        /// </summary>
+        /// <param name="query">La cadena que utilizamos para hacer la consulta</param> 
+        /// <param name="nomTaula">Nombre de la tabla</param> 
+        /// <returns>Devuelve un DataSet</returns>
         public DataSet PortarPerConsulta(string query, string nomTaula)
         {
             Connectar();
@@ -74,7 +95,12 @@ namespace Dades
             conn.Close();
 
             return dts;
-        } 
+        }
+        /// <summary>
+        /// Función que actualiza la tabla de la BBDD
+        /// </summary>
+        /// <param name="query">La cadena que utilizamos para hacer la consulta</param>
+        /// <param name="dts">DataSet con el que estamos trabajando en nuestra aplicación </param>
         public void Actualitzar(string query, DataSet dts)
         {
             conn.Open();
@@ -90,7 +116,12 @@ namespace Dades
             }
             conn.Close();
         }
-
+        /// <summary>
+        /// Función que genera una consulta parametrizada a través de una query y y un diccionario para evitar ataques SQLInjection
+        /// </summary>
+        /// <param name="query">La cadena que utilizamos para hacer la consulta</param>
+        /// <param name="parameters">Parametros que queremos ocultar</param>
+        /// <returns>Devuelve un DataSet</returns>
         public DataSet GenerarConsultaCerca(string query, Dictionary<string, string> parameters)
         {
             DataSet dts = new DataSet();
@@ -117,6 +148,11 @@ namespace Dades
 
             return dts;
         }
+        /// <summary>
+        /// Función que ejecuta directamente la query en la BBDD
+        /// </summary>
+        /// <param name="query">La cadena que utilizamos para hacer la consulta</param>
+        /// <param name="parameters">Parametros que queremos ocultar</param>
         public void Executa(string query, Dictionary<string, string> parameters)
         {
             Connectar();
