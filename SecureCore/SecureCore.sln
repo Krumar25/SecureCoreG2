@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "..\Login\Login.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users", "..\Users\Users.csproj", "{0F180FE2-08ED-46BE-873F-861EF4C3AD6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CategoriaNaus", "..\CategoriaNaus\CategoriaNaus.csproj", "{12BEC4DA-E98D-4F8F-B04F-0B3380647EEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{0F180FE2-08ED-46BE-873F-861EF4C3AD6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F180FE2-08ED-46BE-873F-861EF4C3AD6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F180FE2-08ED-46BE-873F-861EF4C3AD6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12BEC4DA-E98D-4F8F-B04F-0B3380647EEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12BEC4DA-E98D-4F8F-B04F-0B3380647EEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12BEC4DA-E98D-4F8F-B04F-0B3380647EEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12BEC4DA-E98D-4F8F-B04F-0B3380647EEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
