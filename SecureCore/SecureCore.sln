@@ -28,6 +28,7 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RangUsuari", "..\RangUsuari\RangUsuari.csproj", "{67B0AB61-2A18-45D0-8F62-0765BEAAAA01}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipusDeNausFK", "..\TipusDeNausFK\TipusDeNausFK.csproj", "{7FF41C10-6EDD-4948-8193-38D24024D204}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CategoriaNaus", "..\CategoriaNaus\CategoriaNaus.csproj", "{12BEC4DA-E98D-4F8F-B04F-0B3380647EEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
