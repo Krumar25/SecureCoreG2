@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MainFormSC;
 
+
 namespace SecureCore
 {
     static class Program
@@ -18,6 +19,7 @@ namespace SecureCore
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login.frmLogin());
+            //Application.Run(new TipusDeNausFK.frmTipusNausFK());
         }
     }
 }

@@ -102,6 +102,14 @@
       <Project>{db4d62f4-335b-41e6-9c8c-84a531e2eaa6}</Project>
       <Name>mdiProperties</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\RangUsuari\RangUsuari.csproj">
+      <Project>{67b0ab61-2a18-45d0-8f62-0765beaaaa01}</Project>
+      <Name>RangUsuari</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TipusDeNausFK\TipusDeNausFK.csproj">
+      <Project>{7ff41c10-6edd-4948-8193-38d24024d204}</Project>
+      <Name>TipusDeNausFK</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
