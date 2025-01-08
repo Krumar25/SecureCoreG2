@@ -60,21 +60,20 @@ namespace MainFormSC
             this.pnlSuperior.Controls.Add(this.btnDesplegable);
             this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
+            this.pnlSuperior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlSuperior.Name = "pnlSuperior";
-            this.pnlSuperior.Size = new System.Drawing.Size(1830, 75);
+            this.pnlSuperior.Size = new System.Drawing.Size(1000, 49);
             this.pnlSuperior.TabIndex = 1;
-            this.pnlSuperior.MouseDown += Control_MouseDown;
-            this.pnlSuperior.MouseUp += Control_MouseUp;
-            this.pnlSuperior.MouseMove += Control_MouseMove;
             // 
             // picBoxMinimizar
             // 
             this.picBoxMinimizar.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picBoxMinimizar.Image")));
-            this.picBoxMinimizar.Location = new System.Drawing.Point(1479, 0);
+            this.picBoxMinimizar.Location = new System.Drawing.Point(766, 0);
+            this.picBoxMinimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picBoxMinimizar.Name = "picBoxMinimizar";
-            this.picBoxMinimizar.Padding = new System.Windows.Forms.Padding(40, 10, 40, 10);
-            this.picBoxMinimizar.Size = new System.Drawing.Size(117, 75);
+            this.picBoxMinimizar.Padding = new System.Windows.Forms.Padding(27, 6, 27, 6);
+            this.picBoxMinimizar.Size = new System.Drawing.Size(78, 49);
             this.picBoxMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxMinimizar.TabIndex = 4;
             this.picBoxMinimizar.TabStop = false;
@@ -84,10 +83,11 @@ namespace MainFormSC
             // 
             this.picBoxVentana.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxVentana.Image = ((System.Drawing.Image)(resources.GetObject("picBoxVentana.Image")));
-            this.picBoxVentana.Location = new System.Drawing.Point(1596, 0);
+            this.picBoxVentana.Location = new System.Drawing.Point(844, 0);
+            this.picBoxVentana.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picBoxVentana.Name = "picBoxVentana";
-            this.picBoxVentana.Padding = new System.Windows.Forms.Padding(35, 15, 35, 15);
-            this.picBoxVentana.Size = new System.Drawing.Size(117, 75);
+            this.picBoxVentana.Padding = new System.Windows.Forms.Padding(23, 10, 23, 10);
+            this.picBoxVentana.Size = new System.Drawing.Size(78, 49);
             this.picBoxVentana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxVentana.TabIndex = 5;
             this.picBoxVentana.TabStop = false;
@@ -98,10 +98,11 @@ namespace MainFormSC
             this.picBoxCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBoxCerrar.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picBoxCerrar.Image")));
-            this.picBoxCerrar.Location = new System.Drawing.Point(1713, 0);
+            this.picBoxCerrar.Location = new System.Drawing.Point(922, 0);
+            this.picBoxCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picBoxCerrar.Name = "picBoxCerrar";
-            this.picBoxCerrar.Padding = new System.Windows.Forms.Padding(45, 25, 45, 25);
-            this.picBoxCerrar.Size = new System.Drawing.Size(117, 75);
+            this.picBoxCerrar.Padding = new System.Windows.Forms.Padding(30, 16, 30, 16);
+            this.picBoxCerrar.Size = new System.Drawing.Size(78, 49);
             this.picBoxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxCerrar.TabIndex = 6;
             this.picBoxCerrar.TabStop = false;
@@ -114,8 +115,9 @@ namespace MainFormSC
             this.btnDesplegable.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnDesplegable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDesplegable.Location = new System.Drawing.Point(0, 0);
+            this.btnDesplegable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDesplegable.Name = "btnDesplegable";
-            this.btnDesplegable.Size = new System.Drawing.Size(110, 75);
+            this.btnDesplegable.Size = new System.Drawing.Size(73, 49);
             this.btnDesplegable.TabIndex = 3;
             this.btnDesplegable.UseVisualStyleBackColor = true;
             this.btnDesplegable.Click += new System.EventHandler(this.btnDesplegable_Click);
@@ -125,19 +127,18 @@ namespace MainFormSC
             this.pnlMenu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pnlMenu.Controls.Add(this.button1);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlMenu.Location = new System.Drawing.Point(0, 75);
+            this.pnlMenu.Location = new System.Drawing.Point(0, 49);
+            this.pnlMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(329, 1076);
+            this.pnlMenu.Size = new System.Drawing.Size(219, 551);
             this.pnlMenu.TabIndex = 3;
-            this.pnlMenu.MouseDown += Control_MouseDown;
-            this.pnlMenu.MouseUp += Control_MouseUp;
-            this.pnlMenu.MouseMove += Control_MouseMove;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Location = new System.Drawing.Point(2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 77);
+            this.button1.Size = new System.Drawing.Size(118, 50);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -145,14 +146,15 @@ namespace MainFormSC
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1830, 1151);
+            this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Secure Core";
@@ -162,6 +164,7 @@ namespace MainFormSC
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCerrar)).EndInit();
             this.pnlMenu.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -16,36 +16,8 @@ namespace UserCategories
         public frm_userCategories()
         {
             InitializeComponent();
+            ConfigurarConsulta("UserCategories", "User Categories");
         }
 
-        private void swTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void swTextBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void swTextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_desc_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_code_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

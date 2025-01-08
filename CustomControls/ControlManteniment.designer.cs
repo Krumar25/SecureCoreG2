@@ -51,11 +51,11 @@ namespace CustomControls
             // 
             this.lbl_titulo.AutoSize = true;
             this.lbl_titulo.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_titulo.Font = new System.Drawing.Font("StarJedi Special Edition", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_titulo.ForeColor = System.Drawing.Color.Yellow;
             this.lbl_titulo.Location = new System.Drawing.Point(85, 15);
             this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(239, 39);
+            this.lbl_titulo.Size = new System.Drawing.Size(167, 29);
             this.lbl_titulo.TabIndex = 1;
             this.lbl_titulo.Text = "MANTENIMIENTO";
             this.lbl_titulo.Click += new System.EventHandler(this.pb_logo_Click);
