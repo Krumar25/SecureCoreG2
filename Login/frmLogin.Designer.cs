@@ -78,10 +78,11 @@ namespace Login
             // lbErrorLogin
             // 
             this.lbErrorLogin.BackColor = System.Drawing.Color.Transparent;
+            this.lbErrorLogin.Font = new System.Drawing.Font("Lucida Sans", 10F);
             this.lbErrorLogin.ForeColor = System.Drawing.Color.DarkRed;
-            this.lbErrorLogin.Location = new System.Drawing.Point(101, 579);
+            this.lbErrorLogin.Location = new System.Drawing.Point(69, 578);
             this.lbErrorLogin.Name = "lbErrorLogin";
-            this.lbErrorLogin.Size = new System.Drawing.Size(261, 39);
+            this.lbErrorLogin.Size = new System.Drawing.Size(357, 39);
             this.lbErrorLogin.TabIndex = 18;
             this.lbErrorLogin.Text = "Usuario y/o contraseña incorrectos";
             this.lbErrorLogin.Visible = false;
@@ -95,6 +96,7 @@ namespace Login
             this.btnAccess.BorderSize = 0;
             this.btnAccess.FlatAppearance.BorderSize = 0;
             this.btnAccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccess.Font = new System.Drawing.Font("Lucida Sans", 9F);
             this.btnAccess.ForeColor = System.Drawing.Color.White;
             this.btnAccess.Location = new System.Drawing.Point(142, 621);
             this.btnAccess.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -120,18 +122,20 @@ namespace Login
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(101, 486);
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 10F);
+            this.label2.Location = new System.Drawing.Point(101, 484);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 20);
+            this.label2.Size = new System.Drawing.Size(122, 23);
             this.label2.TabIndex = 14;
             this.label2.Text = "Contraseña";
             // 
             // lbUser
             // 
             this.lbUser.AutoSize = true;
-            this.lbUser.Location = new System.Drawing.Point(101, 409);
+            this.lbUser.Font = new System.Drawing.Font("Lucida Sans", 10F);
+            this.lbUser.Location = new System.Drawing.Point(101, 407);
             this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(64, 20);
+            this.lbUser.Size = new System.Drawing.Size(84, 23);
             this.lbUser.TabIndex = 13;
             this.lbUser.Text = "Usuario";
             // 
