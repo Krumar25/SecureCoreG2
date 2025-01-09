@@ -18,7 +18,7 @@ namespace Planets
         public frm_planets()
         {
             InitializeComponent();
-            ConfigurarConsulta("Planets", "Planets");
+            ConfigurarConsulta("Planets", "Planetas");
         
         }
 
