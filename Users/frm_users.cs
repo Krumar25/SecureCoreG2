@@ -66,5 +66,29 @@ namespace Users
             report_tarjeta.ID = swidUser.Text;
             report_tarjeta.Show();
         }
+
+        private void swbtnResetPass_MouseEnter(object sender, EventArgs e)
+        {
+            swbtnResetPass.ForeColor = Color.Black;
+            swbtnResetPass.BackColor = Color.Yellow;
+        }
+
+        private void swbtnResetPass_MouseLeave(object sender, EventArgs e)
+        {
+            swbtnResetPass.ForeColor = Color.Yellow;
+            swbtnResetPass.BackColor = Color.Black;
+        }
+
+        private void swbtnGenerarTarjeta_MouseEnter(object sender, EventArgs e)
+        {
+            swbtnGenerarTarjeta.ForeColor = Color.Black;
+            swbtnGenerarTarjeta.BackColor = Color.Yellow;
+        }
+
+        private void swbtnGenerarTarjeta_MouseLeave(object sender, EventArgs e)
+        {
+            swbtnGenerarTarjeta.ForeColor = Color.Yellow;
+            swbtnGenerarTarjeta.BackColor = Color.Black;
+        }
     }
 }

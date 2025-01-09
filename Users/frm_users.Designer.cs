@@ -57,7 +57,7 @@ namespace Users
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(459, 183);
+            this.controlManteniment1.Location = new System.Drawing.Point(425, 183);
             // 
             // panel1
             // 
@@ -241,6 +241,8 @@ namespace Users
             this.swbtnResetPass.TextColor = System.Drawing.Color.Yellow;
             this.swbtnResetPass.UseVisualStyleBackColor = false;
             this.swbtnResetPass.Click += new System.EventHandler(this.swbtnResetPass_Click);
+            this.swbtnResetPass.MouseEnter += new System.EventHandler(this.swbtnResetPass_MouseEnter);
+            this.swbtnResetPass.MouseLeave += new System.EventHandler(this.swbtnResetPass_MouseLeave);
             // 
             // label1
             // 
@@ -376,6 +378,8 @@ namespace Users
             this.swbtnGenerarTarjeta.TextColor = System.Drawing.Color.Yellow;
             this.swbtnGenerarTarjeta.UseVisualStyleBackColor = false;
             this.swbtnGenerarTarjeta.Click += new System.EventHandler(this.swbtnGenerarTarjeta_Click);
+            this.swbtnGenerarTarjeta.MouseEnter += new System.EventHandler(this.swbtnGenerarTarjeta_MouseEnter);
+            this.swbtnGenerarTarjeta.MouseLeave += new System.EventHandler(this.swbtnGenerarTarjeta_MouseLeave);
             // 
             // crystalReportViewer1
             // 
