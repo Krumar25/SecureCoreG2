@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\App\SecureCore.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,9 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CategoriaNaus">
-      <HintPath>..\..\CategoriaNaus\bin\Debug\CategoriaNaus.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -74,6 +72,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\CategoriaNaus\CategoriaNaus.csproj">
+      <Project>{12bec4da-e98d-4f8f-b04f-0b3380647eeb}</Project>
+      <Name>CategoriaNaus</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\CustomControls\CustomControls.csproj">
       <Project>{77c1d327-1c61-4cd1-babd-d13629498441}</Project>
       <Name>CustomControls</Name>

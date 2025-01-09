@@ -65,7 +65,7 @@ namespace Login
             }
             else
             {
-
+                lbErrorLogin.Visible = true;
             }
         }
 

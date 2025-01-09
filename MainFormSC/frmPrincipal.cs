@@ -11,6 +11,8 @@ using System.Runtime.InteropServices;
 using mdiProperties;
 using UserOptions;
 using Users;
+using Planets;
+
 
 namespace MainFormSC
 {
@@ -24,7 +26,7 @@ namespace MainFormSC
         private bool dragging = false;
         private Point dragCursorPoint;
         private Point dragFormPoint;
-        frm_users mantenimiento;
+        frm_planets mantenimiento;
 
 
         private string _idAccess;
@@ -112,7 +114,7 @@ namespace MainFormSC
         {
             if (mantenimiento == null)
             {
-                mantenimiento = new frm_users();
+                mantenimiento = new frm_planets();
                 mantenimiento.FormClosed += Mantenimiento_FormClosed;
                 mantenimiento.MdiParent = this;
                 mantenimiento.TopLevel = false;
@@ -174,7 +176,7 @@ namespace MainFormSC
                     if (pnlMenu.Height <= 0)
                     {
                         menuWelcomeExpandit = true;
-                        DesplegableWelcome.Stop();
+                        //DesplegableWelcome.Stop();
                     }
                 }
                 else
@@ -184,7 +186,7 @@ namespace MainFormSC
                     if (pnlMenu.Height >= 200)
                     {
                         menuWelcomeExpandit = false;
-                        DesplegableWelcome.Stop();
+                        //DesplegableWelcome.Stop();
                     }
                 }
             }
@@ -192,7 +194,7 @@ namespace MainFormSC
 
         private void pnlWelcome_Click(object sender, EventArgs e)
         {
-            DesplegableWelcome.Start();
+            //DesplegableWelcome.Start();
         }
     }
 }

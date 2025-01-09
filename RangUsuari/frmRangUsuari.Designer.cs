@@ -38,7 +38,7 @@ namespace RangUsuari
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(209, 51);
+            this.controlManteniment1.Location = new System.Drawing.Point(251, 51);
             this.controlManteniment1.NomClase = "Rang Usuari";
             this.controlManteniment1.NomForm = "frmRangUsuari";
             // 
@@ -48,7 +48,7 @@ namespace RangUsuari
             this.panel1.Controls.Add(this.swTextBox1);
             this.panel1.Controls.Add(this.lblDescR);
             this.panel1.Controls.Add(this.lblCodiR);
-            this.panel1.Size = new System.Drawing.Size(843, 680);
+            this.panel1.Size = new System.Drawing.Size(1226, 756);
             this.panel1.Controls.SetChildIndex(this.controlManteniment1, 0);
             this.panel1.Controls.SetChildIndex(this.lblCodiR, 0);
             this.panel1.Controls.SetChildIndex(this.lblDescR, 0);
@@ -61,7 +61,7 @@ namespace RangUsuari
             this.lblCodiR.AutoSize = true;
             this.lblCodiR.BackColor = System.Drawing.Color.Transparent;
             this.lblCodiR.ForeColor = System.Drawing.Color.Yellow;
-            this.lblCodiR.Location = new System.Drawing.Point(244, 217);
+            this.lblCodiR.Location = new System.Drawing.Point(436, 217);
             this.lblCodiR.Name = "lblCodiR";
             this.lblCodiR.Size = new System.Drawing.Size(78, 17);
             this.lblCodiR.TabIndex = 4;
@@ -73,12 +73,11 @@ namespace RangUsuari
             this.lblDescR.AutoSize = true;
             this.lblDescR.BackColor = System.Drawing.Color.Transparent;
             this.lblDescR.ForeColor = System.Drawing.Color.Yellow;
-            this.lblDescR.Location = new System.Drawing.Point(206, 272);
+            this.lblDescR.Location = new System.Drawing.Point(398, 272);
             this.lblDescR.Name = "lblDescR";
             this.lblDescR.Size = new System.Drawing.Size(116, 17);
             this.lblDescR.TabIndex = 5;
             this.lblDescR.Text = "Descripció Rang:";
-            this.lblDescR.Click += new System.EventHandler(this.label2_Click);
             // 
             // swTextBox1
             // 
@@ -87,7 +86,7 @@ namespace RangUsuari
             this.swTextBox1.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swTextBox1.EsForana = false;
             this.swTextBox1.EsNulable = false;
-            this.swTextBox1.Location = new System.Drawing.Point(381, 217);
+            this.swTextBox1.Location = new System.Drawing.Point(573, 217);
             this.swTextBox1.Name = "swTextBox1";
             this.swTextBox1.Size = new System.Drawing.Size(245, 22);
             this.swTextBox1.TabIndex = 6;
@@ -99,7 +98,7 @@ namespace RangUsuari
             this.swTextBox2.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swTextBox2.EsForana = false;
             this.swTextBox2.EsNulable = false;
-            this.swTextBox2.Location = new System.Drawing.Point(381, 272);
+            this.swTextBox2.Location = new System.Drawing.Point(573, 272);
             this.swTextBox2.Name = "swTextBox2";
             this.swTextBox2.Size = new System.Drawing.Size(245, 22);
             this.swTextBox2.TabIndex = 7;
@@ -108,7 +107,7 @@ namespace RangUsuari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 680);
+            this.ClientSize = new System.Drawing.Size(1417, 756);
             this.Name = "frmRangUsuari";
             this.Text = "frmRangUsuari";
             this.panel1.ResumeLayout(false);

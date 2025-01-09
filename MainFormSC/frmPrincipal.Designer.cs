@@ -137,7 +137,6 @@ namespace MainFormSC
             this.pnlMenu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pnlMenu.Controls.Add(this.pnlWelcome);
             this.pnlMenu.Controls.Add(this.pnlDesplegableWelcome);
-            this.pnlMenu.Controls.Add(this.button1);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 60);
             this.pnlMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -179,6 +178,7 @@ namespace MainFormSC
             // 
             // pnlDesplegableWelcome
             // 
+            this.pnlDesplegableWelcome.Controls.Add(this.button1);
             this.pnlDesplegableWelcome.Controls.Add(this.swButton2);
             this.pnlDesplegableWelcome.Controls.Add(this.swButton1);
             this.pnlDesplegableWelcome.Location = new System.Drawing.Point(3, 86);
@@ -188,7 +188,7 @@ namespace MainFormSC
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(3, 329);
+            this.button1.Location = new System.Drawing.Point(21, -11);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 62);

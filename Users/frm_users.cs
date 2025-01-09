@@ -52,5 +52,7 @@ namespace Users
             dades.Executa(query_reset_pass, Dicc);
             CargarDatos();
         }
+
+      
     }
 }
