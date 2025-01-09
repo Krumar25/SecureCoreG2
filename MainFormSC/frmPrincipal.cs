@@ -64,6 +64,14 @@ namespace MainFormSC
             string query = $"SELECT * FROM Users WHERE idUser = {idAccess}";
             DataSet dts = AccessDades.PortarPerConsulta(query, "Users");
             DataRow row = dts.Tables[0].Rows[0];
+
+            pbWelcome.Image = Bitmap.FromFile(row["Photo"].ToString());
+            lblWelcome.Text = "Welcome " + row["UserName"].ToString();
+
+            //Obtencion del idUserCategory
+            query = $"SELECT * FROM Users WHERE idUser = {idAccess}";
+            dts = AccessDades.PortarPerConsulta(query, "Users");
+            row = dts.Tables[0].Rows[0];
             string idUserCategory = row["idUserCategory"].ToString();
 
             //Obtencion del AccessLevel

@@ -152,27 +152,30 @@ namespace MainFormSC
             this.pnlWelcome.Location = new System.Drawing.Point(3, 4);
             this.pnlWelcome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlWelcome.Name = "pnlWelcome";
-            this.pnlWelcome.Size = new System.Drawing.Size(397, 107);
+            this.pnlWelcome.Size = new System.Drawing.Size(497, 155);
             this.pnlWelcome.TabIndex = 1;
             // 
             // lblWelcome
             // 
             this.lblWelcome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcome.ForeColor = System.Drawing.Color.Yellow;
-            this.lblWelcome.Location = new System.Drawing.Point(162, 38);
+            this.lblWelcome.Location = new System.Drawing.Point(122, 64);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(75, 20);
+            this.lblWelcome.Size = new System.Drawing.Size(121, 27);
             this.lblWelcome.TabIndex = 1;
             this.lblWelcome.Text = "Welcome";
             // 
             // pbWelcome
             // 
             this.pbWelcome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pbWelcome.Location = new System.Drawing.Point(29, 2);
+            this.pbWelcome.ImageLocation = "";
+            this.pbWelcome.Location = new System.Drawing.Point(0, 21);
             this.pbWelcome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbWelcome.Name = "pbWelcome";
             this.pbWelcome.Size = new System.Drawing.Size(93, 100);
+            this.pbWelcome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbWelcome.TabIndex = 0;
             this.pbWelcome.TabStop = false;
             // 
@@ -182,7 +185,7 @@ namespace MainFormSC
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Yellow;
-            this.button1.Location = new System.Drawing.Point(3, 117);
+            this.button1.Location = new System.Drawing.Point(3, 165);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(397, 117);

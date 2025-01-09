@@ -121,11 +121,11 @@ namespace FormularioBase
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Yellow;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtg_datos.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtg_datos.Location = new System.Drawing.Point(378, 831);
+            this.dtg_datos.Location = new System.Drawing.Point(279, 831);
             this.dtg_datos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtg_datos.Name = "dtg_datos";
             this.dtg_datos.RowHeadersWidth = 62;
-            this.dtg_datos.Size = new System.Drawing.Size(880, 345);
+            this.dtg_datos.Size = new System.Drawing.Size(1056, 434);
             this.dtg_datos.TabIndex = 3;
             // 
             // imageList1

@@ -88,8 +88,8 @@ namespace Login
             // 
             // btnAccess
             // 
-            this.btnAccess.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnAccess.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAccess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(26)))));
+            this.btnAccess.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(26)))));
             this.btnAccess.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnAccess.BorderRadius = 20;
             this.btnAccess.BorderSize = 0;
@@ -99,7 +99,7 @@ namespace Login
             this.btnAccess.Location = new System.Drawing.Point(142, 621);
             this.btnAccess.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAccess.Name = "btnAccess";
-            this.btnAccess.Size = new System.Drawing.Size(169, 50);
+            this.btnAccess.Size = new System.Drawing.Size(167, 60);
             this.btnAccess.TabIndex = 17;
             this.btnAccess.Text = "Login";
             this.btnAccess.TextColor = System.Drawing.Color.White;

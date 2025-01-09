@@ -47,6 +47,9 @@ namespace Users
             this.swidUserCategory = new CustomControls.SWTextBox();
             this.swidPlanet = new CustomControls.SWTextBox();
             this.swidSpecie = new CustomControls.SWTextBox();
+            this.swbtnGenerarTarjeta = new CustomControls.SWButton();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.swidUser = new CustomControls.SWTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,11 +57,13 @@ namespace Users
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(505, 156);
+            this.controlManteniment1.Location = new System.Drawing.Point(459, 183);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.swidUser);
+            this.panel1.Controls.Add(this.swbtnGenerarTarjeta);
             this.panel1.Controls.Add(this.swidSpecie);
             this.panel1.Controls.Add(this.swidPlanet);
             this.panel1.Controls.Add(this.swidUserCategory);
@@ -77,7 +82,7 @@ namespace Users
             this.panel1.Controls.Add(this.swUserCategory);
             this.panel1.Controls.Add(this.swPlanet);
             this.panel1.Controls.Add(this.swSpecie);
-            this.panel1.Size = new System.Drawing.Size(1569, 1197);
+            this.panel1.Size = new System.Drawing.Size(1569, 1420);
             this.panel1.Controls.SetChildIndex(this.swSpecie, 0);
             this.panel1.Controls.SetChildIndex(this.swPlanet, 0);
             this.panel1.Controls.SetChildIndex(this.swUserCategory, 0);
@@ -93,10 +98,12 @@ namespace Users
             this.panel1.Controls.SetChildIndex(this.label4, 0);
             this.panel1.Controls.SetChildIndex(this.swUserRanks, 0);
             this.panel1.Controls.SetChildIndex(this.swidUserRank, 0);
-            this.panel1.Controls.SetChildIndex(this.controlManteniment1, 0);
             this.panel1.Controls.SetChildIndex(this.swidUserCategory, 0);
             this.panel1.Controls.SetChildIndex(this.swidPlanet, 0);
             this.panel1.Controls.SetChildIndex(this.swidSpecie, 0);
+            this.panel1.Controls.SetChildIndex(this.swbtnGenerarTarjeta, 0);
+            this.panel1.Controls.SetChildIndex(this.controlManteniment1, 0);
+            this.panel1.Controls.SetChildIndex(this.swidUser, 0);
             this.panel1.Controls.SetChildIndex(this.panel2, 0);
             // 
             // swSpecie
@@ -217,20 +224,21 @@ namespace Users
             // swbtnResetPass
             // 
             this.swbtnResetPass.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.swbtnResetPass.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.swbtnResetPass.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.swbtnResetPass.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.swbtnResetPass.BorderRadius = 0;
-            this.swbtnResetPass.BorderSize = 0;
+            this.swbtnResetPass.BackColor = System.Drawing.Color.Transparent;
+            this.swbtnResetPass.BackgroundColor = System.Drawing.Color.Transparent;
+            this.swbtnResetPass.BorderColor = System.Drawing.Color.Yellow;
+            this.swbtnResetPass.BorderRadius = 10;
+            this.swbtnResetPass.BorderSize = 2;
             this.swbtnResetPass.FlatAppearance.BorderSize = 0;
             this.swbtnResetPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.swbtnResetPass.ForeColor = System.Drawing.Color.White;
-            this.swbtnResetPass.Location = new System.Drawing.Point(1129, 626);
+            this.swbtnResetPass.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Bold);
+            this.swbtnResetPass.ForeColor = System.Drawing.Color.Yellow;
+            this.swbtnResetPass.Location = new System.Drawing.Point(1125, 615);
             this.swbtnResetPass.Name = "swbtnResetPass";
-            this.swbtnResetPass.Size = new System.Drawing.Size(134, 40);
+            this.swbtnResetPass.Size = new System.Drawing.Size(163, 62);
             this.swbtnResetPass.TabIndex = 12;
-            this.swbtnResetPass.Text = "swButton1";
-            this.swbtnResetPass.TextColor = System.Drawing.Color.White;
+            this.swbtnResetPass.Text = "Reset";
+            this.swbtnResetPass.TextColor = System.Drawing.Color.Yellow;
             this.swbtnResetPass.UseVisualStyleBackColor = false;
             this.swbtnResetPass.Click += new System.EventHandler(this.swbtnResetPass_Click);
             // 
@@ -303,7 +311,7 @@ namespace Users
             this.swidUserRank.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swidUserRank.EsForana = false;
             this.swidUserRank.EsNulable = false;
-            this.swidUserRank.Location = new System.Drawing.Point(1329, 327);
+            this.swidUserRank.Location = new System.Drawing.Point(1328, 414);
             this.swidUserRank.Name = "swidUserRank";
             this.swidUserRank.Size = new System.Drawing.Size(41, 26);
             this.swidUserRank.TabIndex = 18;
@@ -316,7 +324,7 @@ namespace Users
             this.swidUserCategory.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swidUserCategory.EsForana = false;
             this.swidUserCategory.EsNulable = false;
-            this.swidUserCategory.Location = new System.Drawing.Point(1329, 368);
+            this.swidUserCategory.Location = new System.Drawing.Point(1328, 455);
             this.swidUserCategory.Name = "swidUserCategory";
             this.swidUserCategory.Size = new System.Drawing.Size(41, 26);
             this.swidUserCategory.TabIndex = 19;
@@ -329,7 +337,7 @@ namespace Users
             this.swidPlanet.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swidPlanet.EsForana = false;
             this.swidPlanet.EsNulable = false;
-            this.swidPlanet.Location = new System.Drawing.Point(1329, 412);
+            this.swidPlanet.Location = new System.Drawing.Point(1328, 499);
             this.swidPlanet.Name = "swidPlanet";
             this.swidPlanet.Size = new System.Drawing.Size(41, 26);
             this.swidPlanet.TabIndex = 20;
@@ -342,27 +350,74 @@ namespace Users
             this.swidSpecie.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swidSpecie.EsForana = false;
             this.swidSpecie.EsNulable = false;
-            this.swidSpecie.Location = new System.Drawing.Point(1329, 456);
+            this.swidSpecie.Location = new System.Drawing.Point(1328, 543);
             this.swidSpecie.Name = "swidSpecie";
             this.swidSpecie.Size = new System.Drawing.Size(41, 26);
             this.swidSpecie.TabIndex = 21;
             this.swidSpecie.TextChanged += new System.EventHandler(this.swidSpecie_TextChanged);
             // 
+            // swbtnGenerarTarjeta
+            // 
+            this.swbtnGenerarTarjeta.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.swbtnGenerarTarjeta.BackColor = System.Drawing.Color.Transparent;
+            this.swbtnGenerarTarjeta.BackgroundColor = System.Drawing.Color.Transparent;
+            this.swbtnGenerarTarjeta.BorderColor = System.Drawing.Color.Yellow;
+            this.swbtnGenerarTarjeta.BorderRadius = 10;
+            this.swbtnGenerarTarjeta.BorderSize = 2;
+            this.swbtnGenerarTarjeta.FlatAppearance.BorderSize = 0;
+            this.swbtnGenerarTarjeta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.swbtnGenerarTarjeta.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Bold);
+            this.swbtnGenerarTarjeta.ForeColor = System.Drawing.Color.Yellow;
+            this.swbtnGenerarTarjeta.Location = new System.Drawing.Point(1078, 1331);
+            this.swbtnGenerarTarjeta.Name = "swbtnGenerarTarjeta";
+            this.swbtnGenerarTarjeta.Size = new System.Drawing.Size(226, 62);
+            this.swbtnGenerarTarjeta.TabIndex = 23;
+            this.swbtnGenerarTarjeta.Text = "Generar Tarjeta";
+            this.swbtnGenerarTarjeta.TextColor = System.Drawing.Color.Yellow;
+            this.swbtnGenerarTarjeta.UseVisualStyleBackColor = false;
+            this.swbtnGenerarTarjeta.Click += new System.EventHandler(this.swbtnGenerarTarjeta_Click);
+            // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1569, 1420);
+            this.crystalReportViewer1.TabIndex = 5;
+            // 
+            // swidUser
+            // 
+            this.swidUser.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.swidUser.CampBBDD = "idUser";
+            this.swidUser.DadaPermesa = CustomControls.SWTextBox.TipusDada.Numero;
+            this.swidUser.EsForana = false;
+            this.swidUser.EsNulable = false;
+            this.swidUser.Location = new System.Drawing.Point(1328, 369);
+            this.swidUser.Name = "swidUser";
+            this.swidUser.Size = new System.Drawing.Size(41, 26);
+            this.swidUser.TabIndex = 24;
+            // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.Location = new System.Drawing.Point(1304, 197);
+            this.panel2.Location = new System.Drawing.Point(1281, 222);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 368);
-            this.panel2.TabIndex = 22;
+            this.panel2.TabIndex = 25;
             // 
             // frm_users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1784, 1197);
+            this.ClientSize = new System.Drawing.Size(1784, 1420);
+            this.Controls.Add(this.crystalReportViewer1);
             this.Name = "frm_users";
             this.Text = "frm_users";
+            this.Controls.SetChildIndex(this.crystalReportViewer1, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -391,6 +446,9 @@ namespace Users
         private CustomControls.SWTextBox swidPlanet;
         private CustomControls.SWTextBox swidUserCategory;
         private CustomControls.SWTextBox swidUserRank;
+        private CustomControls.SWButton swbtnGenerarTarjeta;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private System.Windows.Forms.Panel panel2;
+        private CustomControls.SWTextBox swidUser;
     }
 }

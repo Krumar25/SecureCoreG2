@@ -14,10 +14,11 @@ namespace Users
 {
     public partial class frm_users : FormularioBase.frm_Base
     {
+
         public frm_users()
         {
             InitializeComponent();
-            ConfigurarConsulta("Users","USERS");
+            ConfigurarConsulta("Users", "USERS");
         }
 
         private void swidUserRank_TextChanged(object sender, EventArgs e)
@@ -51,6 +52,19 @@ namespace Users
             AccesADades dades = new AccesADades();
             dades.Executa(query_reset_pass, Dicc);
             CargarDatos();
+        }
+
+        private void swbtnGenerarTarjeta_Click(object sender, EventArgs e)
+        {
+
+            Tarjeta report_tarjeta = new Tarjeta();
+            this.Hide();
+            report_tarjeta.MdiParent = this.ParentForm;
+            report_tarjeta.TopLevel = false;
+            report_tarjeta.Dock = DockStyle.Fill;
+            report_tarjeta.FormBorderStyle = FormBorderStyle.None;
+            report_tarjeta.ID = swidUser.Text;
+            report_tarjeta.Show();
         }
     }
 }
