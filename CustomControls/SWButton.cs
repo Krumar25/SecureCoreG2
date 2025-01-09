@@ -17,6 +17,13 @@ namespace CustomControls
         private int borderRadius = 0;
         private Color borderColor = Color.PaleVioletRed;
 
+        private Image imatge;
+
+        public Image Imatge
+        {
+            get { return imatge; }
+            set { imatge = value; }
+        }
         //Properties
         [Category("Customització")]
         public int BorderSize
@@ -74,6 +81,9 @@ namespace CustomControls
             this.BackColor = Color.MediumSlateBlue;
             this.ForeColor = Color.White;
             this.Resize += new EventHandler(Button_Resize);
+            this.ImageAlign = ContentAlignment.MiddleLeft;
+            this.TextAlign = ContentAlignment.MiddleRight;
+            this.Anchor = AnchorStyles.Top;
         }
 
         //Methods
