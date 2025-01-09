@@ -170,23 +170,23 @@ namespace MainFormSC
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (mantenimiento == null)
-            {
-                mantenimiento = new frm_planets();
-                mantenimiento.FormClosed += Mantenimiento_FormClosed;
-                mantenimiento.MdiParent = this;
-                mantenimiento.TopLevel = false;
-                mantenimiento.Dock = DockStyle.Fill;
-                mantenimiento.FormBorderStyle = FormBorderStyle.None;
-                mantenimiento.Show();
-            }
-            else
-            {
-                mantenimiento.Activate();
-            }
-        }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    if (mantenimiento == null)
+        //    {
+        //        mantenimiento = new frm_planets();
+        //        mantenimiento.FormClosed += Mantenimiento_FormClosed;
+        //        mantenimiento.MdiParent = this;
+        //        mantenimiento.TopLevel = false;
+        //        mantenimiento.Dock = DockStyle.Fill;
+        //        mantenimiento.FormBorderStyle = FormBorderStyle.None;
+        //        mantenimiento.Show();
+        //    }
+        //    else
+        //    {
+        //        mantenimiento.Activate();
+        //    }
+        //}
 
         private void Mantenimiento_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -230,37 +230,5 @@ namespace MainFormSC
         }
 
         #endregion
-
-        private void DesplegableWelcome_Tick(object sender, EventArgs e)
-        {
-            if (!menuExpandit)
-            {
-                if (!menuWelcomeExpandit)
-                {
-                    pnlMenu.Height -= 5;
-
-                    if (pnlMenu.Height <= 0)
-                    {
-                        menuWelcomeExpandit = true;
-                        //DesplegableWelcome.Stop();
-                    }
-                }
-                else
-                {
-                    pnlMenu.Height += 5;
-
-                    if (pnlMenu.Height >= 200)
-                    {
-                        menuWelcomeExpandit = false;
-                        //DesplegableWelcome.Stop();
-                    }
-                }
-            }
-        }
-
-        private void pnlWelcome_Click(object sender, EventArgs e)
-        {
-            //DesplegableWelcome.Start();
-        }
     }
 }
