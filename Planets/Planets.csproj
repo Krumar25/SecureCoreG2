@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{28B770CD-A100-4704-AA7B-2D2739F79E4C}</ProjectGuid>
+    <ProjectGuid>{5CA483B4-E9CF-4E3E-BA06-4EF9FE43ACA5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MainFormSC</RootNamespace>
-    <AssemblyName>MainFormSC</AssemblyName>
+    <RootNamespace>Planets</RootNamespace>
+    <AssemblyName>Planets</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -21,7 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\MainFormSC.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -44,26 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmPrincipal.cs">
+    <Compile Include="frm_planets.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipal.Designer.cs">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <Compile Include="frm_planets.Designer.cs">
+      <DependentUpon>frm_planets.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    <EmbeddedResource Include="frm_planets.resx">
+      <DependentUpon>frm_planets.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -79,25 +69,6 @@
       <Project>{66919be8-323d-4519-8163-4472c59b63bd}</Project>
       <Name>FormularioBase</Name>
     </ProjectReference>
-    <ProjectReference Include="..\mdiProperties\mdiProperties.csproj">
-      <Project>{db4d62f4-335b-41e6-9c8c-84a531e2eaa6}</Project>
-      <Name>mdiProperties</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Planets\Planets.csproj">
-      <Project>{5ca483b4-e9cf-4e3e-ba06-4ef9fe43aca5}</Project>
-      <Name>Planets</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UserOptions\UserOptions.csproj">
-      <Project>{9b9a80ee-8089-4134-a2f8-df5533172fe8}</Project>
-      <Name>UserOptions</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Users\Users.csproj">
-      <Project>{0f180fe2-08ed-46be-873f-861ef4c3ad6a}</Project>
-      <Name>Users</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
