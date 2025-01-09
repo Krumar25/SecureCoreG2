@@ -121,6 +121,7 @@ namespace MainFormSC
             this.btnDesplegable.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDesplegable.BackgroundImage")));
             this.btnDesplegable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDesplegable.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDesplegable.FlatAppearance.BorderSize = 0;
             this.btnDesplegable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDesplegable.Location = new System.Drawing.Point(0, 0);
             this.btnDesplegable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
