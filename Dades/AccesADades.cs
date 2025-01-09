@@ -17,7 +17,6 @@ namespace Dades
         /// <remarks>
         /// La cadena de conexión está en la biblioteca SecureCore en el archivo App.config
         /// </remarks>
-
         private void Connectar()
         {
             string cnx;
@@ -31,7 +30,6 @@ namespace Dades
             {
                 throw new InvalidOperationException("No hi ha cap connection string");
             }
-
             conn = new SqlConnection(cnx);
         }
         /// <summary>
