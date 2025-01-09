@@ -54,8 +54,8 @@ namespace Users
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(515, 42);
-            this.controlManteniment1.Margin = new System.Windows.Forms.Padding(3);
+            this.controlManteniment1.Location = new System.Drawing.Point(601, 51);
+            this.controlManteniment1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             // 
             // panel1
             // 
@@ -78,7 +78,7 @@ namespace Users
             this.panel1.Controls.Add(this.swUserCategory);
             this.panel1.Controls.Add(this.swPlanet);
             this.panel1.Controls.Add(this.swSpecie);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1);
+            this.panel1.Size = new System.Drawing.Size(1186, 793);
             this.panel1.Controls.SetChildIndex(this.swSpecie, 0);
             this.panel1.Controls.SetChildIndex(this.swPlanet, 0);
             this.panel1.Controls.SetChildIndex(this.swUserCategory, 0);
@@ -107,14 +107,13 @@ namespace Users
             this.swSpecie.ControlID = "idSpecie";
             this.swSpecie.Cursor = System.Windows.Forms.Cursors.Default;
             this.swSpecie.FormCS = null;
-            this.swSpecie.Location = new System.Drawing.Point(384, 206);
-            this.swSpecie.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.swSpecie.Location = new System.Drawing.Point(591, 254);
             this.swSpecie.Name = "swSpecie";
             this.swSpecie.NomCodi = "CodeSpecie";
             this.swSpecie.NomDesc = "DescSpecie";
             this.swSpecie.NomId = "idSpecie";
             this.swSpecie.NomTaula = "Species";
-            this.swSpecie.Size = new System.Drawing.Size(369, 71);
+            this.swSpecie.Size = new System.Drawing.Size(492, 88);
             this.swSpecie.TabIndex = 4;
             this.swSpecie.TxtCode = null;
             this.swSpecie.TxtDesc = null;
@@ -125,14 +124,13 @@ namespace Users
             this.swPlanet.ClasseCS = null;
             this.swPlanet.ControlID = "idPlanet";
             this.swPlanet.FormCS = null;
-            this.swPlanet.Location = new System.Drawing.Point(384, 170);
-            this.swPlanet.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.swPlanet.Location = new System.Drawing.Point(591, 209);
             this.swPlanet.Name = "swPlanet";
             this.swPlanet.NomCodi = "CodePlanet";
             this.swPlanet.NomDesc = "DescPlanet";
             this.swPlanet.NomId = "idPlanet";
             this.swPlanet.NomTaula = "Planets";
-            this.swPlanet.Size = new System.Drawing.Size(369, 75);
+            this.swPlanet.Size = new System.Drawing.Size(492, 92);
             this.swPlanet.TabIndex = 5;
             this.swPlanet.TxtCode = null;
             this.swPlanet.TxtDesc = null;
@@ -143,14 +141,13 @@ namespace Users
             this.swUserCategory.ClasseCS = null;
             this.swUserCategory.ControlID = "idUserCategory";
             this.swUserCategory.FormCS = null;
-            this.swUserCategory.Location = new System.Drawing.Point(384, 134);
-            this.swUserCategory.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.swUserCategory.Location = new System.Drawing.Point(591, 165);
             this.swUserCategory.Name = "swUserCategory";
             this.swUserCategory.NomCodi = "CodeCategory";
             this.swUserCategory.NomDesc = "DescCategory";
             this.swUserCategory.NomId = "idUserCategory";
             this.swUserCategory.NomTaula = "UserCategories";
-            this.swUserCategory.Size = new System.Drawing.Size(369, 74);
+            this.swUserCategory.Size = new System.Drawing.Size(492, 91);
             this.swUserCategory.TabIndex = 6;
             this.swUserCategory.TxtCode = null;
             this.swUserCategory.TxtDesc = null;
@@ -162,10 +159,10 @@ namespace Users
             this.swCodeUser.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swCodeUser.EsForana = false;
             this.swCodeUser.EsNulable = false;
-            this.swCodeUser.Location = new System.Drawing.Point(138, 154);
-            this.swCodeUser.Margin = new System.Windows.Forms.Padding(2);
+            this.swCodeUser.Location = new System.Drawing.Point(264, 190);
+            this.swCodeUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.swCodeUser.Name = "swCodeUser";
-            this.swCodeUser.Size = new System.Drawing.Size(191, 20);
+            this.swCodeUser.Size = new System.Drawing.Size(253, 22);
             this.swCodeUser.TabIndex = 7;
             // 
             // swUserName
@@ -175,10 +172,10 @@ namespace Users
             this.swUserName.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swUserName.EsForana = false;
             this.swUserName.EsNulable = false;
-            this.swUserName.Location = new System.Drawing.Point(138, 190);
-            this.swUserName.Margin = new System.Windows.Forms.Padding(2);
+            this.swUserName.Location = new System.Drawing.Point(264, 234);
+            this.swUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.swUserName.Name = "swUserName";
-            this.swUserName.Size = new System.Drawing.Size(191, 20);
+            this.swUserName.Size = new System.Drawing.Size(253, 22);
             this.swUserName.TabIndex = 8;
             // 
             // swLogin
@@ -188,10 +185,10 @@ namespace Users
             this.swLogin.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swLogin.EsForana = false;
             this.swLogin.EsNulable = false;
-            this.swLogin.Location = new System.Drawing.Point(138, 229);
-            this.swLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.swLogin.Location = new System.Drawing.Point(264, 282);
+            this.swLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.swLogin.Name = "swLogin";
-            this.swLogin.Size = new System.Drawing.Size(191, 20);
+            this.swLogin.Size = new System.Drawing.Size(253, 22);
             this.swLogin.TabIndex = 9;
             // 
             // swPassword
@@ -201,20 +198,20 @@ namespace Users
             this.swPassword.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swPassword.EsForana = false;
             this.swPassword.EsNulable = false;
-            this.swPassword.Location = new System.Drawing.Point(138, 305);
-            this.swPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.swPassword.Location = new System.Drawing.Point(264, 376);
+            this.swPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.swPassword.Name = "swPassword";
             this.swPassword.ReadOnly = true;
-            this.swPassword.Size = new System.Drawing.Size(482, 20);
+            this.swPassword.Size = new System.Drawing.Size(641, 22);
             this.swPassword.TabIndex = 10;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(-34, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(34, 25);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 104);
+            this.pictureBox1.Size = new System.Drawing.Size(148, 128);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
@@ -229,10 +226,10 @@ namespace Users
             this.swbtnResetPass.FlatAppearance.BorderSize = 0;
             this.swbtnResetPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.swbtnResetPass.ForeColor = System.Drawing.Color.White;
-            this.swbtnResetPass.Location = new System.Drawing.Point(636, 301);
-            this.swbtnResetPass.Margin = new System.Windows.Forms.Padding(2);
+            this.swbtnResetPass.Location = new System.Drawing.Point(928, 370);
+            this.swbtnResetPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.swbtnResetPass.Name = "swbtnResetPass";
-            this.swbtnResetPass.Size = new System.Drawing.Size(89, 26);
+            this.swbtnResetPass.Size = new System.Drawing.Size(119, 32);
             this.swbtnResetPass.TabIndex = 12;
             this.swbtnResetPass.Text = "swButton1";
             this.swbtnResetPass.TextColor = System.Drawing.Color.White;
@@ -244,10 +241,9 @@ namespace Users
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(26, 156);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(114, 192);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(46, 17);
             this.label1.TabIndex = 13;
             this.label1.Text = "label1";
             // 
@@ -256,10 +252,9 @@ namespace Users
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(26, 192);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(114, 237);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(46, 17);
             this.label2.TabIndex = 14;
             this.label2.Text = "label2";
             // 
@@ -268,10 +263,9 @@ namespace Users
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Yellow;
-            this.label3.Location = new System.Drawing.Point(26, 231);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(114, 284);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(46, 17);
             this.label3.TabIndex = 15;
             this.label3.Text = "label3";
             // 
@@ -280,10 +274,9 @@ namespace Users
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Yellow;
-            this.label4.Location = new System.Drawing.Point(26, 307);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(114, 378);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(46, 17);
             this.label4.TabIndex = 16;
             this.label4.Text = "label4";
             // 
@@ -293,14 +286,13 @@ namespace Users
             this.swUserRanks.ClasseCS = null;
             this.swUserRanks.ControlID = "idUserRank";
             this.swUserRanks.FormCS = null;
-            this.swUserRanks.Location = new System.Drawing.Point(384, 99);
-            this.swUserRanks.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.swUserRanks.Location = new System.Drawing.Point(591, 122);
             this.swUserRanks.Name = "swUserRanks";
             this.swUserRanks.NomCodi = "CodeRank";
             this.swUserRanks.NomDesc = "DescRank";
             this.swUserRanks.NomId = "idUserRank";
             this.swUserRanks.NomTaula = "UserRanks";
-            this.swUserRanks.Size = new System.Drawing.Size(369, 72);
+            this.swUserRanks.Size = new System.Drawing.Size(492, 89);
             this.swUserRanks.TabIndex = 17;
             this.swUserRanks.TxtCode = null;
             this.swUserRanks.TxtDesc = null;
@@ -312,10 +304,10 @@ namespace Users
             this.swidUserRank.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swidUserRank.EsForana = false;
             this.swidUserRank.EsNulable = false;
-            this.swidUserRank.Location = new System.Drawing.Point(750, 140);
-            this.swidUserRank.Margin = new System.Windows.Forms.Padding(2);
+            this.swidUserRank.Location = new System.Drawing.Point(1079, 173);
+            this.swidUserRank.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.swidUserRank.Name = "swidUserRank";
-            this.swidUserRank.Size = new System.Drawing.Size(29, 20);
+            this.swidUserRank.Size = new System.Drawing.Size(37, 22);
             this.swidUserRank.TabIndex = 18;
             this.swidUserRank.TextChanged += new System.EventHandler(this.swidUserRank_TextChanged);
             // 
@@ -326,10 +318,10 @@ namespace Users
             this.swidUserCategory.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swidUserCategory.EsForana = false;
             this.swidUserCategory.EsNulable = false;
-            this.swidUserCategory.Location = new System.Drawing.Point(750, 167);
-            this.swidUserCategory.Margin = new System.Windows.Forms.Padding(2);
+            this.swidUserCategory.Location = new System.Drawing.Point(1079, 206);
+            this.swidUserCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.swidUserCategory.Name = "swidUserCategory";
-            this.swidUserCategory.Size = new System.Drawing.Size(29, 20);
+            this.swidUserCategory.Size = new System.Drawing.Size(37, 22);
             this.swidUserCategory.TabIndex = 19;
             this.swidUserCategory.TextChanged += new System.EventHandler(this.swidUserCategory_TextChanged);
             // 
@@ -340,10 +332,10 @@ namespace Users
             this.swidPlanet.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swidPlanet.EsForana = false;
             this.swidPlanet.EsNulable = false;
-            this.swidPlanet.Location = new System.Drawing.Point(750, 196);
-            this.swidPlanet.Margin = new System.Windows.Forms.Padding(2);
+            this.swidPlanet.Location = new System.Drawing.Point(1079, 241);
+            this.swidPlanet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.swidPlanet.Name = "swidPlanet";
-            this.swidPlanet.Size = new System.Drawing.Size(29, 20);
+            this.swidPlanet.Size = new System.Drawing.Size(37, 22);
             this.swidPlanet.TabIndex = 20;
             this.swidPlanet.TextChanged += new System.EventHandler(this.swidPlanet_TextChanged);
             // 
@@ -354,28 +346,28 @@ namespace Users
             this.swidSpecie.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swidSpecie.EsForana = false;
             this.swidSpecie.EsNulable = false;
-            this.swidSpecie.Location = new System.Drawing.Point(750, 224);
-            this.swidSpecie.Margin = new System.Windows.Forms.Padding(2);
+            this.swidSpecie.Location = new System.Drawing.Point(1079, 276);
+            this.swidSpecie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.swidSpecie.Name = "swidSpecie";
-            this.swidSpecie.Size = new System.Drawing.Size(29, 20);
+            this.swidSpecie.Size = new System.Drawing.Size(37, 22);
             this.swidSpecie.TabIndex = 21;
             this.swidSpecie.TextChanged += new System.EventHandler(this.swidSpecie_TextChanged);
             // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.Location = new System.Drawing.Point(757, 88);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(1176, 87);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(105, 239);
+            this.panel2.Size = new System.Drawing.Size(178, 294);
             this.panel2.TabIndex = 22;
             // 
             // frm_users
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 487);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.ClientSize = new System.Drawing.Size(1377, 793);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frm_users";
             this.Text = "frm_users";
             this.panel1.ResumeLayout(false);

@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\MainFormSC.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,6 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FormularioBase">
+      <HintPath>..\FormularioBase\bin\Debug\FormularioBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Mantenimiento">
+      <HintPath>..\Mantenimiento\bin\Debug\Mantenimiento.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -70,21 +77,9 @@
       <Project>{77c1d327-1c61-4cd1-babd-d13629498441}</Project>
       <Name>CustomControls</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FormularioBase\FormularioBase.csproj">
-      <Project>{66919be8-323d-4519-8163-4472c59b63bd}</Project>
-      <Name>FormularioBase</Name>
-    </ProjectReference>
     <ProjectReference Include="..\mdiProperties\mdiProperties.csproj">
       <Project>{db4d62f4-335b-41e6-9c8c-84a531e2eaa6}</Project>
       <Name>mdiProperties</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Planets\Planets.csproj">
-      <Project>{5ca483b4-e9cf-4e3e-ba06-4ef9fe43aca5}</Project>
-      <Name>Planets</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UserCategories\UserCategories.csproj">
-      <Project>{af948442-ced9-4a14-8c61-4f2ba79a397b}</Project>
-      <Name>UserCategories</Name>
     </ProjectReference>
     <ProjectReference Include="..\UserOptions\UserOptions.csproj">
       <Project>{9b9a80ee-8089-4134-a2f8-df5533172fe8}</Project>
