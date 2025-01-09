@@ -174,7 +174,7 @@ namespace MainFormSC
         {
             if (mantenimiento == null)
             {
-                mantenimiento = new frm_users();
+                mantenimiento = new frm_planets();
                 mantenimiento.FormClosed += Mantenimiento_FormClosed;
                 mantenimiento.MdiParent = this;
                 mantenimiento.TopLevel = false;
@@ -230,5 +230,37 @@ namespace MainFormSC
         }
 
         #endregion
+
+        private void DesplegableWelcome_Tick(object sender, EventArgs e)
+        {
+            if (!menuExpandit)
+            {
+                if (!menuWelcomeExpandit)
+                {
+                    pnlMenu.Height -= 5;
+
+                    if (pnlMenu.Height <= 0)
+                    {
+                        menuWelcomeExpandit = true;
+                        //DesplegableWelcome.Stop();
+                    }
+                }
+                else
+                {
+                    pnlMenu.Height += 5;
+
+                    if (pnlMenu.Height >= 200)
+                    {
+                        menuWelcomeExpandit = false;
+                        //DesplegableWelcome.Stop();
+                    }
+                }
+            }
+        }
+
+        private void pnlWelcome_Click(object sender, EventArgs e)
+        {
+            //DesplegableWelcome.Start();
+        }
     }
 }
