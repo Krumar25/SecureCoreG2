@@ -44,6 +44,8 @@ namespace MainFormSC
             this.pnlDesplegableWelcome = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.DesplegableWelcome = new System.Windows.Forms.Timer(this.components);
+            this.swButton1 = new CustomControls.SWButton();
+            this.swButton2 = new CustomControls.SWButton();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxVentana)).BeginInit();
@@ -51,6 +53,7 @@ namespace MainFormSC
             this.pnlMenu.SuspendLayout();
             this.pnlWelcome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbWelcome)).BeginInit();
+            this.pnlDesplegableWelcome.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuTransicio
@@ -176,6 +179,8 @@ namespace MainFormSC
             // 
             // pnlDesplegableWelcome
             // 
+            this.pnlDesplegableWelcome.Controls.Add(this.swButton2);
+            this.pnlDesplegableWelcome.Controls.Add(this.swButton1);
             this.pnlDesplegableWelcome.Location = new System.Drawing.Point(3, 86);
             this.pnlDesplegableWelcome.Name = "pnlDesplegableWelcome";
             this.pnlDesplegableWelcome.Size = new System.Drawing.Size(289, 238);
@@ -196,6 +201,50 @@ namespace MainFormSC
             // 
             this.DesplegableWelcome.Interval = 10;
             this.DesplegableWelcome.Tick += new System.EventHandler(this.DesplegableWelcome_Tick);
+            // 
+            // swButton1
+            // 
+            this.swButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.swButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.swButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.swButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.swButton1.BorderRadius = 0;
+            this.swButton1.BorderSize = 0;
+            this.swButton1.FlatAppearance.BorderSize = 0;
+            this.swButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.swButton1.ForeColor = System.Drawing.Color.White;
+            this.swButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.swButton1.ImageKey = "close.png";
+            this.swButton1.Location = new System.Drawing.Point(9, 145);
+            this.swButton1.Name = "swButton1";
+            this.swButton1.Size = new System.Drawing.Size(169, 60);
+            this.swButton1.TabIndex = 5;
+            this.swButton1.Text = "swButton1";
+            this.swButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.swButton1.TextColor = System.Drawing.Color.White;
+            this.swButton1.UseVisualStyleBackColor = false;
+            // 
+            // swButton2
+            // 
+            this.swButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.swButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.swButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.swButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.swButton2.BorderRadius = 0;
+            this.swButton2.BorderSize = 0;
+            this.swButton2.FlatAppearance.BorderSize = 0;
+            this.swButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.swButton2.ForeColor = System.Drawing.Color.White;
+            this.swButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.swButton2.ImageKey = "(ninguno)";
+            this.swButton2.Location = new System.Drawing.Point(28, 68);
+            this.swButton2.Name = "swButton2";
+            this.swButton2.Size = new System.Drawing.Size(150, 45);
+            this.swButton2.TabIndex = 5;
+            this.swButton2.Text = "swButton2";
+            this.swButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.swButton2.TextColor = System.Drawing.Color.White;
+            this.swButton2.UseVisualStyleBackColor = false;
             // 
             // frmPrincipal
             // 
@@ -219,6 +268,7 @@ namespace MainFormSC
             this.pnlWelcome.ResumeLayout(false);
             this.pnlWelcome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbWelcome)).EndInit();
+            this.pnlDesplegableWelcome.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -238,5 +288,7 @@ namespace MainFormSC
         private System.Windows.Forms.PictureBox pbWelcome;
         private System.Windows.Forms.Timer DesplegableWelcome;
         private System.Windows.Forms.Panel pnlDesplegableWelcome;
+        private CustomControls.SWButton swButton1;
+        private CustomControls.SWButton swButton2;
     }
 }
