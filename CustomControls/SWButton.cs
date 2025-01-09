@@ -81,8 +81,6 @@ namespace CustomControls
             this.BackColor = Color.MediumSlateBlue;
             this.ForeColor = Color.White;
             this.Resize += new EventHandler(Button_Resize);
-            this.ImageAlign = ContentAlignment.MiddleLeft;
-            this.TextAlign = ContentAlignment.MiddleRight;
             this.Anchor = AnchorStyles.Top;
         }
 

@@ -38,7 +38,8 @@ namespace RangUsuari
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(251, 51);
+            this.controlManteniment1.Location = new System.Drawing.Point(404, 85);
+            this.controlManteniment1.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.controlManteniment1.NomClase = "Rang Usuari";
             this.controlManteniment1.NomForm = "frmRangUsuari";
             // 
@@ -48,7 +49,8 @@ namespace RangUsuari
             this.panel1.Controls.Add(this.swTextBox1);
             this.panel1.Controls.Add(this.lblDescR);
             this.panel1.Controls.Add(this.lblCodiR);
-            this.panel1.Size = new System.Drawing.Size(1226, 756);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Size = new System.Drawing.Size(1272, 1298);
             this.panel1.Controls.SetChildIndex(this.controlManteniment1, 0);
             this.panel1.Controls.SetChildIndex(this.lblCodiR, 0);
             this.panel1.Controls.SetChildIndex(this.lblDescR, 0);
@@ -61,9 +63,9 @@ namespace RangUsuari
             this.lblCodiR.AutoSize = true;
             this.lblCodiR.BackColor = System.Drawing.Color.Transparent;
             this.lblCodiR.ForeColor = System.Drawing.Color.Yellow;
-            this.lblCodiR.Location = new System.Drawing.Point(436, 217);
+            this.lblCodiR.Location = new System.Drawing.Point(434, 478);
             this.lblCodiR.Name = "lblCodiR";
-            this.lblCodiR.Size = new System.Drawing.Size(78, 17);
+            this.lblCodiR.Size = new System.Drawing.Size(88, 20);
             this.lblCodiR.TabIndex = 4;
             this.lblCodiR.Text = "Codi Rang:";
             // 
@@ -73,9 +75,9 @@ namespace RangUsuari
             this.lblDescR.AutoSize = true;
             this.lblDescR.BackColor = System.Drawing.Color.Transparent;
             this.lblDescR.ForeColor = System.Drawing.Color.Yellow;
-            this.lblDescR.Location = new System.Drawing.Point(398, 272);
+            this.lblDescR.Location = new System.Drawing.Point(391, 547);
             this.lblDescR.Name = "lblDescR";
-            this.lblDescR.Size = new System.Drawing.Size(116, 17);
+            this.lblDescR.Size = new System.Drawing.Size(130, 20);
             this.lblDescR.TabIndex = 5;
             this.lblDescR.Text = "Descripció Rang:";
             // 
@@ -86,9 +88,10 @@ namespace RangUsuari
             this.swTextBox1.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swTextBox1.EsForana = false;
             this.swTextBox1.EsNulable = false;
-            this.swTextBox1.Location = new System.Drawing.Point(573, 217);
+            this.swTextBox1.Location = new System.Drawing.Point(588, 478);
+            this.swTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.swTextBox1.Name = "swTextBox1";
-            this.swTextBox1.Size = new System.Drawing.Size(245, 22);
+            this.swTextBox1.Size = new System.Drawing.Size(275, 26);
             this.swTextBox1.TabIndex = 6;
             // 
             // swTextBox2
@@ -98,21 +101,24 @@ namespace RangUsuari
             this.swTextBox2.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swTextBox2.EsForana = false;
             this.swTextBox2.EsNulable = false;
-            this.swTextBox2.Location = new System.Drawing.Point(573, 272);
+            this.swTextBox2.Location = new System.Drawing.Point(588, 547);
+            this.swTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.swTextBox2.Name = "swTextBox2";
-            this.swTextBox2.Size = new System.Drawing.Size(245, 22);
+            this.swTextBox2.Size = new System.Drawing.Size(275, 26);
             this.swTextBox2.TabIndex = 7;
             // 
             // frmRangUsuari
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1417, 756);
+            this.ClientSize = new System.Drawing.Size(1594, 1298);
+            this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "frmRangUsuari";
             this.Text = "frmRangUsuari";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
