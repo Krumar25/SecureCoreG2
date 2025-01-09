@@ -35,30 +35,30 @@ namespace CustomControls
             // 
             // txtCodiNivell
             // 
-            this.txtCodiNivell.Location = new System.Drawing.Point(24, 60);
-            this.txtCodiNivell.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCodiNivell.Location = new System.Drawing.Point(16, 21);
+            this.txtCodiNivell.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtCodiNivell.Name = "txtCodiNivell";
-            this.txtCodiNivell.Size = new System.Drawing.Size(112, 26);
+            this.txtCodiNivell.Size = new System.Drawing.Size(76, 20);
             this.txtCodiNivell.TabIndex = 0;
             // 
             // txtNivell
             // 
             this.txtNivell.Enabled = false;
-            this.txtNivell.Location = new System.Drawing.Point(184, 60);
-            this.txtNivell.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNivell.Location = new System.Drawing.Point(123, 21);
+            this.txtNivell.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtNivell.Name = "txtNivell";
-            this.txtNivell.Size = new System.Drawing.Size(273, 26);
+            this.txtNivell.Size = new System.Drawing.Size(183, 20);
             this.txtNivell.TabIndex = 1;
             // 
             // SWCodi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.txtNivell);
             this.Controls.Add(this.txtCodiNivell);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "SWCodi";
-            this.Size = new System.Drawing.Size(554, 151);
+            this.Size = new System.Drawing.Size(369, 62);
             this.Validating += new System.ComponentModel.CancelEventHandler(this.SWCodi_Validating);
             this.ResumeLayout(false);
             this.PerformLayout();

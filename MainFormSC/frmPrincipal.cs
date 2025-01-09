@@ -11,7 +11,8 @@ using System.Runtime.InteropServices;
 using mdiProperties;
 using UserOptions;
 using Users;
-using UserCategories;
+using Planets;
+
 
 namespace MainFormSC
 {
@@ -20,10 +21,12 @@ namespace MainFormSC
 
         #region Variables Globales
 
+        private bool menuExpandit = false;
+        private bool menuWelcomeExpandit = false;
         private bool dragging = false;
         private Point dragCursorPoint;
         private Point dragFormPoint;
-        frm_userCategories mantenimiento;
+        frm_planets mantenimiento;
 
 
         private string _idAccess;
@@ -41,7 +44,6 @@ namespace MainFormSC
             mdiProp();
         }
 
-        bool menuExpandit = false;
 
         #region Metodos
 
@@ -112,7 +114,7 @@ namespace MainFormSC
         {
             if (mantenimiento == null)
             {
-                mantenimiento = new frm_userCategories();
+                mantenimiento = new frm_planets();
                 mantenimiento.FormClosed += Mantenimiento_FormClosed;
                 mantenimiento.MdiParent = this;
                 mantenimiento.TopLevel = false;
@@ -162,5 +164,37 @@ namespace MainFormSC
         }
 
         #endregion
+
+        private void DesplegableWelcome_Tick(object sender, EventArgs e)
+        {
+            if (!menuExpandit)
+            {
+                if (!menuWelcomeExpandit)
+                {
+                    pnlMenu.Height -= 5;
+
+                    if (pnlMenu.Height <= 0)
+                    {
+                        menuWelcomeExpandit = true;
+                        //DesplegableWelcome.Stop();
+                    }
+                }
+                else
+                {
+                    pnlMenu.Height += 5;
+
+                    if (pnlMenu.Height >= 200)
+                    {
+                        menuWelcomeExpandit = false;
+                        //DesplegableWelcome.Stop();
+                    }
+                }
+            }
+        }
+
+        private void pnlWelcome_Click(object sender, EventArgs e)
+        {
+            //DesplegableWelcome.Start();
+        }
     }
 }

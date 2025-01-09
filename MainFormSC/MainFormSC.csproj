@@ -78,6 +78,10 @@
       <Project>{db4d62f4-335b-41e6-9c8c-84a531e2eaa6}</Project>
       <Name>mdiProperties</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Planets\Planets.csproj">
+      <Project>{5ca483b4-e9cf-4e3e-ba06-4ef9fe43aca5}</Project>
+      <Name>Planets</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UserCategories\UserCategories.csproj">
       <Project>{af948442-ced9-4a14-8c61-4f2ba79a397b}</Project>
       <Name>UserCategories</Name>
