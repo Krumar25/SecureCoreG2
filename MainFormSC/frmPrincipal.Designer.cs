@@ -41,7 +41,6 @@ namespace MainFormSC
             this.pnlWelcome = new System.Windows.Forms.Panel();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.pbWelcome = new System.Windows.Forms.PictureBox();
-            this.pnlDesplegableWelcome = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.DesplegableWelcome = new System.Windows.Forms.Timer(this.components);
             this.pnlSuperior.SuspendLayout();
@@ -133,7 +132,6 @@ namespace MainFormSC
             // 
             this.pnlMenu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pnlMenu.Controls.Add(this.pnlWelcome);
-            this.pnlMenu.Controls.Add(this.pnlDesplegableWelcome);
             this.pnlMenu.Controls.Add(this.button1);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 60);
@@ -150,7 +148,7 @@ namespace MainFormSC
             this.pnlWelcome.Name = "pnlWelcome";
             this.pnlWelcome.Size = new System.Drawing.Size(289, 77);
             this.pnlWelcome.TabIndex = 1;
-            this.pnlWelcome.Click += new System.EventHandler(this.pnlWelcome_Click);
+
             // 
             // lblWelcome
             // 
@@ -162,7 +160,7 @@ namespace MainFormSC
             this.lblWelcome.Size = new System.Drawing.Size(66, 17);
             this.lblWelcome.TabIndex = 1;
             this.lblWelcome.Text = "Welcome";
-            this.lblWelcome.Click += new System.EventHandler(this.pnlWelcome_Click);
+       
             // 
             // pbWelcome
             // 
@@ -172,18 +170,11 @@ namespace MainFormSC
             this.pbWelcome.Size = new System.Drawing.Size(83, 80);
             this.pbWelcome.TabIndex = 0;
             this.pbWelcome.TabStop = false;
-            this.pbWelcome.Click += new System.EventHandler(this.pnlWelcome_Click);
-            // 
-            // pnlDesplegableWelcome
-            // 
-            this.pnlDesplegableWelcome.Location = new System.Drawing.Point(3, 86);
-            this.pnlDesplegableWelcome.Name = "pnlDesplegableWelcome";
-            this.pnlDesplegableWelcome.Size = new System.Drawing.Size(289, 238);
-            this.pnlDesplegableWelcome.TabIndex = 2;
+ 
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(3, 329);
+            this.button1.Location = new System.Drawing.Point(3, 85);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 62);
@@ -195,7 +186,6 @@ namespace MainFormSC
             // DesplegableWelcome
             // 
             this.DesplegableWelcome.Interval = 10;
-            this.DesplegableWelcome.Tick += new System.EventHandler(this.DesplegableWelcome_Tick);
             // 
             // frmPrincipal
             // 
@@ -237,6 +227,5 @@ namespace MainFormSC
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.PictureBox pbWelcome;
         private System.Windows.Forms.Timer DesplegableWelcome;
-        private System.Windows.Forms.Panel pnlDesplegableWelcome;
     }
 }

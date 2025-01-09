@@ -18,10 +18,5 @@ namespace RangUsuari
             InitializeComponent();
             ConfigurarConsulta("UserRanks", "Rangs Usuari");
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
