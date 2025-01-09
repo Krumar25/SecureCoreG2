@@ -53,6 +53,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frm_users.resx">
+      <DependentUpon>frm_users.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\CustomControls\CustomControls.csproj">
       <Project>{77c1d327-1c61-4cd1-babd-d13629498441}</Project>
       <Name>CustomControls</Name>
@@ -65,11 +70,6 @@
       <Project>{66919be8-323d-4519-8163-4472c59b63bd}</Project>
       <Name>FormularioBase</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="frm_users.resx">
-      <DependentUpon>frm_users.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
