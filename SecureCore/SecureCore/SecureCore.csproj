@@ -108,6 +108,10 @@
       <Project>{67b0ab61-2a18-45d0-8f62-0765beaaaa01}</Project>
       <Name>RangUsuari</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\SplashScreen\SplashScreen.csproj">
+      <Project>{8577b167-194f-47f0-8982-57c306c10a21}</Project>
+      <Name>SplashScreen</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\TipusDeNausFK\TipusDeNausFK.csproj">
       <Project>{7ff41c10-6edd-4948-8193-38d24024d204}</Project>
       <Name>TipusDeNausFK</Name>

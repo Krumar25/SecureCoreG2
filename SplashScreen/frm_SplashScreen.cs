@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Login;
 
 namespace SplashScreen
 {
-    public partial class SplashScreen : Form
+    public partial class frm_SplashScreen : Form
     {
         private ProgressBar progressBar;
         private PictureBox pictureBox;
@@ -18,13 +19,13 @@ namespace SplashScreen
         private Timer timer;
         private double progressFraction; // Fracción de progreso entre 0 y 1
 
-        public SplashScreen()
+        public frm_SplashScreen()
         {
             // Configuración del formulario
             this.Text = "Nave Voladora";
             this.Size = new Size(800, 450);
             // Establecer la imagen de fondo del formulario
-            this.BackgroundImage = Bitmap.FromFile("img/space.jpg"); // Ruta de la imagen de fondo
+            this.BackgroundImage = Bitmap.FromFile("Imatges/space.jpg"); // Ruta de la imagen de fondo
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.None;
             this.DoubleBuffered = true;
@@ -43,7 +44,7 @@ namespace SplashScreen
             // Crear el PictureBox para la nave
             pictureBox1 = new PictureBox
             {
-                Image = Bitmap.FromFile("img/logo_sin_fondo.png"), // Ruta de la imagen
+                Image = Bitmap.FromFile("Imatges/logo_sin_fondo.png"), // Ruta de la imagen
                 SizeMode = PictureBoxSizeMode.StretchImage, // Redimensiona la imagen
                 Size = new Size(250, 250),
                 Location = new Point(275, 50),
@@ -54,7 +55,7 @@ namespace SplashScreen
             // Crear el PictureBox para la nave
             pictureBox = new PictureBox
             {
-                Image = Bitmap.FromFile("img/battleship.png"), // Ruta de la imagen
+                Image = Bitmap.FromFile("Imatges/battleship.png"), // Ruta de la imagen
                 SizeMode = PictureBoxSizeMode.StretchImage, // Redimensiona la imagen
                 Size = new Size(50, 50), // Ajusta el tamaño de la imagen
                 BackColor = Color.Transparent
@@ -92,8 +93,17 @@ namespace SplashScreen
             else
             {
                 timer.Stop(); // Detiene el timer al alcanzar el máximo
-                this.Close(); // Cierra el formulario al terminar la animación
+                this.Hide(); // Cierra el formulario al terminar la animación
+                frmLogin frmlogin = new frmLogin();
+                frmlogin.FormClosed += frmlogin_FormClosed;
+                frmlogin.Show();
             }
+        }
+
+        private void frmlogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+            this.Close();
         }
     }
 }

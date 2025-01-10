@@ -1,7 +1,7 @@
 ﻿
 namespace SplashScreen
 {
-    partial class SplashScreen
+    partial class frm_SplashScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace SplashScreen
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_SplashScreen));
             this.SuspendLayout();
             // 
             // SplashScreen

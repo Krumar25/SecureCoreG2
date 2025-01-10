@@ -170,29 +170,6 @@ namespace MainFormSC
             this.Close();
         }
 
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    if (mantenimiento == null)
-        //    {
-        //        mantenimiento = new frm_planets();
-        //        mantenimiento.FormClosed += Mantenimiento_FormClosed;
-        //        mantenimiento.MdiParent = this;
-        //        mantenimiento.TopLevel = false;
-        //        mantenimiento.Dock = DockStyle.Fill;
-        //        mantenimiento.FormBorderStyle = FormBorderStyle.None;
-        //        mantenimiento.Show();
-        //    }
-        //    else
-        //    {
-        //        mantenimiento.Activate();
-        //    }
-        //}
-
-        private void Mantenimiento_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            mantenimiento = null;
-        }
-
         private void Button_Click(object sender, EventArgs e)
         {
             logout = true; // Indica que el cierre fue intencional
