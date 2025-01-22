@@ -53,7 +53,7 @@ namespace Login
             // pbMostrarPass
             // 
             this.pbMostrarPass.Image = ((System.Drawing.Image)(resources.GetObject("pbMostrarPass.Image")));
-            this.pbMostrarPass.Location = new System.Drawing.Point(372, 511);
+            this.pbMostrarPass.Location = new System.Drawing.Point(372, 516);
             this.pbMostrarPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbMostrarPass.Name = "pbMostrarPass";
             this.pbMostrarPass.Size = new System.Drawing.Size(37, 39);
@@ -65,7 +65,7 @@ namespace Login
             // pbOcultarPass
             // 
             this.pbOcultarPass.Image = ((System.Drawing.Image)(resources.GetObject("pbOcultarPass.Image")));
-            this.pbOcultarPass.Location = new System.Drawing.Point(372, 511);
+            this.pbOcultarPass.Location = new System.Drawing.Point(372, 516);
             this.pbOcultarPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbOcultarPass.Name = "pbOcultarPass";
             this.pbOcultarPass.Size = new System.Drawing.Size(37, 39);
@@ -80,15 +80,17 @@ namespace Login
             this.lbErrorLogin.BackColor = System.Drawing.Color.Transparent;
             this.lbErrorLogin.Font = new System.Drawing.Font("Lucida Sans", 10F);
             this.lbErrorLogin.ForeColor = System.Drawing.Color.DarkRed;
-            this.lbErrorLogin.Location = new System.Drawing.Point(69, 578);
+            this.lbErrorLogin.Location = new System.Drawing.Point(12, 569);
             this.lbErrorLogin.Name = "lbErrorLogin";
-            this.lbErrorLogin.Size = new System.Drawing.Size(357, 39);
+            this.lbErrorLogin.Size = new System.Drawing.Size(463, 58);
             this.lbErrorLogin.TabIndex = 18;
             this.lbErrorLogin.Text = "Usuario y/o contraseña incorrectos";
+            this.lbErrorLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbErrorLogin.Visible = false;
             // 
             // btnAccess
             // 
+            this.btnAccess.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAccess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(26)))));
             this.btnAccess.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(26)))));
             this.btnAccess.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -98,7 +100,8 @@ namespace Login
             this.btnAccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccess.Font = new System.Drawing.Font("Lucida Sans", 9F);
             this.btnAccess.ForeColor = System.Drawing.Color.White;
-            this.btnAccess.Location = new System.Drawing.Point(142, 621);
+            this.btnAccess.Imatge = null;
+            this.btnAccess.Location = new System.Drawing.Point(154, 641);
             this.btnAccess.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAccess.Name = "btnAccess";
             this.btnAccess.Size = new System.Drawing.Size(167, 60);
@@ -123,7 +126,7 @@ namespace Login
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 10F);
-            this.label2.Location = new System.Drawing.Point(101, 484);
+            this.label2.Location = new System.Drawing.Point(101, 489);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 23);
             this.label2.TabIndex = 14;
@@ -144,7 +147,7 @@ namespace Login
             this.tbPass.BackColor = System.Drawing.SystemColors.ControlDark;
             this.tbPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPass.Location = new System.Drawing.Point(105, 511);
+            this.tbPass.Location = new System.Drawing.Point(105, 516);
             this.tbPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbPass.Name = "tbPass";
             this.tbPass.Size = new System.Drawing.Size(261, 37);

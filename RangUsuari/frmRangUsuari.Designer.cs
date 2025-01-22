@@ -38,7 +38,7 @@ namespace RangUsuari
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(404, 85);
+            this.controlManteniment1.Location = new System.Drawing.Point(538, 180);
             this.controlManteniment1.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.controlManteniment1.NomClase = "Rang Usuari";
             this.controlManteniment1.NomForm = "frmRangUsuari";
@@ -50,7 +50,7 @@ namespace RangUsuari
             this.panel1.Controls.Add(this.lblDescR);
             this.panel1.Controls.Add(this.lblCodiR);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Size = new System.Drawing.Size(1272, 1298);
+            this.panel1.Size = new System.Drawing.Size(1497, 1298);
             this.panel1.Controls.SetChildIndex(this.controlManteniment1, 0);
             this.panel1.Controls.SetChildIndex(this.lblCodiR, 0);
             this.panel1.Controls.SetChildIndex(this.lblDescR, 0);
@@ -62,24 +62,26 @@ namespace RangUsuari
             this.lblCodiR.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCodiR.AutoSize = true;
             this.lblCodiR.BackColor = System.Drawing.Color.Transparent;
+            this.lblCodiR.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodiR.ForeColor = System.Drawing.Color.Yellow;
-            this.lblCodiR.Location = new System.Drawing.Point(434, 478);
+            this.lblCodiR.Location = new System.Drawing.Point(507, 494);
             this.lblCodiR.Name = "lblCodiR";
-            this.lblCodiR.Size = new System.Drawing.Size(88, 20);
+            this.lblCodiR.Size = new System.Drawing.Size(98, 27);
             this.lblCodiR.TabIndex = 4;
-            this.lblCodiR.Text = "Codi Rang:";
+            this.lblCodiR.Text = "Código";
             // 
             // lblDescR
             // 
             this.lblDescR.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDescR.AutoSize = true;
             this.lblDescR.BackColor = System.Drawing.Color.Transparent;
+            this.lblDescR.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescR.ForeColor = System.Drawing.Color.Yellow;
-            this.lblDescR.Location = new System.Drawing.Point(391, 547);
+            this.lblDescR.Location = new System.Drawing.Point(464, 597);
             this.lblDescR.Name = "lblDescR";
-            this.lblDescR.Size = new System.Drawing.Size(130, 20);
+            this.lblDescR.Size = new System.Drawing.Size(155, 27);
             this.lblDescR.TabIndex = 5;
-            this.lblDescR.Text = "Descripció Rang:";
+            this.lblDescR.Text = "Descripción";
             // 
             // swTextBox1
             // 
@@ -88,10 +90,11 @@ namespace RangUsuari
             this.swTextBox1.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swTextBox1.EsForana = false;
             this.swTextBox1.EsNulable = false;
-            this.swTextBox1.Location = new System.Drawing.Point(588, 478);
+            this.swTextBox1.Font = new System.Drawing.Font("Lucida Sans", 11F);
+            this.swTextBox1.Location = new System.Drawing.Point(661, 494);
             this.swTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.swTextBox1.Name = "swTextBox1";
-            this.swTextBox1.Size = new System.Drawing.Size(275, 26);
+            this.swTextBox1.Size = new System.Drawing.Size(275, 33);
             this.swTextBox1.TabIndex = 6;
             // 
             // swTextBox2
@@ -101,17 +104,18 @@ namespace RangUsuari
             this.swTextBox2.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swTextBox2.EsForana = false;
             this.swTextBox2.EsNulable = false;
-            this.swTextBox2.Location = new System.Drawing.Point(588, 547);
+            this.swTextBox2.Font = new System.Drawing.Font("Lucida Sans", 11F);
+            this.swTextBox2.Location = new System.Drawing.Point(661, 597);
             this.swTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.swTextBox2.Name = "swTextBox2";
-            this.swTextBox2.Size = new System.Drawing.Size(275, 26);
+            this.swTextBox2.Size = new System.Drawing.Size(275, 33);
             this.swTextBox2.TabIndex = 7;
             // 
             // frmRangUsuari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1594, 1298);
+            this.ClientSize = new System.Drawing.Size(1819, 1298);
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "frmRangUsuari";
             this.Text = "frmRangUsuari";

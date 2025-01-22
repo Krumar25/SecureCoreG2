@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\SecureCore\App\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -32,9 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Dades">
-      <HintPath>..\Dades\bin\Debug\Dades.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -59,6 +56,10 @@
     <ProjectReference Include="..\CustomControls\CustomControls.csproj">
       <Project>{77C1D327-1C61-4CD1-BABD-D13629498441}</Project>
       <Name>CustomControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dades\Dades.csproj">
+      <Project>{994b6a65-41bc-4014-9ee3-eb7c9161bd34}</Project>
+      <Name>Dades</Name>
     </ProjectReference>
     <ProjectReference Include="..\FormularioBase\FormularioBase.csproj">
       <Project>{66919be8-323d-4519-8163-4472c59b63bd}</Project>

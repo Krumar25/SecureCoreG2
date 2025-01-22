@@ -71,7 +71,7 @@ namespace Login
             // 
             this.lbUser.AutoSize = true;
             this.lbUser.Font = new System.Drawing.Font("Lucida Sans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUser.Location = new System.Drawing.Point(115, 415);
+            this.lbUser.Location = new System.Drawing.Point(115, 408);
             this.lbUser.Name = "lbUser";
             this.lbUser.Size = new System.Drawing.Size(150, 23);
             this.lbUser.TabIndex = 23;
@@ -95,7 +95,7 @@ namespace Login
             this.tbNewPass.BackColor = System.Drawing.SystemColors.ControlDark;
             this.tbNewPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNewPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNewPass.Location = new System.Drawing.Point(119, 442);
+            this.tbNewPass.Location = new System.Drawing.Point(119, 435);
             this.tbNewPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbNewPass.Name = "tbNewPass";
             this.tbNewPass.Size = new System.Drawing.Size(261, 37);
@@ -141,6 +141,7 @@ namespace Login
             // 
             // btnAccess
             // 
+            this.btnAccess.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAccess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(26)))));
             this.btnAccess.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(26)))));
             this.btnAccess.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -150,10 +151,11 @@ namespace Login
             this.btnAccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccess.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccess.ForeColor = System.Drawing.Color.White;
+            this.btnAccess.Imatge = null;
             this.btnAccess.Location = new System.Drawing.Point(156, 635);
             this.btnAccess.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAccess.Name = "btnAccess";
-            this.btnAccess.Size = new System.Drawing.Size(180, 60);
+            this.btnAccess.Size = new System.Drawing.Size(190, 65);
             this.btnAccess.TabIndex = 26;
             this.btnAccess.Text = "Reset Password";
             this.btnAccess.TextColor = System.Drawing.Color.White;

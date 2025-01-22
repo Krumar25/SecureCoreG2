@@ -60,6 +60,11 @@ namespace MainFormSC
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            frmBackground background = new frmBackground();
+            background.MdiParent = this;
+            background.Dock = DockStyle.Fill;
+            background.Show();
+
             //Obtencion del idUserCategory
             string query = $"SELECT * FROM Users WHERE idUser = {idAccess}";
             DataSet dts = AccessDades.PortarPerConsulta(query, "Users");
@@ -104,16 +109,10 @@ namespace MainFormSC
                 pnlMenu.Controls.Add(control);
             }
 
-            Button button = new Button();
-            button.Size = new Size(pnlMenu.Width, 100);
-            button.Dock = DockStyle.Bottom;
-            button.FlatStyle = FlatStyle.Flat;
-            button.FlatAppearance.BorderSize = 0;
-            button.BackColor = Color.Transparent;
-            button.ForeColor = Color.Yellow;
-            button.Text = "Logout";
-            button.Font = new Font("Lucida Sans", 9, FontStyle.Bold);
-            button.Click += Button_Click;
+            LogOutButton button = new LogOutButton();
+            button.Size = new Size(pnlMenu.Width, 100); // Ajustar el tamaño del control
+            button.Dock = DockStyle.Top;
+            button.ButtonClick += LogoutButton_ButtonClick;
             pnlMenu.Controls.Add(button);
         }
 
@@ -168,6 +167,13 @@ namespace MainFormSC
         private void picBoxCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        // Método que se ejecutará cuando se haga clic en el botón del UserControl
+        private void LogoutButton_ButtonClick(object sender, EventArgs e)
+        {
+            // Llamar al evento Button_Click existente
+            Button_Click(sender, e);
         }
 
         private void Button_Click(object sender, EventArgs e)

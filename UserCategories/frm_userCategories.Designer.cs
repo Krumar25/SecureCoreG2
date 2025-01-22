@@ -34,46 +34,46 @@ namespace UserCategories
             this.lbl_desc = new System.Windows.Forms.Label();
             this.swTextBox2 = new CustomControls.SWTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.swTextBox4 = new CustomControls.SWTextBox();
+            this.cboxAccessLevel = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(350, 142);
+            this.controlManteniment1.Location = new System.Drawing.Point(452, 202);
             this.controlManteniment1.Margin = new System.Windows.Forms.Padding(14, 18, 14, 18);
             this.controlManteniment1.Size = new System.Drawing.Size(566, 106);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cboxAccessLevel);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.swTextBox4);
             this.panel1.Controls.Add(this.swTextBox2);
             this.panel1.Controls.Add(this.lbl_desc);
             this.panel1.Controls.Add(this.lbl_code);
             this.panel1.Controls.Add(this.swTextBox1);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel1.Size = new System.Drawing.Size(1058, 1570);
+            this.panel1.Size = new System.Drawing.Size(1552, 1298);
             this.panel1.Controls.SetChildIndex(this.controlManteniment1, 0);
             this.panel1.Controls.SetChildIndex(this.swTextBox1, 0);
             this.panel1.Controls.SetChildIndex(this.lbl_code, 0);
             this.panel1.Controls.SetChildIndex(this.lbl_desc, 0);
             this.panel1.Controls.SetChildIndex(this.swTextBox2, 0);
-            this.panel1.Controls.SetChildIndex(this.swTextBox4, 0);
             this.panel1.Controls.SetChildIndex(this.label2, 0);
+            this.panel1.Controls.SetChildIndex(this.cboxAccessLevel, 0);
             // 
             // swTextBox1
             // 
             this.swTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.swTextBox1.CampBBDD = "CodeCategory";
-            this.swTextBox1.DadaPermesa = CustomControls.SWTextBox.TipusDada.Numero;
+            this.swTextBox1.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swTextBox1.EsForana = false;
             this.swTextBox1.EsNulable = false;
-            this.swTextBox1.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox1.Location = new System.Drawing.Point(389, 655);
+            this.swTextBox1.Font = new System.Drawing.Font("Lucida Sans", 11F);
+            this.swTextBox1.Location = new System.Drawing.Point(487, 615);
             this.swTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swTextBox1.Name = "swTextBox1";
-            this.swTextBox1.Size = new System.Drawing.Size(104, 34);
+            this.swTextBox1.Size = new System.Drawing.Size(104, 33);
             this.swTextBox1.TabIndex = 4;
             // 
             // lbl_code
@@ -82,7 +82,7 @@ namespace UserCategories
             this.lbl_code.AutoSize = true;
             this.lbl_code.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_code.ForeColor = System.Drawing.Color.Yellow;
-            this.lbl_code.Location = new System.Drawing.Point(286, 659);
+            this.lbl_code.Location = new System.Drawing.Point(384, 619);
             this.lbl_code.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_code.Name = "lbl_code";
             this.lbl_code.Size = new System.Drawing.Size(95, 26);
@@ -95,7 +95,7 @@ namespace UserCategories
             this.lbl_desc.AutoSize = true;
             this.lbl_desc.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_desc.ForeColor = System.Drawing.Color.Yellow;
-            this.lbl_desc.Location = new System.Drawing.Point(518, 659);
+            this.lbl_desc.Location = new System.Drawing.Point(659, 621);
             this.lbl_desc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_desc.Name = "lbl_desc";
             this.lbl_desc.Size = new System.Drawing.Size(149, 26);
@@ -106,14 +106,14 @@ namespace UserCategories
             // 
             this.swTextBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.swTextBox2.CampBBDD = "DescCategory";
-            this.swTextBox2.DadaPermesa = CustomControls.SWTextBox.TipusDada.Numero;
+            this.swTextBox2.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swTextBox2.EsForana = false;
             this.swTextBox2.EsNulable = false;
-            this.swTextBox2.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox2.Location = new System.Drawing.Point(674, 655);
+            this.swTextBox2.Font = new System.Drawing.Font("Lucida Sans", 11F);
+            this.swTextBox2.Location = new System.Drawing.Point(815, 617);
             this.swTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swTextBox2.Name = "swTextBox2";
-            this.swTextBox2.Size = new System.Drawing.Size(296, 34);
+            this.swTextBox2.Size = new System.Drawing.Size(296, 33);
             this.swTextBox2.TabIndex = 7;
             // 
             // label2
@@ -122,32 +122,41 @@ namespace UserCategories
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(221, 590);
+            this.label2.Location = new System.Drawing.Point(317, 519);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(159, 26);
             this.label2.TabIndex = 9;
             this.label2.Text = "Access Level";
             // 
-            // swTextBox4
+            // cboxAccessLevel
             // 
-            this.swTextBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.swTextBox4.CampBBDD = "AccessLevel";
-            this.swTextBox4.DadaPermesa = CustomControls.SWTextBox.TipusDada.Numero;
-            this.swTextBox4.EsForana = false;
-            this.swTextBox4.EsNulable = false;
-            this.swTextBox4.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox4.Location = new System.Drawing.Point(389, 590);
-            this.swTextBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.swTextBox4.Name = "swTextBox4";
-            this.swTextBox4.Size = new System.Drawing.Size(104, 34);
-            this.swTextBox4.TabIndex = 8;
+            this.cboxAccessLevel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboxAccessLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxAccessLevel.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxAccessLevel.FormattingEnabled = true;
+            this.cboxAccessLevel.Items.AddRange(new object[] {
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100"});
+            this.cboxAccessLevel.Location = new System.Drawing.Point(485, 512);
+            this.cboxAccessLevel.Name = "cboxAccessLevel";
+            this.cboxAccessLevel.Size = new System.Drawing.Size(104, 33);
+            this.cboxAccessLevel.TabIndex = 16;
+            this.cboxAccessLevel.Tag = "AccessLevel";
             // 
             // frm_userCategories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1380, 1570);
+            this.ClientSize = new System.Drawing.Size(1874, 1298);
             this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.Name = "frm_userCategories";
             this.Text = "frm_userCategories";
@@ -163,8 +172,8 @@ namespace UserCategories
         private CustomControls.SWTextBox swTextBox1;
         private System.Windows.Forms.Label lbl_code;
         private System.Windows.Forms.Label label2;
-        private CustomControls.SWTextBox swTextBox4;
         private CustomControls.SWTextBox swTextBox2;
         private System.Windows.Forms.Label lbl_desc;
+        private System.Windows.Forms.ComboBox cboxAccessLevel;
     }
 }
