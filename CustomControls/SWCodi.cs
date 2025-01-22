@@ -123,6 +123,7 @@ namespace CustomControls
                 DataRow row = dts.Tables[0].Rows[0];
 
                 txtNivell.Text = row[NomDesc].ToString();
+                controlID = row[NomId].ToString();
             }
             else
             {

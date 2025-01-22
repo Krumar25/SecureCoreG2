@@ -63,7 +63,7 @@ namespace Users
             report_tarjeta.TopLevel = false;
             report_tarjeta.Dock = DockStyle.Fill;
             report_tarjeta.FormBorderStyle = FormBorderStyle.None;
-            report_tarjeta.ID = swidUser.Text;
+            report_tarjeta.User = swCodeUser.Text;
             report_tarjeta.Show();
         }
 
@@ -89,6 +89,31 @@ namespace Users
         {
             swbtnGenerarTarjeta.ForeColor = Color.Yellow;
             swbtnGenerarTarjeta.BackColor = Color.Black;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void swUserRanks_Validating(object sender, CancelEventArgs e)
+        {
+            swidUserRank.ActualizarId(swUserRanks.ControlID);
+        }
+
+        private void swUserCategory_Validating(object sender, CancelEventArgs e)
+        {
+            swidUserCategory.ActualizarId(swUserCategory.ControlID);
+        }
+
+        private void swPlanet_Validating(object sender, CancelEventArgs e)
+        {
+            swidPlanet.ActualizarId(swPlanet.ControlID);
+        }
+
+        private void swSpecie_Validating(object sender, CancelEventArgs e)
+        {
+            swidSpecie.ActualizarId(swSpecie.ControlID);
         }
     }
 }

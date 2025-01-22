@@ -60,16 +60,16 @@ namespace CustomControls
 
         }
 
-        private void pb_logo_Click(object sender, EventArgs e)
-        {
-            Assembly assembly = Assembly.LoadFrom($@"{this.NomClase}.dll");
-            Object dllBD;
-            Type type;
+        //private void pb_logo_Click(object sender, EventArgs e)
+        //{
+        //    Assembly assembly = Assembly.LoadFrom($@"{this.NomClase}.dll");
+        //    Object dllBD;
+        //    Type type;
 
-            type = assembly.GetType($"{this.NomForm}.{this.NomClase}");
-            dllBD = Activator.CreateInstance(type);
+        //    type = assembly.GetType($"{this.NomForm}.{this.NomClase}");
+        //    dllBD = Activator.CreateInstance(type);
 
-            ((Form)dllBD).Show();
-        }
+        //    ((Form)dllBD).Show();
+        //}
     }
 }

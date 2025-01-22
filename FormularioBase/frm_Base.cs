@@ -151,26 +151,6 @@ namespace FormularioBase
 
         private void cmb_actualizar_Click(object sender, EventArgs e)
         {
-            DataRow dr = dts.Tables[0].NewRow();
-
-            foreach (Control panel in Controls)
-            {
-                if (panel is Panel)
-                {
-                    foreach (Control control in panel.Controls)
-                    {
-                        if (control is CustomControls.SWTextBox)
-                        {
-                            CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)control;
-
-                            dr[ctr.CampBBDD.ToString()] = ctr.Text;
-                        }
-                    }
-                }
-                
-
-            }
-            dts.Tables[0].Rows.Add(dr);
 
             if (dts.HasChanges())
             {
@@ -178,7 +158,27 @@ namespace FormularioBase
             }
             if (esNou)
             {
-                dts = BBDD.PortarPerConsulta(query, nomTaula);
+                DataRow dr = dts.Tables[0].NewRow();
+
+                foreach (Control panel in Controls)
+                {
+                    if (panel is Panel)
+                    {
+                        foreach (Control control in panel.Controls)
+                        {
+                            if (control is CustomControls.SWTextBox)
+                            {
+                                CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)control;
+
+                                dr[ctr.CampBBDD.ToString()] = ctr.Text;
+                            }
+                        }
+                    }
+                }
+                dts.Tables[0].Rows.Add(dr);
+
+                BBDD.Actualitzar(query, dts);
+                //dts = BBDD.PortarPerConsulta(query, nomTaula);
                 ConfigurarBinding();
 
                 esNou = false;
@@ -197,8 +197,24 @@ namespace FormularioBase
                         if (item is CustomControls.SWTextBox)
                         {
                             CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)item;
-                            ctr.DataBindings.Clear();
-                            ctr.Text = "";
+                            if (ctr.CampBBDD != "Password")
+                            {
+                                if (ctr.EsForana)
+                                {
+                                    ctr.DataBindings.Clear();
+                                    ctr.Text = "1";
+                                }
+                                else
+                                {
+                                    ctr.DataBindings.Clear();
+                                    ctr.Text = "";
+                                }
+                            }
+                            else
+                            {
+                                ctr.DataBindings.Clear();
+                                ctr.Text = "12345aA";
+                            }
                             ctr.Validated -= new System.EventHandler(this.ValidarControl);
                         }
                     }

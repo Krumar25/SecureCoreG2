@@ -135,6 +135,11 @@ namespace CustomControls
             }
         }
 
+        public void ActualizarId(string id)
+        {
+            Text = id;
+        }
+
         #endregion
 
     }

@@ -9,18 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
+using Dades;
 
 namespace Users
 {
     
     public partial class Tarjeta : Form
     {
-        private string id;
+        private string user;
         private ReportDocument cryRpt;
-        public string ID
+        private AccesADades AccesDades = new AccesADades();
+
+        public string User
         {
-            get { return id; }
-            set { id = value; }
+            get { return user; }
+            set { user = value; }
         }
 
         public Tarjeta()
@@ -86,6 +89,14 @@ namespace Users
             cryRpt.Load("TarjetaUsuari.rpt");
 
             SetCredencialesCrystal();
+
+            Dictionary<string, string> Dicc = new Dictionary<string, string>();
+            Dicc.Add("@user", user);
+            string query = $"SELECT * FROM Users WHERE CodeUser = @user";
+            DataSet dts = AccesDades.GenerarConsultaCerca(query, Dicc);
+            DataRow dr = dts.Tables[0].Rows[0];
+
+            string id = dr["idUser"].ToString();
 
             cryRpt.RecordSelectionFormula = "{Users.idUser} = " + Convert.ToInt32(id);
 

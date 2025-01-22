@@ -45,7 +45,6 @@ namespace CustomControls
             this.pn_manteniment.Name = "pn_manteniment";
             this.pn_manteniment.Size = new System.Drawing.Size(612, 63);
             this.pn_manteniment.TabIndex = 0;
-            this.pn_manteniment.Click += new System.EventHandler(this.pb_logo_Click);
             // 
             // lbl_titulo
             // 
@@ -58,7 +57,6 @@ namespace CustomControls
             this.lbl_titulo.Size = new System.Drawing.Size(167, 29);
             this.lbl_titulo.TabIndex = 1;
             this.lbl_titulo.Text = "MANTENIMIENTO";
-            this.lbl_titulo.Click += new System.EventHandler(this.pb_logo_Click);
             // 
             // pb_logo
             // 
@@ -68,7 +66,6 @@ namespace CustomControls
             this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_logo.TabIndex = 0;
             this.pb_logo.TabStop = false;
-            this.pb_logo.Click += new System.EventHandler(this.pb_logo_Click);
             // 
             // ControlManteniment
             // 
@@ -79,7 +76,6 @@ namespace CustomControls
             this.Name = "ControlManteniment";
             this.Size = new System.Drawing.Size(626, 69);
             this.Load += new System.EventHandler(this.ControlManteniment_Load);
-            this.Click += new System.EventHandler(this.pb_logo_Click);
             this.pn_manteniment.ResumeLayout(false);
             this.pn_manteniment.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();
