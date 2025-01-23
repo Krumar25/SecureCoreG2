@@ -83,6 +83,13 @@ namespace CustomControls
                     // Verificamos si el formulario es un MDI container
                     if (frmPrincipal.IsMdiContainer)
                     {
+
+                        // Cerramos los formularios hijos MDI abiertos anteriormente
+                        foreach (Form childForm in frmPrincipal.MdiChildren)
+                        {
+                            childForm.Close();
+                        }
+
                         // Configuramos el formulario hijo
                         formulari.MdiParent = frmPrincipal;
                         formulari.TopLevel = false;
