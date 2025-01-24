@@ -63,7 +63,6 @@ namespace Login
                 MainFormSC.frmPrincipal frmmain = new MainFormSC.frmPrincipal();
                 frmmain.FormClosed += (s, args) => this.Close();
                 frmmain.idAccess = idAccess;
-                frmmain.Username = UserName;
                 frmmain.Show();
             }
             else

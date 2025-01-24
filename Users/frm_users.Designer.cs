@@ -61,7 +61,7 @@ namespace Users
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(578, 176);
+            this.controlManteniment1.Location = new System.Drawing.Point(623, 176);
             // 
             // panel1
             // 
@@ -417,7 +417,7 @@ namespace Users
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.Location = new System.Drawing.Point(1295, 279);
+            this.panel2.Location = new System.Drawing.Point(1313, 291);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 368);
             this.panel2.TabIndex = 25;

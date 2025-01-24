@@ -70,7 +70,7 @@ namespace Login
                     DataRow row = dts.Tables[0].Rows[0];
                     passwordBBDD = row["Password"].ToString();
                     loginBBDD = row["Login"].ToString();
-                    idAccess = row["idUserCategory"].ToString();
+                    idAccess = row["idUser"].ToString();
                     Hashsalt = row["Hash"].ToString();
 
                     if (string.IsNullOrEmpty(Hashsalt) && password == "12345aA")
@@ -79,7 +79,6 @@ namespace Login
 
                         CanviPassword frmCanvi = new CanviPassword();
                         frmCanvi.FormClosed += (s, args) => this.Close();
-                        frmCanvi.UserName = Username;
                         frmCanvi.idAccess = idAccess;
                         frmCanvi.Show();
                     }
@@ -95,7 +94,6 @@ namespace Login
                             this.Hide();
                             frmmain = new MainFormSC.frmPrincipal();
                             frmmain.FormClosed += frmmain_FormClosed;
-                            frmmain.Username = Username;
                             frmmain.idAccess = idAccess;
                             frmmain.Show();
                         }
