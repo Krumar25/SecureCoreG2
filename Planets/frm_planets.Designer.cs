@@ -59,7 +59,7 @@
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(919, 18);
+            this.controlManteniment1.Location = new System.Drawing.Point(538, 27);
             this.controlManteniment1.Margin = new System.Windows.Forms.Padding(14, 18, 14, 18);
             this.controlManteniment1.Size = new System.Drawing.Size(588, 120);
             // 
@@ -92,7 +92,7 @@
             this.panel1.Controls.Add(this.swCodi_sector);
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel1.Size = new System.Drawing.Size(1617, 1570);
+            this.panel1.Size = new System.Drawing.Size(1694, 1570);
             this.panel1.Controls.SetChildIndex(this.swCodi_sector, 0);
             this.panel1.Controls.SetChildIndex(this.swCodi_nativos, 0);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
@@ -127,7 +127,7 @@
             this.swCodi_filiation.ControlID = null;
             this.swCodi_filiation.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swCodi_filiation.FormCS = null;
-            this.swCodi_filiation.Location = new System.Drawing.Point(413, 528);
+            this.swCodi_filiation.Location = new System.Drawing.Point(452, 528);
             this.swCodi_filiation.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.swCodi_filiation.Name = "swCodi_filiation";
             this.swCodi_filiation.NomCodi = "CodeFiliation";
@@ -146,7 +146,7 @@
             this.swCodi_nativos.ControlID = null;
             this.swCodi_nativos.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swCodi_nativos.FormCS = null;
-            this.swCodi_nativos.Location = new System.Drawing.Point(413, 427);
+            this.swCodi_nativos.Location = new System.Drawing.Point(452, 427);
             this.swCodi_nativos.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.swCodi_nativos.Name = "swCodi_nativos";
             this.swCodi_nativos.NomCodi = "CodeSpecie";
@@ -165,7 +165,7 @@
             this.swCodi_sector.ControlID = "idSector";
             this.swCodi_sector.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swCodi_sector.FormCS = null;
-            this.swCodi_sector.Location = new System.Drawing.Point(413, 321);
+            this.swCodi_sector.Location = new System.Drawing.Point(452, 321);
             this.swCodi_sector.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.swCodi_sector.Name = "swCodi_sector";
             this.swCodi_sector.NomCodi = "CodeSector";
@@ -184,7 +184,7 @@
             this.swCodi_planet.ControlID = "idPlanets";
             this.swCodi_planet.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swCodi_planet.FormCS = null;
-            this.swCodi_planet.Location = new System.Drawing.Point(413, 213);
+            this.swCodi_planet.Location = new System.Drawing.Point(452, 213);
             this.swCodi_planet.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.swCodi_planet.Name = "swCodi_planet";
             this.swCodi_planet.NomCodi = "CodePlanet";
@@ -202,7 +202,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(552, 181);
+            this.label1.Location = new System.Drawing.Point(591, 181);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 26);
@@ -215,7 +215,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(831, 181);
+            this.label2.Location = new System.Drawing.Point(870, 181);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 26);
@@ -228,7 +228,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Yellow;
-            this.label3.Location = new System.Drawing.Point(355, 687);
+            this.label3.Location = new System.Drawing.Point(394, 687);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 26);
@@ -243,7 +243,7 @@
             this.swTx_long.EsForana = false;
             this.swTx_long.EsNulable = false;
             this.swTx_long.Font = new System.Drawing.Font("Lucida Sans", 11F);
-            this.swTx_long.Location = new System.Drawing.Point(487, 688);
+            this.swTx_long.Location = new System.Drawing.Point(526, 688);
             this.swTx_long.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swTx_long.Name = "swTx_long";
             this.swTx_long.Size = new System.Drawing.Size(174, 33);
@@ -257,7 +257,7 @@
             this.swTx_ip.EsForana = false;
             this.swTx_ip.EsNulable = false;
             this.swTx_ip.Font = new System.Drawing.Font("Lucida Sans", 11F);
-            this.swTx_ip.Location = new System.Drawing.Point(487, 748);
+            this.swTx_ip.Location = new System.Drawing.Point(526, 748);
             this.swTx_ip.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swTx_ip.Name = "swTx_ip";
             this.swTx_ip.Size = new System.Drawing.Size(175, 33);
@@ -269,7 +269,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Yellow;
-            this.label4.Location = new System.Drawing.Point(438, 748);
+            this.label4.Location = new System.Drawing.Point(477, 748);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 26);
@@ -282,7 +282,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Yellow;
-            this.label5.Location = new System.Drawing.Point(723, 687);
+            this.label5.Location = new System.Drawing.Point(762, 687);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 26);
@@ -297,7 +297,7 @@
             this.swTx_lat.EsForana = false;
             this.swTx_lat.EsNulable = false;
             this.swTx_lat.Font = new System.Drawing.Font("Lucida Sans", 11F);
-            this.swTx_lat.Location = new System.Drawing.Point(825, 688);
+            this.swTx_lat.Location = new System.Drawing.Point(864, 688);
             this.swTx_lat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swTx_lat.Name = "swTx_lat";
             this.swTx_lat.Size = new System.Drawing.Size(174, 33);
@@ -309,7 +309,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Yellow;
-            this.label6.Location = new System.Drawing.Point(707, 747);
+            this.label6.Location = new System.Drawing.Point(746, 747);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(110, 26);
@@ -324,7 +324,7 @@
             this.swTx_p1.EsForana = false;
             this.swTx_p1.EsNulable = false;
             this.swTx_p1.Font = new System.Drawing.Font("Lucida Sans", 11F);
-            this.swTx_p1.Location = new System.Drawing.Point(825, 749);
+            this.swTx_p1.Location = new System.Drawing.Point(864, 749);
             this.swTx_p1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swTx_p1.Name = "swTx_p1";
             this.swTx_p1.Size = new System.Drawing.Size(64, 33);
@@ -336,7 +336,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Yellow;
-            this.label7.Location = new System.Drawing.Point(905, 748);
+            this.label7.Location = new System.Drawing.Point(944, 748);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(110, 26);
@@ -349,7 +349,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Yellow;
-            this.label8.Location = new System.Drawing.Point(365, 397);
+            this.label8.Location = new System.Drawing.Point(404, 397);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(84, 26);
@@ -362,7 +362,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Yellow;
-            this.label9.Location = new System.Drawing.Point(352, 501);
+            this.label9.Location = new System.Drawing.Point(391, 501);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(101, 26);
@@ -375,7 +375,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Yellow;
-            this.label10.Location = new System.Drawing.Point(341, 600);
+            this.label10.Location = new System.Drawing.Point(380, 600);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(109, 26);
@@ -389,7 +389,7 @@
             this.swTx_filiation.DadaPermesa = CustomControls.SWTextBox.TipusDada.Numero;
             this.swTx_filiation.EsForana = false;
             this.swTx_filiation.EsNulable = false;
-            this.swTx_filiation.Location = new System.Drawing.Point(1211, 581);
+            this.swTx_filiation.Location = new System.Drawing.Point(1250, 581);
             this.swTx_filiation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swTx_filiation.Name = "swTx_filiation";
             this.swTx_filiation.Size = new System.Drawing.Size(97, 26);
@@ -403,7 +403,7 @@
             this.swTx_nativos.DadaPermesa = CustomControls.SWTextBox.TipusDada.Numero;
             this.swTx_nativos.EsForana = false;
             this.swTx_nativos.EsNulable = false;
-            this.swTx_nativos.Location = new System.Drawing.Point(1210, 510);
+            this.swTx_nativos.Location = new System.Drawing.Point(1249, 510);
             this.swTx_nativos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swTx_nativos.Name = "swTx_nativos";
             this.swTx_nativos.Size = new System.Drawing.Size(97, 26);
@@ -417,7 +417,7 @@
             this.swTx_sector.DadaPermesa = CustomControls.SWTextBox.TipusDada.Numero;
             this.swTx_sector.EsForana = false;
             this.swTx_sector.EsNulable = false;
-            this.swTx_sector.Location = new System.Drawing.Point(1210, 435);
+            this.swTx_sector.Location = new System.Drawing.Point(1249, 435);
             this.swTx_sector.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swTx_sector.Name = "swTx_sector";
             this.swTx_sector.Size = new System.Drawing.Size(97, 26);
@@ -431,7 +431,7 @@
             this.swTx_planet.DadaPermesa = CustomControls.SWTextBox.TipusDada.Numero;
             this.swTx_planet.EsForana = false;
             this.swTx_planet.EsNulable = false;
-            this.swTx_planet.Location = new System.Drawing.Point(1210, 366);
+            this.swTx_planet.Location = new System.Drawing.Point(1249, 366);
             this.swTx_planet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swTx_planet.Name = "swTx_planet";
             this.swTx_planet.Size = new System.Drawing.Size(97, 26);
@@ -446,7 +446,7 @@
             this.swTx_p2.EsForana = false;
             this.swTx_p2.EsNulable = false;
             this.swTx_p2.Font = new System.Drawing.Font("Lucida Sans", 11F);
-            this.swTx_p2.Location = new System.Drawing.Point(1023, 748);
+            this.swTx_p2.Location = new System.Drawing.Point(1062, 748);
             this.swTx_p2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swTx_p2.Name = "swTx_p2";
             this.swTx_p2.Size = new System.Drawing.Size(64, 33);
@@ -455,10 +455,11 @@
             // pb_planets
             // 
             this.pb_planets.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pb_planets.Location = new System.Drawing.Point(1141, 321);
+            this.pb_planets.Location = new System.Drawing.Point(1180, 321);
             this.pb_planets.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pb_planets.Name = "pb_planets";
             this.pb_planets.Size = new System.Drawing.Size(376, 326);
+            this.pb_planets.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_planets.TabIndex = 37;
             this.pb_planets.TabStop = false;
             this.pb_planets.Tag = "PlanetPicture";
@@ -469,7 +470,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Yellow;
-            this.label11.Location = new System.Drawing.Point(348, 275);
+            this.label11.Location = new System.Drawing.Point(387, 275);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(98, 26);

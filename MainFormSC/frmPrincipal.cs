@@ -29,6 +29,15 @@ namespace MainFormSC
         private AccesADades AccessDades = new AccesADades();
         frm_users mantenimiento;
 
+        private string _Username;
+
+        public string Username
+        {
+            get { return _Username; }
+            set { _Username = value; }
+        }
+
+
 
         private string _idAccess;
 
@@ -65,8 +74,7 @@ namespace MainFormSC
             background.Dock = DockStyle.Fill;
             background.Show();
 
-            //Obtencion del idUserCategory
-            string query = $"SELECT * FROM Users WHERE idUser = {idAccess}";
+            string query = $"SELECT * FROM Users WHERE Login = '{Username}'";
             DataSet dts = AccessDades.PortarPerConsulta(query, "Users");
             DataRow row = dts.Tables[0].Rows[0];
 

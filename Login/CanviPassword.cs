@@ -21,6 +21,7 @@ namespace Login
         private const int HashByteSize = 24;
         private const int HasingIterationsCount = 10101;
         private string username;
+        public string idAccess;
 
         public string UserName
         {
@@ -61,6 +62,8 @@ namespace Login
 
                 MainFormSC.frmPrincipal frmmain = new MainFormSC.frmPrincipal();
                 frmmain.FormClosed += (s, args) => this.Close();
+                frmmain.idAccess = idAccess;
+                frmmain.Username = UserName;
                 frmmain.Show();
             }
             else

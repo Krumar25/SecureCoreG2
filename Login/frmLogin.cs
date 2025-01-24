@@ -73,16 +73,17 @@ namespace Login
                     idAccess = row["idUserCategory"].ToString();
                     Hashsalt = row["Hash"].ToString();
 
-                    if (string.IsNullOrEmpty(Hashsalt))
+                    if (string.IsNullOrEmpty(Hashsalt) && password == "12345aA")
                     {
                         this.Hide();
 
                         CanviPassword frmCanvi = new CanviPassword();
                         frmCanvi.FormClosed += (s, args) => this.Close();
                         frmCanvi.UserName = Username;
+                        frmCanvi.idAccess = idAccess;
                         frmCanvi.Show();
                     }
-                    else
+                    else if (!string.IsNullOrEmpty(Hashsalt))
                     {
                         Hashsalt = row["Hash"].ToString();
                         byte[] salt = HashUser.ConvertHexStringToBytes(Hashsalt);
@@ -94,6 +95,7 @@ namespace Login
                             this.Hide();
                             frmmain = new MainFormSC.frmPrincipal();
                             frmmain.FormClosed += frmmain_FormClosed;
+                            frmmain.Username = Username;
                             frmmain.idAccess = idAccess;
                             frmmain.Show();
                         }
@@ -102,6 +104,10 @@ namespace Login
                             lbErrorLogin.Visible = true;
                         }
                         
+                    }
+                    else
+                    {
+                        lbErrorLogin.Visible = true;
                     }
                 }
                 else
