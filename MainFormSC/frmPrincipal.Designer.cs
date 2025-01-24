@@ -171,6 +171,7 @@ namespace MainFormSC
             // pbWelcome
             // 
             this.pbWelcome.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbWelcome.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbWelcome.ErrorImage")));
             this.pbWelcome.ImageLocation = "";
             this.pbWelcome.Location = new System.Drawing.Point(0, 21);
             this.pbWelcome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
