@@ -116,6 +116,10 @@
       <Project>{7ff41c10-6edd-4948-8193-38d24024d204}</Project>
       <Name>TipusDeNausFK</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FormsTests\FormsTests.csproj">
+      <Project>{d8f670ca-fa0a-4853-9c5b-3224179ca259}</Project>
+      <Name>FormsTests</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

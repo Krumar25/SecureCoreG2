@@ -45,8 +45,8 @@ namespace TipusDeNausFK
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(380, 132);
-            this.controlManteniment1.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
+            this.controlManteniment1.Location = new System.Drawing.Point(473, 106);
+            this.controlManteniment1.Margin = new System.Windows.Forms.Padding(9, 12, 9, 12);
             // 
             // panel1
             // 
@@ -61,8 +61,8 @@ namespace TipusDeNausFK
             this.panel1.Controls.Add(this.idFiliation);
             this.panel1.Controls.Add(this.swCodiCategory);
             this.panel1.Controls.Add(this.swCodiFiliation);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Size = new System.Drawing.Size(1515, 1298);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.panel1.Size = new System.Drawing.Size(1415, 1038);
             this.panel1.Controls.SetChildIndex(this.controlManteniment1, 0);
             this.panel1.Controls.SetChildIndex(this.swCodiFiliation, 0);
             this.panel1.Controls.SetChildIndex(this.swCodiCategory, 0);
@@ -83,14 +83,14 @@ namespace TipusDeNausFK
             this.swCodiFiliation.ControlID = "idFiliation";
             this.swCodiFiliation.Font = new System.Drawing.Font("Lucida Sans", 9F);
             this.swCodiFiliation.FormCS = null;
-            this.swCodiFiliation.Location = new System.Drawing.Point(353, 510);
-            this.swCodiFiliation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.swCodiFiliation.Location = new System.Drawing.Point(347, 408);
+            this.swCodiFiliation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.swCodiFiliation.Name = "swCodiFiliation";
             this.swCodiFiliation.NomCodi = "CodeFiliation";
             this.swCodiFiliation.NomDesc = "DescFiliations";
             this.swCodiFiliation.NomId = "idFiliation";
             this.swCodiFiliation.NomTaula = "Filiations";
-            this.swCodiFiliation.Size = new System.Drawing.Size(598, 104);
+            this.swCodiFiliation.Size = new System.Drawing.Size(532, 83);
             this.swCodiFiliation.TabIndex = 4;
             this.swCodiFiliation.TxtCode = null;
             this.swCodiFiliation.TxtDesc = null;
@@ -102,14 +102,14 @@ namespace TipusDeNausFK
             this.swCodiCategory.ControlID = "idCategory";
             this.swCodiCategory.Font = new System.Drawing.Font("Lucida Sans", 9F);
             this.swCodiCategory.FormCS = null;
-            this.swCodiCategory.Location = new System.Drawing.Point(353, 620);
-            this.swCodiCategory.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.swCodiCategory.Location = new System.Drawing.Point(347, 496);
+            this.swCodiCategory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swCodiCategory.Name = "swCodiCategory";
             this.swCodiCategory.NomCodi = "CodeSpaceShipCategory";
             this.swCodiCategory.NomDesc = "DescSpaceShipCategory";
             this.swCodiCategory.NomId = "idSpaceShipCategory";
             this.swCodiCategory.NomTaula = "SpaceShipCategories";
-            this.swCodiCategory.Size = new System.Drawing.Size(598, 112);
+            this.swCodiCategory.Size = new System.Drawing.Size(532, 90);
             this.swCodiCategory.TabIndex = 5;
             this.swCodiCategory.TxtCode = null;
             this.swCodiCategory.TxtDesc = null;
@@ -121,10 +121,9 @@ namespace TipusDeNausFK
             this.idFiliation.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.idFiliation.EsForana = true;
             this.idFiliation.EsNulable = false;
-            this.idFiliation.Location = new System.Drawing.Point(1267, 452);
-            this.idFiliation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.idFiliation.Location = new System.Drawing.Point(1160, 362);
             this.idFiliation.Name = "idFiliation";
-            this.idFiliation.Size = new System.Drawing.Size(52, 26);
+            this.idFiliation.Size = new System.Drawing.Size(47, 22);
             this.idFiliation.TabIndex = 6;
             this.idFiliation.TextChanged += new System.EventHandler(this.idFiliation_TextChanged);
             // 
@@ -135,10 +134,9 @@ namespace TipusDeNausFK
             this.idCategory.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.idCategory.EsForana = true;
             this.idCategory.EsNulable = false;
-            this.idCategory.Location = new System.Drawing.Point(1267, 542);
-            this.idCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.idCategory.Location = new System.Drawing.Point(1160, 434);
             this.idCategory.Name = "idCategory";
-            this.idCategory.Size = new System.Drawing.Size(52, 26);
+            this.idCategory.Size = new System.Drawing.Size(47, 22);
             this.idCategory.TabIndex = 7;
             this.idCategory.TextChanged += new System.EventHandler(this.idCategory_TextChanged);
             // 
@@ -150,10 +148,9 @@ namespace TipusDeNausFK
             this.swCodeSpaceShip.EsForana = false;
             this.swCodeSpaceShip.EsNulable = false;
             this.swCodeSpaceShip.Font = new System.Drawing.Font("Lucida Sans", 11F);
-            this.swCodeSpaceShip.Location = new System.Drawing.Point(532, 378);
-            this.swCodeSpaceShip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.swCodeSpaceShip.Location = new System.Drawing.Point(507, 302);
             this.swCodeSpaceShip.Name = "swCodeSpaceShip";
-            this.swCodeSpaceShip.Size = new System.Drawing.Size(166, 33);
+            this.swCodeSpaceShip.Size = new System.Drawing.Size(148, 29);
             this.swCodeSpaceShip.TabIndex = 8;
             // 
             // swDescSpaceShip
@@ -164,19 +161,17 @@ namespace TipusDeNausFK
             this.swDescSpaceShip.EsForana = false;
             this.swDescSpaceShip.EsNulable = false;
             this.swDescSpaceShip.Font = new System.Drawing.Font("Lucida Sans", 11F);
-            this.swDescSpaceShip.Location = new System.Drawing.Point(532, 468);
-            this.swDescSpaceShip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.swDescSpaceShip.Location = new System.Drawing.Point(507, 374);
             this.swDescSpaceShip.Name = "swDescSpaceShip";
-            this.swDescSpaceShip.Size = new System.Drawing.Size(436, 33);
+            this.swDescSpaceShip.Size = new System.Drawing.Size(388, 29);
             this.swDescSpaceShip.TabIndex = 9;
             // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.Location = new System.Drawing.Point(1236, 365);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(1132, 292);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(212, 374);
+            this.panel2.Size = new System.Drawing.Size(188, 299);
             this.panel2.TabIndex = 10;
             // 
             // label2
@@ -185,10 +180,10 @@ namespace TipusDeNausFK
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(316, 376);
+            this.label2.Location = new System.Drawing.Point(315, 301);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 26);
+            this.label2.Size = new System.Drawing.Size(83, 22);
             this.label2.TabIndex = 11;
             this.label2.Text = "Código";
             // 
@@ -198,10 +193,10 @@ namespace TipusDeNausFK
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(316, 466);
+            this.label1.Location = new System.Drawing.Point(315, 373);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 26);
+            this.label1.Size = new System.Drawing.Size(86, 22);
             this.label1.TabIndex = 12;
             this.label1.Text = "Modelo";
             // 
@@ -211,10 +206,10 @@ namespace TipusDeNausFK
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Yellow;
-            this.label3.Location = new System.Drawing.Point(315, 571);
+            this.label3.Location = new System.Drawing.Point(314, 457);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 26);
+            this.label3.Size = new System.Drawing.Size(98, 22);
             this.label3.TabIndex = 13;
             this.label3.Text = "Filiación";
             // 
@@ -224,19 +219,19 @@ namespace TipusDeNausFK
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Yellow;
-            this.label4.Location = new System.Drawing.Point(299, 691);
+            this.label4.Location = new System.Drawing.Point(299, 553);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 26);
+            this.label4.Size = new System.Drawing.Size(109, 22);
             this.label4.TabIndex = 14;
             this.label4.Text = "Categoría";
             // 
             // frmTipusNausFK
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1837, 1298);
-            this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.ClientSize = new System.Drawing.Size(1633, 1038);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmTipusNausFK";
             this.Text = "frmTipusNausFK";
             this.panel1.ResumeLayout(false);
