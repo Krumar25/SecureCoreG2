@@ -27,7 +27,6 @@ namespace MainFormSC
         private Point dragCursorPoint;
         private Point dragFormPoint;
         private AccesADades AccessDades = new AccesADades();
-        frm_users mantenimiento;
 
         private string _idAccess;
 

@@ -124,6 +124,7 @@ namespace FormularioBase
             this.dtg_datos.Location = new System.Drawing.Point(142, 820);
             this.dtg_datos.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.dtg_datos.Name = "dtg_datos";
+            this.dtg_datos.ReadOnly = true;
             this.dtg_datos.RowHeadersWidth = 62;
             this.dtg_datos.Size = new System.Drawing.Size(1181, 470);
             this.dtg_datos.TabIndex = 3;
