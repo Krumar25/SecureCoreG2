@@ -31,7 +31,6 @@
             this.swCodi_filiation = new CustomControls.SWCodi();
             this.swCodi_nativos = new CustomControls.SWCodi();
             this.swCodi_sector = new CustomControls.SWCodi();
-            this.swCodi_planet = new CustomControls.SWCodi();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,30 +48,35 @@
             this.swTx_filiation = new CustomControls.SWTextBox();
             this.swTx_nativos = new CustomControls.SWTextBox();
             this.swTx_sector = new CustomControls.SWTextBox();
-            this.swTx_planet = new CustomControls.SWTextBox();
             this.swTx_p2 = new CustomControls.SWTextBox();
             this.pb_planets = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.swTextBox1 = new CustomControls.SWTextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.swTextBox2 = new CustomControls.SWTextBox();
+            this.swTextBox3 = new CustomControls.SWTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_planets)).BeginInit();
             this.SuspendLayout();
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(538, 27);
+            this.controlManteniment1.Location = new System.Drawing.Point(784, 27);
             this.controlManteniment1.Margin = new System.Windows.Forms.Padding(14, 18, 14, 18);
             this.controlManteniment1.Size = new System.Drawing.Size(588, 120);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.swTextBox3);
+            this.panel1.Controls.Add(this.swTextBox2);
+            this.panel1.Controls.Add(this.swTextBox1);
+            this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.pb_planets);
             this.panel1.Controls.Add(this.swTx_p2);
             this.panel1.Controls.Add(this.swTx_filiation);
             this.panel1.Controls.Add(this.swTx_nativos);
             this.panel1.Controls.Add(this.swTx_sector);
-            this.panel1.Controls.Add(this.swTx_planet);
-            this.panel1.Controls.Add(this.swCodi_planet);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
@@ -110,8 +114,6 @@
             this.panel1.Controls.SetChildIndex(this.label8, 0);
             this.panel1.Controls.SetChildIndex(this.label9, 0);
             this.panel1.Controls.SetChildIndex(this.label10, 0);
-            this.panel1.Controls.SetChildIndex(this.swCodi_planet, 0);
-            this.panel1.Controls.SetChildIndex(this.swTx_planet, 0);
             this.panel1.Controls.SetChildIndex(this.swTx_sector, 0);
             this.panel1.Controls.SetChildIndex(this.swTx_nativos, 0);
             this.panel1.Controls.SetChildIndex(this.swTx_filiation, 0);
@@ -119,6 +121,10 @@
             this.panel1.Controls.SetChildIndex(this.pb_planets, 0);
             this.panel1.Controls.SetChildIndex(this.label11, 0);
             this.panel1.Controls.SetChildIndex(this.controlManteniment1, 0);
+            this.panel1.Controls.SetChildIndex(this.label12, 0);
+            this.panel1.Controls.SetChildIndex(this.swTextBox1, 0);
+            this.panel1.Controls.SetChildIndex(this.swTextBox2, 0);
+            this.panel1.Controls.SetChildIndex(this.swTextBox3, 0);
             // 
             // swCodi_filiation
             // 
@@ -176,25 +182,6 @@
             this.swCodi_sector.TabIndex = 9;
             this.swCodi_sector.TxtCode = null;
             this.swCodi_sector.TxtDesc = null;
-            // 
-            // swCodi_planet
-            // 
-            this.swCodi_planet.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.swCodi_planet.ClasseCS = null;
-            this.swCodi_planet.ControlID = "idPlanets";
-            this.swCodi_planet.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swCodi_planet.FormCS = null;
-            this.swCodi_planet.Location = new System.Drawing.Point(452, 213);
-            this.swCodi_planet.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.swCodi_planet.Name = "swCodi_planet";
-            this.swCodi_planet.NomCodi = "CodePlanet";
-            this.swCodi_planet.NomDesc = "DescPlanet";
-            this.swCodi_planet.NomId = "idPlanet";
-            this.swCodi_planet.NomTaula = "planets";
-            this.swCodi_planet.Size = new System.Drawing.Size(552, 112);
-            this.swCodi_planet.TabIndex = 30;
-            this.swCodi_planet.TxtCode = null;
-            this.swCodi_planet.TxtDesc = null;
             // 
             // label1
             // 
@@ -424,20 +411,6 @@
             this.swTx_sector.TabIndex = 33;
             this.swTx_sector.TextChanged += new System.EventHandler(this.swTx_sector_TextChanged);
             // 
-            // swTx_planet
-            // 
-            this.swTx_planet.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.swTx_planet.CampBBDD = "idPlanet";
-            this.swTx_planet.DadaPermesa = CustomControls.SWTextBox.TipusDada.Numero;
-            this.swTx_planet.EsForana = false;
-            this.swTx_planet.EsNulable = false;
-            this.swTx_planet.Location = new System.Drawing.Point(1249, 366);
-            this.swTx_planet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.swTx_planet.Name = "swTx_planet";
-            this.swTx_planet.Size = new System.Drawing.Size(97, 26);
-            this.swTx_planet.TabIndex = 32;
-            this.swTx_planet.TextChanged += new System.EventHandler(this.swTx_planet_TextChanged);
-            // 
             // swTx_p2
             // 
             this.swTx_p2.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -455,7 +428,7 @@
             // pb_planets
             // 
             this.pb_planets.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pb_planets.Location = new System.Drawing.Point(1180, 321);
+            this.pb_planets.Location = new System.Drawing.Point(1155, 302);
             this.pb_planets.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pb_planets.Name = "pb_planets";
             this.pb_planets.Size = new System.Drawing.Size(376, 326);
@@ -476,6 +449,61 @@
             this.label11.Size = new System.Drawing.Size(98, 26);
             this.label11.TabIndex = 38;
             this.label11.Text = "Planeta";
+            // 
+            // swTextBox1
+            // 
+            this.swTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.swTextBox1.CampBBDD = "parsecs";
+            this.swTextBox1.DadaPermesa = CustomControls.SWTextBox.TipusDada.Numero;
+            this.swTextBox1.EsForana = false;
+            this.swTextBox1.EsNulable = false;
+            this.swTextBox1.Font = new System.Drawing.Font("Lucida Sans", 11F);
+            this.swTextBox1.Location = new System.Drawing.Point(1209, 688);
+            this.swTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.swTextBox1.Name = "swTextBox1";
+            this.swTextBox1.Size = new System.Drawing.Size(174, 33);
+            this.swTextBox1.TabIndex = 40;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Yellow;
+            this.label12.Location = new System.Drawing.Point(1077, 687);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(101, 26);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "Parsecs";
+            // 
+            // swTextBox2
+            // 
+            this.swTextBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.swTextBox2.CampBBDD = "CodePlanet";
+            this.swTextBox2.DadaPermesa = CustomControls.SWTextBox.TipusDada.Numero;
+            this.swTextBox2.EsForana = false;
+            this.swTextBox2.EsNulable = false;
+            this.swTextBox2.Font = new System.Drawing.Font("Lucida Sans", 11F);
+            this.swTextBox2.Location = new System.Drawing.Point(585, 268);
+            this.swTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.swTextBox2.Name = "swTextBox2";
+            this.swTextBox2.Size = new System.Drawing.Size(130, 33);
+            this.swTextBox2.TabIndex = 41;
+            // 
+            // swTextBox3
+            // 
+            this.swTextBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.swTextBox3.CampBBDD = "DescPlanet";
+            this.swTextBox3.DadaPermesa = CustomControls.SWTextBox.TipusDada.Numero;
+            this.swTextBox3.EsForana = false;
+            this.swTextBox3.EsNulable = false;
+            this.swTextBox3.Font = new System.Drawing.Font("Lucida Sans", 11F);
+            this.swTextBox3.Location = new System.Drawing.Point(864, 268);
+            this.swTextBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.swTextBox3.Name = "swTextBox3";
+            this.swTextBox3.Size = new System.Drawing.Size(217, 33);
+            this.swTextBox3.TabIndex = 42;
             // 
             // frm_planets
             // 
@@ -508,16 +536,18 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private CustomControls.SWTextBox swTx_p1;
-        private CustomControls.SWCodi swCodi_planet;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private CustomControls.SWTextBox swTx_filiation;
         private CustomControls.SWTextBox swTx_nativos;
         private CustomControls.SWTextBox swTx_sector;
-        private CustomControls.SWTextBox swTx_planet;
         private CustomControls.SWTextBox swTx_p2;
         private System.Windows.Forms.PictureBox pb_planets;
         private System.Windows.Forms.Label label11;
+        private CustomControls.SWTextBox swTextBox3;
+        private CustomControls.SWTextBox swTextBox2;
+        private CustomControls.SWTextBox swTextBox1;
+        private System.Windows.Forms.Label label12;
     }
 }

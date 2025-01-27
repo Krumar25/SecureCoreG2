@@ -44,7 +44,7 @@ namespace UserOptions
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(409, 152);
+            this.controlManteniment1.Location = new System.Drawing.Point(572, 150);
             // 
             // panel1
             // 
@@ -58,7 +58,7 @@ namespace UserOptions
             this.panel1.Controls.Add(this.swTextBox4);
             this.panel1.Controls.Add(this.swTextBox3);
             this.panel1.Controls.Add(this.swTextBox1);
-            this.panel1.Size = new System.Drawing.Size(1518, 1298);
+            this.panel1.Size = new System.Drawing.Size(1595, 1298);
             this.panel1.Controls.SetChildIndex(this.controlManteniment1, 0);
             this.panel1.Controls.SetChildIndex(this.swTextBox1, 0);
             this.panel1.Controls.SetChildIndex(this.swTextBox3, 0);
@@ -79,7 +79,7 @@ namespace UserOptions
             this.swTextBox1.EsForana = false;
             this.swTextBox1.EsNulable = false;
             this.swTextBox1.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox1.Location = new System.Drawing.Point(681, 423);
+            this.swTextBox1.Location = new System.Drawing.Point(719, 423);
             this.swTextBox1.Name = "swTextBox1";
             this.swTextBox1.Size = new System.Drawing.Size(450, 33);
             this.swTextBox1.TabIndex = 4;
@@ -92,7 +92,7 @@ namespace UserOptions
             this.swTextBox3.EsForana = false;
             this.swTextBox3.EsNulable = false;
             this.swTextBox3.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox3.Location = new System.Drawing.Point(681, 579);
+            this.swTextBox3.Location = new System.Drawing.Point(719, 579);
             this.swTextBox3.Name = "swTextBox3";
             this.swTextBox3.Size = new System.Drawing.Size(450, 33);
             this.swTextBox3.TabIndex = 6;
@@ -105,7 +105,7 @@ namespace UserOptions
             this.swTextBox4.EsForana = false;
             this.swTextBox4.EsNulable = false;
             this.swTextBox4.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox4.Location = new System.Drawing.Point(681, 501);
+            this.swTextBox4.Location = new System.Drawing.Point(719, 501);
             this.swTextBox4.Name = "swTextBox4";
             this.swTextBox4.Size = new System.Drawing.Size(450, 33);
             this.swTextBox4.TabIndex = 7;
@@ -118,7 +118,7 @@ namespace UserOptions
             this.swTextBox5.EsForana = false;
             this.swTextBox5.EsNulable = false;
             this.swTextBox5.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox5.Location = new System.Drawing.Point(681, 657);
+            this.swTextBox5.Location = new System.Drawing.Point(719, 657);
             this.swTextBox5.Name = "swTextBox5";
             this.swTextBox5.Size = new System.Drawing.Size(450, 33);
             this.swTextBox5.TabIndex = 8;
@@ -130,7 +130,7 @@ namespace UserOptions
             this.lblClass.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblClass.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClass.ForeColor = System.Drawing.Color.Yellow;
-            this.lblClass.Location = new System.Drawing.Point(571, 426);
+            this.lblClass.Location = new System.Drawing.Point(609, 426);
             this.lblClass.Name = "lblClass";
             this.lblClass.Size = new System.Drawing.Size(73, 25);
             this.lblClass.TabIndex = 10;
@@ -143,7 +143,7 @@ namespace UserOptions
             this.lblform.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblform.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblform.ForeColor = System.Drawing.Color.Yellow;
-            this.lblform.Location = new System.Drawing.Point(575, 504);
+            this.lblform.Location = new System.Drawing.Point(613, 504);
             this.lblform.Name = "lblform";
             this.lblform.Size = new System.Drawing.Size(69, 25);
             this.lblform.TabIndex = 11;
@@ -156,7 +156,7 @@ namespace UserOptions
             this.lblDLL_name.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblDLL_name.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDLL_name.ForeColor = System.Drawing.Color.Yellow;
-            this.lblDLL_name.Location = new System.Drawing.Point(495, 582);
+            this.lblDLL_name.Location = new System.Drawing.Point(533, 582);
             this.lblDLL_name.Name = "lblDLL_name";
             this.lblDLL_name.Size = new System.Drawing.Size(149, 25);
             this.lblDLL_name.TabIndex = 12;
@@ -169,7 +169,7 @@ namespace UserOptions
             this.lblicon_img.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblicon_img.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblicon_img.ForeColor = System.Drawing.Color.Yellow;
-            this.lblicon_img.Location = new System.Drawing.Point(479, 660);
+            this.lblicon_img.Location = new System.Drawing.Point(517, 660);
             this.lblicon_img.Name = "lblicon_img";
             this.lblicon_img.Size = new System.Drawing.Size(165, 25);
             this.lblicon_img.TabIndex = 13;
@@ -182,7 +182,7 @@ namespace UserOptions
             this.lblAccessLevel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblAccessLevel.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAccessLevel.ForeColor = System.Drawing.Color.Yellow;
-            this.lblAccessLevel.Location = new System.Drawing.Point(238, 426);
+            this.lblAccessLevel.Location = new System.Drawing.Point(276, 426);
             this.lblAccessLevel.Name = "lblAccessLevel";
             this.lblAccessLevel.Size = new System.Drawing.Size(154, 25);
             this.lblAccessLevel.TabIndex = 14;
@@ -205,7 +205,7 @@ namespace UserOptions
             "80",
             "90",
             "100"});
-            this.cboxAccessLevel.Location = new System.Drawing.Point(420, 423);
+            this.cboxAccessLevel.Location = new System.Drawing.Point(458, 423);
             this.cboxAccessLevel.Name = "cboxAccessLevel";
             this.cboxAccessLevel.Size = new System.Drawing.Size(88, 33);
             this.cboxAccessLevel.TabIndex = 15;
