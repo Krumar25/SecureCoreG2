@@ -61,8 +61,7 @@ namespace Users
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(746, 141);
-            this.controlManteniment1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.controlManteniment1.Location = new System.Drawing.Point(623, 176);
             // 
             // panel1
             // 
@@ -90,7 +89,7 @@ namespace Users
             this.panel1.Controls.Add(this.swUserCategory);
             this.panel1.Controls.Add(this.swPlanet);
             this.panel1.Controls.Add(this.swSpecie);
-            this.panel1.Size = new System.Drawing.Size(1368, 1055);
+            this.panel1.Size = new System.Drawing.Size(1539, 1420);
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.Controls.SetChildIndex(this.swSpecie, 0);
             this.panel1.Controls.SetChildIndex(this.swPlanet, 0);
@@ -125,13 +124,14 @@ namespace Users
             this.swSpecie.ControlID = "idSpecie";
             this.swSpecie.Cursor = System.Windows.Forms.Cursors.Default;
             this.swSpecie.FormCS = null;
-            this.swSpecie.Location = new System.Drawing.Point(611, 412);
+            this.swSpecie.Location = new System.Drawing.Point(735, 515);
+            this.swSpecie.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.swSpecie.Name = "swSpecie";
             this.swSpecie.NomCodi = "CodeSpecie";
             this.swSpecie.NomDesc = "DescSpecie";
             this.swSpecie.NomId = "idSpecie";
             this.swSpecie.NomTaula = "Species";
-            this.swSpecie.Size = new System.Drawing.Size(492, 88);
+            this.swSpecie.Size = new System.Drawing.Size(554, 110);
             this.swSpecie.TabIndex = 4;
             this.swSpecie.TxtCode = null;
             this.swSpecie.TxtDesc = null;
@@ -143,13 +143,14 @@ namespace Users
             this.swPlanet.ClasseCS = null;
             this.swPlanet.ControlID = "idPlanet";
             this.swPlanet.FormCS = null;
-            this.swPlanet.Location = new System.Drawing.Point(611, 367);
+            this.swPlanet.Location = new System.Drawing.Point(735, 459);
+            this.swPlanet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.swPlanet.Name = "swPlanet";
             this.swPlanet.NomCodi = "CodePlanet";
             this.swPlanet.NomDesc = "DescPlanet";
             this.swPlanet.NomId = "idPlanet";
             this.swPlanet.NomTaula = "Planets";
-            this.swPlanet.Size = new System.Drawing.Size(492, 92);
+            this.swPlanet.Size = new System.Drawing.Size(554, 115);
             this.swPlanet.TabIndex = 5;
             this.swPlanet.TxtCode = null;
             this.swPlanet.TxtDesc = null;
@@ -161,13 +162,14 @@ namespace Users
             this.swUserCategory.ClasseCS = null;
             this.swUserCategory.ControlID = "idUserCategory";
             this.swUserCategory.FormCS = null;
-            this.swUserCategory.Location = new System.Drawing.Point(611, 323);
+            this.swUserCategory.Location = new System.Drawing.Point(735, 404);
+            this.swUserCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.swUserCategory.Name = "swUserCategory";
             this.swUserCategory.NomCodi = "CodeCategory";
             this.swUserCategory.NomDesc = "DescCategory";
             this.swUserCategory.NomId = "idUserCategory";
             this.swUserCategory.NomTaula = "UserCategories";
-            this.swUserCategory.Size = new System.Drawing.Size(492, 91);
+            this.swUserCategory.Size = new System.Drawing.Size(554, 114);
             this.swUserCategory.TabIndex = 6;
             this.swUserCategory.TxtCode = null;
             this.swUserCategory.TxtDesc = null;
@@ -180,10 +182,9 @@ namespace Users
             this.swCodeUser.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swCodeUser.EsForana = false;
             this.swCodeUser.EsNulable = false;
-            this.swCodeUser.Location = new System.Drawing.Point(234, 348);
-            this.swCodeUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.swCodeUser.Location = new System.Drawing.Point(310, 435);
             this.swCodeUser.Name = "swCodeUser";
-            this.swCodeUser.Size = new System.Drawing.Size(253, 22);
+            this.swCodeUser.Size = new System.Drawing.Size(284, 26);
             this.swCodeUser.TabIndex = 7;
             // 
             // swUserName
@@ -193,10 +194,9 @@ namespace Users
             this.swUserName.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swUserName.EsForana = false;
             this.swUserName.EsNulable = false;
-            this.swUserName.Location = new System.Drawing.Point(234, 393);
-            this.swUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.swUserName.Location = new System.Drawing.Point(310, 491);
             this.swUserName.Name = "swUserName";
-            this.swUserName.Size = new System.Drawing.Size(253, 22);
+            this.swUserName.Size = new System.Drawing.Size(284, 26);
             this.swUserName.TabIndex = 8;
             // 
             // swLogin
@@ -206,10 +206,9 @@ namespace Users
             this.swLogin.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swLogin.EsForana = false;
             this.swLogin.EsNulable = false;
-            this.swLogin.Location = new System.Drawing.Point(234, 440);
-            this.swLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.swLogin.Location = new System.Drawing.Point(310, 550);
             this.swLogin.Name = "swLogin";
-            this.swLogin.Size = new System.Drawing.Size(253, 22);
+            this.swLogin.Size = new System.Drawing.Size(284, 26);
             this.swLogin.TabIndex = 9;
             // 
             // swPassword
@@ -219,21 +218,19 @@ namespace Users
             this.swPassword.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swPassword.EsForana = false;
             this.swPassword.EsNulable = false;
-            this.swPassword.Location = new System.Drawing.Point(274, 540);
-            this.swPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.swPassword.Location = new System.Drawing.Point(355, 675);
             this.swPassword.Name = "swPassword";
             this.swPassword.ReadOnly = true;
-            this.swPassword.Size = new System.Drawing.Size(641, 22);
+            this.swPassword.Size = new System.Drawing.Size(721, 26);
             this.swPassword.TabIndex = 10;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(131, 57);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(194, 71);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(241, 213);
+            this.pictureBox1.Size = new System.Drawing.Size(271, 266);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -252,10 +249,9 @@ namespace Users
             this.swbtnResetPass.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Bold);
             this.swbtnResetPass.ForeColor = System.Drawing.Color.Yellow;
             this.swbtnResetPass.Imatge = null;
-            this.swbtnResetPass.Location = new System.Drawing.Point(934, 526);
-            this.swbtnResetPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.swbtnResetPass.Location = new System.Drawing.Point(1098, 657);
             this.swbtnResetPass.Name = "swbtnResetPass";
-            this.swbtnResetPass.Size = new System.Drawing.Size(145, 50);
+            this.swbtnResetPass.Size = new System.Drawing.Size(163, 62);
             this.swbtnResetPass.TabIndex = 12;
             this.swbtnResetPass.Text = "Reset";
             this.swbtnResetPass.TextColor = System.Drawing.Color.Yellow;
@@ -270,9 +266,9 @@ namespace Users
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(110, 347);
+            this.label1.Location = new System.Drawing.Point(171, 434);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 23);
+            this.label1.Size = new System.Drawing.Size(98, 27);
             this.label1.TabIndex = 13;
             this.label1.Text = "Codigo";
             // 
@@ -282,9 +278,9 @@ namespace Users
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(99, 393);
+            this.label2.Location = new System.Drawing.Point(159, 491);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 23);
+            this.label2.Size = new System.Drawing.Size(110, 27);
             this.label2.TabIndex = 14;
             this.label2.Text = "Nombre";
             // 
@@ -294,9 +290,9 @@ namespace Users
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Yellow;
-            this.label3.Location = new System.Drawing.Point(126, 439);
+            this.label3.Location = new System.Drawing.Point(189, 549);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 23);
+            this.label3.Size = new System.Drawing.Size(80, 27);
             this.label3.TabIndex = 15;
             this.label3.Text = "Login";
             // 
@@ -306,9 +302,9 @@ namespace Users
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Yellow;
-            this.label4.Location = new System.Drawing.Point(123, 542);
+            this.label4.Location = new System.Drawing.Point(186, 678);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 23);
+            this.label4.Size = new System.Drawing.Size(128, 27);
             this.label4.TabIndex = 16;
             this.label4.Text = "Password";
             // 
@@ -318,13 +314,14 @@ namespace Users
             this.swUserRanks.ClasseCS = null;
             this.swUserRanks.ControlID = "idUserRank";
             this.swUserRanks.FormCS = null;
-            this.swUserRanks.Location = new System.Drawing.Point(611, 280);
+            this.swUserRanks.Location = new System.Drawing.Point(735, 350);
+            this.swUserRanks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.swUserRanks.Name = "swUserRanks";
             this.swUserRanks.NomCodi = "CodeRank";
             this.swUserRanks.NomDesc = "DescRank";
             this.swUserRanks.NomId = "idUserRank";
             this.swUserRanks.NomTaula = "UserRanks";
-            this.swUserRanks.Size = new System.Drawing.Size(492, 89);
+            this.swUserRanks.Size = new System.Drawing.Size(554, 111);
             this.swUserRanks.TabIndex = 17;
             this.swUserRanks.TxtCode = null;
             this.swUserRanks.TxtDesc = null;
@@ -337,10 +334,9 @@ namespace Users
             this.swidUserRank.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swidUserRank.EsForana = true;
             this.swidUserRank.EsNulable = false;
-            this.swidUserRank.Location = new System.Drawing.Point(1125, 303);
-            this.swidUserRank.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.swidUserRank.Location = new System.Drawing.Point(1313, 379);
             this.swidUserRank.Name = "swidUserRank";
-            this.swidUserRank.Size = new System.Drawing.Size(37, 22);
+            this.swidUserRank.Size = new System.Drawing.Size(41, 26);
             this.swidUserRank.TabIndex = 18;
             this.swidUserRank.TextChanged += new System.EventHandler(this.swidUserRank_TextChanged);
             // 
@@ -351,10 +347,9 @@ namespace Users
             this.swidUserCategory.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swidUserCategory.EsForana = true;
             this.swidUserCategory.EsNulable = false;
-            this.swidUserCategory.Location = new System.Drawing.Point(1125, 348);
-            this.swidUserCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.swidUserCategory.Location = new System.Drawing.Point(1313, 435);
             this.swidUserCategory.Name = "swidUserCategory";
-            this.swidUserCategory.Size = new System.Drawing.Size(37, 22);
+            this.swidUserCategory.Size = new System.Drawing.Size(41, 26);
             this.swidUserCategory.TabIndex = 19;
             this.swidUserCategory.TextChanged += new System.EventHandler(this.swidUserCategory_TextChanged);
             // 
@@ -365,10 +360,9 @@ namespace Users
             this.swidPlanet.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swidPlanet.EsForana = true;
             this.swidPlanet.EsNulable = false;
-            this.swidPlanet.Location = new System.Drawing.Point(1125, 391);
-            this.swidPlanet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.swidPlanet.Location = new System.Drawing.Point(1313, 489);
             this.swidPlanet.Name = "swidPlanet";
-            this.swidPlanet.Size = new System.Drawing.Size(37, 22);
+            this.swidPlanet.Size = new System.Drawing.Size(41, 26);
             this.swidPlanet.TabIndex = 20;
             this.swidPlanet.TextChanged += new System.EventHandler(this.swidPlanet_TextChanged);
             // 
@@ -379,10 +373,9 @@ namespace Users
             this.swidSpecie.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swidSpecie.EsForana = true;
             this.swidSpecie.EsNulable = false;
-            this.swidSpecie.Location = new System.Drawing.Point(1125, 434);
-            this.swidSpecie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.swidSpecie.Location = new System.Drawing.Point(1313, 543);
             this.swidSpecie.Name = "swidSpecie";
-            this.swidSpecie.Size = new System.Drawing.Size(37, 22);
+            this.swidSpecie.Size = new System.Drawing.Size(41, 26);
             this.swidSpecie.TabIndex = 21;
             this.swidSpecie.TextChanged += new System.EventHandler(this.swidSpecie_TextChanged);
             // 
@@ -399,10 +392,9 @@ namespace Users
             this.swbtnGenerarTarjeta.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Bold);
             this.swbtnGenerarTarjeta.ForeColor = System.Drawing.Color.Yellow;
             this.swbtnGenerarTarjeta.Imatge = null;
-            this.swbtnGenerarTarjeta.Location = new System.Drawing.Point(903, 1065);
-            this.swbtnGenerarTarjeta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.swbtnGenerarTarjeta.Location = new System.Drawing.Point(1063, 1331);
             this.swbtnGenerarTarjeta.Name = "swbtnGenerarTarjeta";
-            this.swbtnGenerarTarjeta.Size = new System.Drawing.Size(201, 50);
+            this.swbtnGenerarTarjeta.Size = new System.Drawing.Size(226, 62);
             this.swbtnGenerarTarjeta.TabIndex = 23;
             this.swbtnGenerarTarjeta.Text = "Generar Tarjeta";
             this.swbtnGenerarTarjeta.TextColor = System.Drawing.Color.Yellow;
@@ -418,19 +410,16 @@ namespace Users
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.crystalReportViewer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1368, 1055);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1539, 1420);
             this.crystalReportViewer1.TabIndex = 5;
-            this.crystalReportViewer1.ToolPanelWidth = 178;
             // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.Location = new System.Drawing.Point(1109, 223);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(1313, 291);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(178, 294);
+            this.panel2.Size = new System.Drawing.Size(200, 368);
             this.panel2.TabIndex = 25;
             // 
             // label5
@@ -439,9 +428,9 @@ namespace Users
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Yellow;
-            this.label5.Location = new System.Drawing.Point(594, 329);
+            this.label5.Location = new System.Drawing.Point(715, 411);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 23);
+            this.label5.Size = new System.Drawing.Size(91, 27);
             this.label5.TabIndex = 26;
             this.label5.Text = "Rango";
             // 
@@ -451,9 +440,9 @@ namespace Users
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Yellow;
-            this.label6.Location = new System.Drawing.Point(561, 374);
+            this.label6.Location = new System.Drawing.Point(678, 467);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 23);
+            this.label6.Size = new System.Drawing.Size(128, 27);
             this.label6.TabIndex = 27;
             this.label6.Text = "Categoria";
             // 
@@ -463,9 +452,9 @@ namespace Users
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Yellow;
-            this.label7.Location = new System.Drawing.Point(584, 417);
+            this.label7.Location = new System.Drawing.Point(704, 521);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 23);
+            this.label7.Size = new System.Drawing.Size(102, 27);
             this.label7.TabIndex = 28;
             this.label7.Text = "Planeta";
             // 
@@ -475,19 +464,18 @@ namespace Users
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Yellow;
-            this.label8.Location = new System.Drawing.Point(610, 460);
+            this.label8.Location = new System.Drawing.Point(733, 575);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 23);
+            this.label8.Size = new System.Drawing.Size(73, 27);
             this.label8.TabIndex = 29;
             this.label8.Text = "Raza";
             // 
             // frm_users
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1586, 1055);
+            this.ClientSize = new System.Drawing.Size(1784, 1420);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frm_users";
             this.Text = "frm_users";
             this.Controls.SetChildIndex(this.crystalReportViewer1, 0);

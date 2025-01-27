@@ -17,6 +17,9 @@ namespace Login
     {
         #region Variables Globales
 
+        private bool dragging = false;
+        private Point dragCursorPoint;
+        private Point dragFormPoint;
         AccesADades AccesDades = new AccesADades();
         MainFormSC.frmPrincipal frmmain;
         private const int SaltByteSize = 24;
@@ -70,7 +73,7 @@ namespace Login
                     DataRow row = dts.Tables[0].Rows[0];
                     passwordBBDD = row["Password"].ToString();
                     loginBBDD = row["Login"].ToString();
-                    idAccess = row["idUserCategory"].ToString();
+                    idAccess = row["idUser"].ToString();
                     Hashsalt = row["Hash"].ToString();
 
                     if (string.IsNullOrEmpty(Hashsalt) && password == "12345aA")
@@ -79,7 +82,7 @@ namespace Login
 
                         CanviPassword frmCanvi = new CanviPassword();
                         frmCanvi.FormClosed += (s, args) => this.Close();
-                        frmCanvi.UserName = Username;
+                        frmCanvi.UserName = username;
                         frmCanvi.idAccess = idAccess;
                         frmCanvi.Show();
                     }
@@ -95,9 +98,9 @@ namespace Login
                             this.Hide();
                             frmmain = new MainFormSC.frmPrincipal();
                             frmmain.FormClosed += frmmain_FormClosed;
-                            frmmain.Username = Username;
                             frmmain.idAccess = idAccess;
                             frmmain.Show();
+                            lbErrorLogin.Visible = false;
                         }
                         else
                         {
@@ -177,6 +180,36 @@ namespace Login
             {
                 // Cerrar completamente la aplicación si no fue un cierre intencional
                 this.Close();
+            }
+        }
+
+        #endregion
+
+        #region Eventos para mover el formulario
+        private void Control_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                dragging = true;
+                dragCursorPoint = Cursor.Position;
+                dragFormPoint = this.Location;
+            }
+        }
+
+        private void Control_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point diff = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
+                this.Location = Point.Add(dragFormPoint, new Size(diff));
+            }
+        }
+
+        private void Control_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                dragging = false;
             }
         }
 

@@ -22,11 +22,6 @@ namespace Planets
         
         }
 
-        private void swTx_planet_TextChanged(object sender, EventArgs e)
-        {
-            swCodi_planet.ActualizarId(swTx_planet.Text);
-        }
-
         private void swTx_sector_TextChanged(object sender, EventArgs e)
         {
             swCodi_sector.ActualizarId(swTx_sector.Text);

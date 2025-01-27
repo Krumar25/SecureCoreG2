@@ -27,17 +27,6 @@ namespace MainFormSC
         private Point dragCursorPoint;
         private Point dragFormPoint;
         private AccesADades AccessDades = new AccesADades();
-        frm_users mantenimiento;
-
-        private string _Username;
-
-        public string Username
-        {
-            get { return _Username; }
-            set { _Username = value; }
-        }
-
-
 
         private string _idAccess;
 
@@ -74,7 +63,7 @@ namespace MainFormSC
             background.Dock = DockStyle.Fill;
             background.Show();
 
-            string query = $"SELECT * FROM Users WHERE Login = '{Username}'";
+            string query = $"SELECT * FROM Users WHERE idUser = '{_idAccess}'";
             DataSet dts = AccessDades.PortarPerConsulta(query, "Users");
             DataRow row = dts.Tables[0].Rows[0];
 
@@ -82,7 +71,7 @@ namespace MainFormSC
             lblWelcome.Text = "Welcome " + row["UserName"].ToString();
 
             //Obtencion del idUserCategory
-            query = $"SELECT * FROM Users WHERE idUser = {idAccess}";
+            query = $"SELECT * FROM Users WHERE idUser = {_idAccess}";
             dts = AccessDades.PortarPerConsulta(query, "Users");
             row = dts.Tables[0].Rows[0];
             string idUserCategory = row["idUserCategory"].ToString();
