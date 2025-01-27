@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MainFormSC;
 using SplashScreen;
+using Test;
 
 
 namespace SecureCore
@@ -19,7 +20,7 @@ namespace SecureCore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_SplashScreen());
+            Application.Run(new Test2());
         }
     }
 }

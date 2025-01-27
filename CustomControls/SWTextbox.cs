@@ -48,7 +48,7 @@ namespace CustomControls
         }
 
         // Indica el nombre del campo de la base de datos al que enlazaremos el control
-        private string campBBDD;
+        private string campBBDD; 
 
         public string CampBBDD
         {

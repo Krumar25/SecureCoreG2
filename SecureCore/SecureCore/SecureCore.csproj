@@ -72,6 +72,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Test\Test.csproj">
+      <Project>{23bf8e0b-c64f-4b91-b831-f0d91bcdfd20}</Project>
+      <Name>Test</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\CategoriaNaus\CategoriaNaus.csproj">
       <Project>{12bec4da-e98d-4f8f-b04f-0b3380647eeb}</Project>
       <Name>CategoriaNaus</Name>
