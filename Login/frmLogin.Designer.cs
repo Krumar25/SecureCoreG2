@@ -189,6 +189,9 @@ namespace Login
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(494, 51);
             this.pnlHeader.TabIndex = 15;
+            this.pnlHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Control_MouseDown);
+            this.pnlHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Control_MouseMove);
+            this.pnlHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Control_MouseUp);
             // 
             // pbClose
             // 

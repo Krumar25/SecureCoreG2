@@ -61,7 +61,7 @@
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(784, 27);
+            this.controlManteniment1.Location = new System.Drawing.Point(907, 27);
             this.controlManteniment1.Margin = new System.Windows.Forms.Padding(14, 18, 14, 18);
             this.controlManteniment1.Size = new System.Drawing.Size(588, 120);
             // 
@@ -374,7 +374,7 @@
             this.swTx_filiation.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.swTx_filiation.CampBBDD = "idFiliation";
             this.swTx_filiation.DadaPermesa = CustomControls.SWTextBox.TipusDada.Numero;
-            this.swTx_filiation.EsForana = false;
+            this.swTx_filiation.EsForana = true;
             this.swTx_filiation.EsNulable = false;
             this.swTx_filiation.Location = new System.Drawing.Point(1250, 581);
             this.swTx_filiation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -388,7 +388,7 @@
             this.swTx_nativos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.swTx_nativos.CampBBDD = "idNatives";
             this.swTx_nativos.DadaPermesa = CustomControls.SWTextBox.TipusDada.Numero;
-            this.swTx_nativos.EsForana = false;
+            this.swTx_nativos.EsForana = true;
             this.swTx_nativos.EsNulable = false;
             this.swTx_nativos.Location = new System.Drawing.Point(1249, 510);
             this.swTx_nativos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -402,7 +402,7 @@
             this.swTx_sector.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.swTx_sector.CampBBDD = "idSector";
             this.swTx_sector.DadaPermesa = CustomControls.SWTextBox.TipusDada.Numero;
-            this.swTx_sector.EsForana = false;
+            this.swTx_sector.EsForana = true;
             this.swTx_sector.EsNulable = false;
             this.swTx_sector.Location = new System.Drawing.Point(1249, 435);
             this.swTx_sector.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -428,7 +428,7 @@
             // pb_planets
             // 
             this.pb_planets.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pb_planets.Location = new System.Drawing.Point(1155, 302);
+            this.pb_planets.Location = new System.Drawing.Point(1119, 300);
             this.pb_planets.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pb_planets.Name = "pb_planets";
             this.pb_planets.Size = new System.Drawing.Size(376, 326);

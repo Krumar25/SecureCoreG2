@@ -16,6 +16,9 @@ namespace Login
     {
         #region Variables Globales
 
+        private bool dragging = false;
+        private Point dragCursorPoint;
+        private Point dragFormPoint;
         string query_update_pass;
         private const int SaltByteSize = 24;
         private const int HashByteSize = 24;
@@ -64,6 +67,7 @@ namespace Login
                 frmmain.FormClosed += (s, args) => this.Close();
                 frmmain.idAccess = idAccess;
                 frmmain.Show();
+                lbErrorLogin.Visible = false;
             }
             else
             {
@@ -96,6 +100,36 @@ namespace Login
             if (e.KeyCode == Keys.Enter)
             {
                 verify_Creedentials();
+            }
+        }
+
+        #endregion
+
+        #region Eventos para mover el formulario
+        private void Control_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                dragging = true;
+                dragCursorPoint = Cursor.Position;
+                dragFormPoint = this.Location;
+            }
+        }
+
+        private void Control_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point diff = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
+                this.Location = Point.Add(dragFormPoint, new Size(diff));
+            }
+        }
+
+        private void Control_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                dragging = false;
             }
         }
 

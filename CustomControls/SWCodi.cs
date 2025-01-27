@@ -151,6 +151,10 @@ namespace CustomControls
                 txtNivell.Text = row[NomDesc].ToString();
                 txtCodiNivell.Text = row[NomCodi].ToString();
             }
+
+            // Notificar cambios al binding
+            this.Validate(); // Valida los cambios en el control
+            BindingContext[dts.Tables[0]].EndCurrentEdit(); // Sincroniza con el DataSet
         }
     }
 }

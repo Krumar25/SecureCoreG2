@@ -138,6 +138,9 @@ namespace Login
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(493, 51);
             this.pnlHeader.TabIndex = 30;
+            this.pnlHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Control_MouseDown);
+            this.pnlHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Control_MouseMove);
+            this.pnlHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Control_MouseUp);
             // 
             // btnAccess
             // 
@@ -192,6 +195,7 @@ namespace Login
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CanviPassword";
+            this.Opacity = 0.85D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CanviPassword";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
