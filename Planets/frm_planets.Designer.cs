@@ -61,7 +61,7 @@
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(1030, 27);
+            this.controlManteniment1.Location = new System.Drawing.Point(513, 43);
             this.controlManteniment1.Margin = new System.Windows.Forms.Padding(14, 18, 14, 18);
             this.controlManteniment1.Size = new System.Drawing.Size(588, 120);
             // 

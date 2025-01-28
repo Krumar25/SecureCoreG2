@@ -101,18 +101,42 @@ namespace Dades
         /// <param name="dts">DataSet con el que estamos trabajando en nuestra aplicación </param>
         public void Actualitzar(string query, DataSet dts)
         {
-            conn.Open();
-
-            SqlDataAdapter adapter;
-            adapter = new SqlDataAdapter(query, conn);
-            SqlCommandBuilder cmdBuilder;
-            cmdBuilder = new SqlCommandBuilder(adapter);
-
-            if (dts.HasChanges())
+            try
             {
-                int result = adapter.Update(dts.Tables[0]);
+                conn.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(adapter);
+
+                if (dts.HasChanges())
+                {
+                    int result = adapter.Update(dts.Tables[0]);
+                }
             }
-            conn.Close();
+            catch (SqlException ex)
+            {
+                // Manejo de excepciones específicas de SQL
+                if (ex.Number == 547) // Error 547: Violación de la clave foránea
+                {
+                    Console.WriteLine("Error: Se intentó actualizar datos que violan restricciones de clave foránea.");
+                }
+                else
+                {
+                    Console.WriteLine($"Error SQL: {ex.Message}");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de otras excepciones generales
+                Console.WriteLine($"Error general: {ex.Message}");
+            }
+            finally
+            {
+                if (conn.State == System.Data.ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
         }
         /// <summary>
         /// Función que genera una consulta parametrizada a través de una query y y un diccionario para evitar ataques SQLInjection
