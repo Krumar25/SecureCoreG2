@@ -45,7 +45,7 @@ namespace TipusDeNausFK
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(524, 132);
+            this.controlManteniment1.Location = new System.Drawing.Point(668, 132);
             this.controlManteniment1.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             // 
             // panel1
@@ -94,6 +94,7 @@ namespace TipusDeNausFK
             this.swCodiFiliation.TabIndex = 4;
             this.swCodiFiliation.TxtCode = null;
             this.swCodiFiliation.TxtDesc = null;
+            this.swCodiFiliation.Validating += new System.ComponentModel.CancelEventHandler(this.swCodiFiliation_Validating);
             // 
             // swCodiCategory
             // 
@@ -113,6 +114,7 @@ namespace TipusDeNausFK
             this.swCodiCategory.TabIndex = 5;
             this.swCodiCategory.TxtCode = null;
             this.swCodiCategory.TxtDesc = null;
+            this.swCodiCategory.Validating += new System.ComponentModel.CancelEventHandler(this.swCodiCategory_Validating);
             // 
             // idFiliation
             // 
@@ -175,7 +177,7 @@ namespace TipusDeNausFK
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.Location = new System.Drawing.Point(1256, 358);
+            this.panel2.Location = new System.Drawing.Point(1198, 343);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(212, 374);

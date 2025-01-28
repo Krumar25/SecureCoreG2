@@ -15,7 +15,6 @@ namespace FormularioBase
     public partial class frm_Base : Form
     {
         private AccesADades BBDD = new AccesADades();
-        private NotifyIcon notifyIcon;
         private DataSet dts;
         private string query;
         private string nomTaula;

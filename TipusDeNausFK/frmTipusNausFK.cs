@@ -26,5 +26,15 @@ namespace TipusDeNausFK
         {
             swCodiCategory.ActualizarId(idCategory.Text);
         }
+
+        private void swCodiFiliation_Validating(object sender, CancelEventArgs e)
+        {
+            idFiliation.ActualizarId(swCodiFiliation.ControlID);
+        }
+
+        private void swCodiCategory_Validating(object sender, CancelEventArgs e)
+        {
+            idCategory.ActualizarId(swCodiCategory.ControlID);
+        }
     }
 }

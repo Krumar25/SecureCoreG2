@@ -38,7 +38,7 @@ namespace CategoriaNaus
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(471, 228);
+            this.controlManteniment1.Location = new System.Drawing.Point(543, 228);
             this.controlManteniment1.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.controlManteniment1.NomClase = "CategoriaNaus";
             this.controlManteniment1.NomForm = "frm_categoriaNaus";
@@ -50,7 +50,7 @@ namespace CategoriaNaus
             this.panel1.Controls.Add(this.swDescripcion);
             this.panel1.Controls.Add(this.swCodigo);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Size = new System.Drawing.Size(1516, 1298);
+            this.panel1.Size = new System.Drawing.Size(1593, 1298);
             this.panel1.Controls.SetChildIndex(this.controlManteniment1, 0);
             this.panel1.Controls.SetChildIndex(this.swCodigo, 0);
             this.panel1.Controls.SetChildIndex(this.swDescripcion, 0);
@@ -61,11 +61,11 @@ namespace CategoriaNaus
             // 
             this.swCodigo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.swCodigo.CampBBDD = "CodeSpaceShipCategory";
-            this.swCodigo.DadaPermesa = CustomControls.SWTextBox.TipusDada.Codi;
+            this.swCodigo.DadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swCodigo.EsForana = false;
             this.swCodigo.EsNulable = false;
             this.swCodigo.Font = new System.Drawing.Font("Lucida Sans", 11F);
-            this.swCodigo.Location = new System.Drawing.Point(601, 477);
+            this.swCodigo.Location = new System.Drawing.Point(639, 477);
             this.swCodigo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.swCodigo.Name = "swCodigo";
             this.swCodigo.Size = new System.Drawing.Size(112, 33);
@@ -79,7 +79,7 @@ namespace CategoriaNaus
             this.swDescripcion.EsForana = false;
             this.swDescripcion.EsNulable = false;
             this.swDescripcion.Font = new System.Drawing.Font("Lucida Sans", 11F);
-            this.swDescripcion.Location = new System.Drawing.Point(601, 578);
+            this.swDescripcion.Location = new System.Drawing.Point(639, 578);
             this.swDescripcion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.swDescripcion.Name = "swDescripcion";
             this.swDescripcion.Size = new System.Drawing.Size(366, 33);
@@ -91,7 +91,7 @@ namespace CategoriaNaus
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.Color.Yellow;
-            this.lblCodigo.Location = new System.Drawing.Point(455, 478);
+            this.lblCodigo.Location = new System.Drawing.Point(493, 478);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(98, 27);
             this.lblCodigo.TabIndex = 6;
@@ -103,7 +103,7 @@ namespace CategoriaNaus
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.Color.Yellow;
-            this.lblDescripcion.Location = new System.Drawing.Point(398, 578);
+            this.lblDescripcion.Location = new System.Drawing.Point(436, 578);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDescripcion.Size = new System.Drawing.Size(155, 27);

@@ -38,27 +38,29 @@ namespace CustomControls
             // txtCodiNivell
             // 
             this.txtCodiNivell.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtCodiNivell.Location = new System.Drawing.Point(71, 48);
+            this.txtCodiNivell.Location = new System.Drawing.Point(99, 60);
+            this.txtCodiNivell.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCodiNivell.Name = "txtCodiNivell";
-            this.txtCodiNivell.Size = new System.Drawing.Size(100, 22);
+            this.txtCodiNivell.Size = new System.Drawing.Size(112, 26);
             this.txtCodiNivell.TabIndex = 0;
             // 
             // txtNivell
             // 
             this.txtNivell.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNivell.Enabled = false;
-            this.txtNivell.Location = new System.Drawing.Point(297, 48);
+            this.txtNivell.Location = new System.Drawing.Point(353, 60);
+            this.txtNivell.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNivell.Name = "txtNivell";
-            this.txtNivell.Size = new System.Drawing.Size(243, 22);
+            this.txtNivell.Size = new System.Drawing.Size(273, 26);
             this.txtNivell.TabIndex = 1;
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(209, 51);
+            this.lblDescripcion.Location = new System.Drawing.Point(254, 64);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(82, 17);
+            this.lblDescripcion.Size = new System.Drawing.Size(92, 20);
             this.lblDescripcion.TabIndex = 2;
             this.lblDescripcion.Text = "Descripción";
             // 
@@ -66,22 +68,23 @@ namespace CustomControls
             // 
             this.lblCodigo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(13, 53);
+            this.lblCodigo.Location = new System.Drawing.Point(34, 66);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(52, 17);
+            this.lblCodigo.Size = new System.Drawing.Size(59, 20);
             this.lblCodigo.TabIndex = 3;
             this.lblCodigo.Text = "Código";
             // 
             // SWCodi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.txtNivell);
             this.Controls.Add(this.txtCodiNivell);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SWCodi";
-            this.Size = new System.Drawing.Size(557, 121);
+            this.Size = new System.Drawing.Size(665, 151);
             this.Validating += new System.ComponentModel.CancelEventHandler(this.SWCodi_Validating);
             this.ResumeLayout(false);
             this.PerformLayout();
