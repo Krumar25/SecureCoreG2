@@ -67,7 +67,20 @@ namespace MainFormSC
             DataSet dts = AccessDades.PortarPerConsulta(query, "Users");
             DataRow row = dts.Tables[0].Rows[0];
 
-            pbWelcome.Image = Bitmap.FromFile(row["Photo"].ToString());
+            try
+            {
+                string photoPath = row["Photo"].ToString();
+                pbWelcome.Image = Bitmap.FromFile(photoPath);
+            }
+            catch (Exception ex)
+            {
+                // Manejar el error, como asignar una imagen predeterminada o dejar el PictureBox vacío
+                pbWelcome.Image = null; // O puedes usar una imagen predeterminada
+                                        // pbWelcome.Image = Properties.Resources.DefaultImage;
+
+                // Opcional: Registrar el error para depuración
+                Console.WriteLine($"Error al cargar la imagen: {ex.Message}");
+            }
             lblWelcome.Text = "Welcome " + row["UserName"].ToString();
 
             //Obtencion del idUserCategory
