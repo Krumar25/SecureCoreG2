@@ -55,13 +55,13 @@ namespace FormularioBase
                         {
                             CustomControls.SWTextBox ctr = (CustomControls.SWTextBox)item;
                             ctr.DataBindings.Clear();
-                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.CampBBDD.ToString());
+                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.CampBBDD.ToString(), true, DataSourceUpdateMode.OnPropertyChanged);
                         }
                         if (item is ComboBox)
                         {
                             ComboBox ctr = (ComboBox)item;
                             ctr.DataBindings.Clear();
-                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString());
+                            ctr.DataBindings.Add("Text", dts.Tables[0], ctr.Tag.ToString(), true, DataSourceUpdateMode.OnPropertyChanged);
                         }
                         if(item is PictureBox)
                         {
@@ -102,10 +102,6 @@ namespace FormularioBase
                         {
                             CustomControls.SWCodi ctr = (CustomControls.SWCodi)item;
                             ctr.DataBindings.Clear();
-
-                            // Vincula las propiedades TxtCode y TxtDesc
-                            ctr.DataBindings.Add("TxtCode", dts.Tables[0], ctr.NomCodi, true, DataSourceUpdateMode.OnPropertyChanged);
-                            ctr.DataBindings.Add("TxtDesc", dts.Tables[0], ctr.NomDesc, true, DataSourceUpdateMode.OnPropertyChanged);
                         }
                     }
                 }
@@ -160,7 +156,6 @@ namespace FormularioBase
 
         private void cmb_actualizar_Click(object sender, EventArgs e)
         {
-            this.Validate();
             if (dts.HasChanges())
             {
                 BBDD.Actualitzar(query, dts);

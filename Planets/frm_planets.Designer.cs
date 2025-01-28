@@ -61,7 +61,7 @@
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(907, 27);
+            this.controlManteniment1.Location = new System.Drawing.Point(1030, 27);
             this.controlManteniment1.Margin = new System.Windows.Forms.Padding(14, 18, 14, 18);
             this.controlManteniment1.Size = new System.Drawing.Size(588, 120);
             // 
@@ -379,6 +379,7 @@
             this.swTx_filiation.Location = new System.Drawing.Point(1250, 581);
             this.swTx_filiation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swTx_filiation.Name = "swTx_filiation";
+            this.swTx_filiation.ReadOnly = true;
             this.swTx_filiation.Size = new System.Drawing.Size(97, 26);
             this.swTx_filiation.TabIndex = 35;
             this.swTx_filiation.TextChanged += new System.EventHandler(this.swTx_filiation_TextChanged);
@@ -393,6 +394,7 @@
             this.swTx_nativos.Location = new System.Drawing.Point(1249, 510);
             this.swTx_nativos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swTx_nativos.Name = "swTx_nativos";
+            this.swTx_nativos.ReadOnly = true;
             this.swTx_nativos.Size = new System.Drawing.Size(97, 26);
             this.swTx_nativos.TabIndex = 34;
             this.swTx_nativos.TextChanged += new System.EventHandler(this.swTx_nativos_TextChanged);
@@ -407,6 +409,7 @@
             this.swTx_sector.Location = new System.Drawing.Point(1249, 435);
             this.swTx_sector.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swTx_sector.Name = "swTx_sector";
+            this.swTx_sector.ReadOnly = true;
             this.swTx_sector.Size = new System.Drawing.Size(97, 26);
             this.swTx_sector.TabIndex = 33;
             this.swTx_sector.TextChanged += new System.EventHandler(this.swTx_sector_TextChanged);
@@ -428,7 +431,7 @@
             // pb_planets
             // 
             this.pb_planets.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pb_planets.Location = new System.Drawing.Point(1119, 300);
+            this.pb_planets.Location = new System.Drawing.Point(1126, 302);
             this.pb_planets.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pb_planets.Name = "pb_planets";
             this.pb_planets.Size = new System.Drawing.Size(376, 326);

@@ -61,7 +61,7 @@ namespace Users
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(623, 176);
+            this.controlManteniment1.Location = new System.Drawing.Point(668, 176);
             // 
             // panel1
             // 
@@ -132,7 +132,7 @@ namespace Users
             this.swSpecie.NomId = "idSpecie";
             this.swSpecie.NomTaula = "Species";
             this.swSpecie.Size = new System.Drawing.Size(554, 110);
-            this.swSpecie.TabIndex = 4;
+            this.swSpecie.TabIndex = 6;
             this.swSpecie.TxtCode = null;
             this.swSpecie.TxtDesc = null;
             this.swSpecie.Validating += new System.ComponentModel.CancelEventHandler(this.swSpecie_Validating);
@@ -170,7 +170,7 @@ namespace Users
             this.swUserCategory.NomId = "idUserCategory";
             this.swUserCategory.NomTaula = "UserCategories";
             this.swUserCategory.Size = new System.Drawing.Size(554, 114);
-            this.swUserCategory.TabIndex = 6;
+            this.swUserCategory.TabIndex = 4;
             this.swUserCategory.TxtCode = null;
             this.swUserCategory.TxtDesc = null;
             this.swUserCategory.Validating += new System.ComponentModel.CancelEventHandler(this.swUserCategory_Validating);
@@ -185,7 +185,7 @@ namespace Users
             this.swCodeUser.Location = new System.Drawing.Point(310, 435);
             this.swCodeUser.Name = "swCodeUser";
             this.swCodeUser.Size = new System.Drawing.Size(284, 26);
-            this.swCodeUser.TabIndex = 7;
+            this.swCodeUser.TabIndex = 0;
             // 
             // swUserName
             // 
@@ -197,7 +197,7 @@ namespace Users
             this.swUserName.Location = new System.Drawing.Point(310, 491);
             this.swUserName.Name = "swUserName";
             this.swUserName.Size = new System.Drawing.Size(284, 26);
-            this.swUserName.TabIndex = 8;
+            this.swUserName.TabIndex = 1;
             // 
             // swLogin
             // 
@@ -209,7 +209,7 @@ namespace Users
             this.swLogin.Location = new System.Drawing.Point(310, 550);
             this.swLogin.Name = "swLogin";
             this.swLogin.Size = new System.Drawing.Size(284, 26);
-            this.swLogin.TabIndex = 9;
+            this.swLogin.TabIndex = 2;
             // 
             // swPassword
             // 
@@ -252,7 +252,7 @@ namespace Users
             this.swbtnResetPass.Location = new System.Drawing.Point(1098, 657);
             this.swbtnResetPass.Name = "swbtnResetPass";
             this.swbtnResetPass.Size = new System.Drawing.Size(163, 62);
-            this.swbtnResetPass.TabIndex = 12;
+            this.swbtnResetPass.TabIndex = 7;
             this.swbtnResetPass.Text = "Reset";
             this.swbtnResetPass.TextColor = System.Drawing.Color.Yellow;
             this.swbtnResetPass.UseVisualStyleBackColor = false;
@@ -322,7 +322,7 @@ namespace Users
             this.swUserRanks.NomId = "idUserRank";
             this.swUserRanks.NomTaula = "UserRanks";
             this.swUserRanks.Size = new System.Drawing.Size(554, 111);
-            this.swUserRanks.TabIndex = 17;
+            this.swUserRanks.TabIndex = 3;
             this.swUserRanks.TxtCode = null;
             this.swUserRanks.TxtDesc = null;
             this.swUserRanks.Validating += new System.ComponentModel.CancelEventHandler(this.swUserRanks_Validating);
@@ -336,6 +336,7 @@ namespace Users
             this.swidUserRank.EsNulable = false;
             this.swidUserRank.Location = new System.Drawing.Point(1313, 379);
             this.swidUserRank.Name = "swidUserRank";
+            this.swidUserRank.ReadOnly = true;
             this.swidUserRank.Size = new System.Drawing.Size(41, 26);
             this.swidUserRank.TabIndex = 18;
             this.swidUserRank.TextChanged += new System.EventHandler(this.swidUserRank_TextChanged);
@@ -349,6 +350,7 @@ namespace Users
             this.swidUserCategory.EsNulable = false;
             this.swidUserCategory.Location = new System.Drawing.Point(1313, 435);
             this.swidUserCategory.Name = "swidUserCategory";
+            this.swidUserCategory.ReadOnly = true;
             this.swidUserCategory.Size = new System.Drawing.Size(41, 26);
             this.swidUserCategory.TabIndex = 19;
             this.swidUserCategory.TextChanged += new System.EventHandler(this.swidUserCategory_TextChanged);
@@ -362,6 +364,7 @@ namespace Users
             this.swidPlanet.EsNulable = false;
             this.swidPlanet.Location = new System.Drawing.Point(1313, 489);
             this.swidPlanet.Name = "swidPlanet";
+            this.swidPlanet.ReadOnly = true;
             this.swidPlanet.Size = new System.Drawing.Size(41, 26);
             this.swidPlanet.TabIndex = 20;
             this.swidPlanet.TextChanged += new System.EventHandler(this.swidPlanet_TextChanged);
@@ -375,6 +378,7 @@ namespace Users
             this.swidSpecie.EsNulable = false;
             this.swidSpecie.Location = new System.Drawing.Point(1313, 543);
             this.swidSpecie.Name = "swidSpecie";
+            this.swidSpecie.ReadOnly = true;
             this.swidSpecie.Size = new System.Drawing.Size(41, 26);
             this.swidSpecie.TabIndex = 21;
             this.swidSpecie.TextChanged += new System.EventHandler(this.swidSpecie_TextChanged);
@@ -417,7 +421,7 @@ namespace Users
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.Location = new System.Drawing.Point(1313, 291);
+            this.panel2.Location = new System.Drawing.Point(1313, 306);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 368);
             this.panel2.TabIndex = 25;

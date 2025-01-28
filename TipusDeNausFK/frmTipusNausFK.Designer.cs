@@ -45,7 +45,7 @@ namespace TipusDeNausFK
             // 
             // controlManteniment1
             // 
-            this.controlManteniment1.Location = new System.Drawing.Point(452, 132);
+            this.controlManteniment1.Location = new System.Drawing.Point(524, 132);
             this.controlManteniment1.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             // 
             // panel1
@@ -124,6 +124,7 @@ namespace TipusDeNausFK
             this.idFiliation.Location = new System.Drawing.Point(1306, 452);
             this.idFiliation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.idFiliation.Name = "idFiliation";
+            this.idFiliation.ReadOnly = true;
             this.idFiliation.Size = new System.Drawing.Size(52, 26);
             this.idFiliation.TabIndex = 6;
             this.idFiliation.TextChanged += new System.EventHandler(this.idFiliation_TextChanged);
@@ -138,6 +139,7 @@ namespace TipusDeNausFK
             this.idCategory.Location = new System.Drawing.Point(1306, 542);
             this.idCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.idCategory.Name = "idCategory";
+            this.idCategory.ReadOnly = true;
             this.idCategory.Size = new System.Drawing.Size(52, 26);
             this.idCategory.TabIndex = 7;
             this.idCategory.TextChanged += new System.EventHandler(this.idCategory_TextChanged);
@@ -173,7 +175,7 @@ namespace TipusDeNausFK
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.Location = new System.Drawing.Point(1268, 358);
+            this.panel2.Location = new System.Drawing.Point(1256, 358);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(212, 374);
